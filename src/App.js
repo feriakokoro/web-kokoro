@@ -10,7 +10,7 @@ import Guests from "./components/Invitados";
 import Schedule from "./components/Cronograma";
 import Contests from "./components/Concursos";
 import About from "./components/About";
-import Home from "./components/Inicio";
+import Inicio from "./components/Inicio";
 import Stands from "./components/Stands";
 import Navbar from "./components/Navbar";
 
@@ -23,7 +23,7 @@ function App() {
         <Navbar />
         <main style={{ flex: 1, paddingBottom: "50px" }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Inicio />} />
             <Route path="/guests" element={<Guests />} />
             <Route path="/stands" element={<Stands />} />
             <Route path="/schedule" element={<Schedule />} />

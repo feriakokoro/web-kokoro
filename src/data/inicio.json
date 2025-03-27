@@ -1,0 +1,13 @@
+{
+    "actividades": [
+      { "icon": "🌸", "text": "Desfile y concursos de Cosplay" },
+      { "icon": "🛍️", "text": "Stands con productos exclusivos" },
+      { "icon": "🎤", "text": "Invitados especiales y paneles" },
+      { "icon": "🎮", "text": "Zona gamer con torneos épicos" },
+      { "icon": "🍜", "text": "Gastronomía temática japonesa" }
+    ],
+    "ubicacion": {
+        "fecha": "12 y 13 de Octubre 2025",
+        "lugar": "Centro de Convenciones Kokoro, Buenos Aires"
+    }
+}

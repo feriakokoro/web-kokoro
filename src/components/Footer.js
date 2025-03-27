@@ -25,7 +25,7 @@ const Footer = () => {
 const styles = {
   footer: {
     width: "100%",
-    backgroundColor: "#222",
+    backgroundColor: "#333",
     color: "white",
     padding: "20px 0",
     fontSize: "14px",
