@@ -1,74 +1,17 @@
 import React, { useState } from "react";
 
-const guestsData = [
-  { 
-    id: 1,
-    name: "John Doe",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/camuy-valoy-jurado-de-cosplay.webp?v=0.17.0",
-    tags: ["JURADO"],
-    days: ["Domingo"],
-    socialUrl: "https://www.instagram.com/camivaloy/"
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/midra-knight-jurado-de-cosplay.webp?v=0.17.0",
-    tags: ["JURADO", "CANTANTE"],
-    days: ["Domingo"],
-    socialUrl: "https://www.instagram.com/midraknight/"
-  },
-  {
-    id: 3,
-    name: "Carlos Pérez",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/kpop/franhen-artista-y-jurado-de-fandancers.webp?v=0.17.0",
-    tags: ["JURADO"],
-    days: ["Domingo"],
-    socialUrl: "https://www.instagram.com/imfranhen/"
-  },
-  { 
-    id: 4,
-    name: "John Doe",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/camuy-valoy-jurado-de-cosplay.webp?v=0.17.0",
-    tags: ["JURADO", "GAMER"],
-    days: ["Domingo", "Sábado"],
-    socialUrl: "https://www.instagram.com/camivaloy/"
-  },
-  {
-    id: 5,
-    name: "Jane Smith",
-    bio: "Ingeniera de Software",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/midra-knight-jurado-de-cosplay.webp?v=0.17.0",
-    tags: ["JURADO"],
-    days: ["Domingo"],
-    socialUrl: "https://www.instagram.com/midraknight/"
-  },
-  {
-    id: 6,
-    name: "Carlos Pérez",
-    bio: "Experto en UX/UI",
-    category: "cosplayers",
-    image: "https://jigoku-random.com.ar/assets/images/invitados/domingo/kpop/franhen-artista-y-jurado-de-fandancers.webp?v=0.17.0",
-    tags: ["JURADO", "GAMER"],
-    days: ["Domingo"],
-    socialUrl: "https://www.instagram.com/imfranhen/"
-  },
-];
+const invitadosJson = require("../data/invitados.json").Invitados;
 
 const Guests = () => {
   const [selectedTag, setSelectedTag] = useState(null);
 
   // Obtener todos los tags sin duplicados
-  const tags = [...new Set(guestsData.flatMap(guest => guest.tags))];
+  const tags = [...new Set(invitadosJson.flatMap(guest => guest.tags))];
 
   // Filtrar los invitados según el tag seleccionado
   const filteredGuests = selectedTag 
-    ? guestsData.filter(guest => guest.tags.includes(selectedTag)) 
-    : guestsData;
+    ? invitadosJson.filter(guest => guest.tags.includes(selectedTag)) 
+    : invitadosJson;
 
   return (
     <div style={styles.container}>
