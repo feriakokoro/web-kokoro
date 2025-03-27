@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 import Footer from "./components/Footer";
-import Guests from "./components/Guests";
-import Schedule from "./components/Schedule";
-import Contests from "./components/Contests";
+import Guests from "./components/Invitados";
+import Schedule from "./components/Cronograma";
+import Contests from "./components/Concursos";
 import About from "./components/About";
-import Home from "./components/Home";
+import Home from "./components/Inicio";
 import Stands from "./components/Stands";
 import Navbar from "./components/Navbar";
 

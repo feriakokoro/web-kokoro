@@ -1,0 +1,189 @@
+{
+	"Concursos": [
+		{
+			"id": "cosplay",
+			"icon": "fa-mask",
+			"title": "Concurso de Cosplay LOL",
+			"tags": [
+				"Presencial",
+				"Individual"
+			],
+			"cardInfo": {
+				"inscription": "Anotate en mesa de informes el día del evento.",
+				"prizes": "Grandes premios"
+			},
+			"inscription": {
+				"title": "¿Cómo me anoto?",
+				"details": [
+					"La inscripción es presencial en la mesa de informes el día del evento, hasta completar el cupo (25 personas).",
+					"Si vas a usar audio o video, traelo en un Pendrive. Si necesitás luces de algún color específico, dejalo anotado.",
+					"Deberás estar una hora antes en el backstage para la evaluación previa. Te daremos una pulsera de acceso y un staff te guiará en el auditorio."
+				]
+			},
+			"como_se_evalua": {
+				"title": "¿Cómo se evalúa?",
+				"details": [
+					"El jurado calificará tres aspectos:",
+					"Confección del cosplay → Se priorizan trajes hechos por los participantes o con modificaciones significativas propias.",
+					"Maquillaje → Se revisará la caracterización y los detalles que aporten fidelidad al personaje.",
+					"Performance en escenario → Se evaluará tu interpretación y presencia escénica."
+				]
+			},
+			"rules": {
+				"title": "Reglas del concurso",
+				"details": [
+					"✅ Tiempo máximo de performance: 2 minutos.",
+					"🚫 Prohibido: objetos peligrosos (armas reales, cortantes, punzantes), pintura, polvos, bengalas, agua o papeles en el escenario.",
+					"🚫 No se permite insultar al público, jurado o staff.",
+					"👶 Menores de 13 años deben estar acompañados por un adulto."
+				]
+			},
+			"puntaje_y_desempates": {
+				"title": "Puntaje y desempates",
+				"details": [
+					"Se sumarán los puntos de cada categoría para definir a los ganadores.",
+					"En caso de empate, el jurado debatirá hasta llegar a un acuerdo."
+				]
+			},
+			"prizes": {
+				"title": "Premios",
+				"details": [
+					"🥇 1er puesto: $100.000",
+					"🥈 2do puesto: $50.000"
+				]
+			},
+			"additional": {
+				"title": "Información Adicional",
+				"details": [
+					"Si querés competir, asegurate de que tu cosplay tenga tu toque personal.",
+					"¡Nos vemos en el escenario! 🚀"
+				]
+			}
+		},
+
+		{
+			"id": "dibujo",
+			"icon": "fa-paint-brush",
+			"title": "Concurso de Dibujo",
+			"tags": [
+				"Presencial",
+				"Temática Libre"
+			],
+			"cardInfo": {
+				"inscription": "Anotate en mesa de informes el día del evento.",
+				"prizes": "Grandes premios"
+			},
+			"inscription": {
+				"title": "Inscripción",
+				"details": [
+					"Modalidad: Temática Libre.",
+					"Te anotás en mesa de informes el día del evento.",
+					"Llevá tus materiales para dibujar, nosotros te entregamos la hoja con el logo al momento de anotarte.",
+					"Si querés llevar una hoja en la que te guste dibujar, llevála y acércate a informes para que te la firmemos antes de que comiences a dibujar.",
+					"Podés dibujar desde que comienza el evento hasta las 16:45 hs, horario límite para entregar tu dibujo en mesa de informes."
+				]
+			},
+			"prizes": {
+				"title": "Premios",
+				"details": [
+					"Premio para categoría kids.",
+					"Premio para categoría juvenil.",
+					"Premio para categoría adultos."
+				]
+			},
+			"rules": {
+				"title": "Reglamento",
+				"details": [
+					""
+				]
+			},
+			"additional": {
+				"title": "Información Adicional",
+				"details": [
+					"Es obligatorio colocar edad al momento de anotarte."
+				]
+			}
+		},
+
+		{
+			"id": "karaoke",
+			"icon": "fa-microphone",
+			"title": "Concurso de Karaoke",
+			"tags": [
+				"Presencial"
+			],
+			"cardInfo": {
+				"inscription": "Anotate en mesa de informes el día del evento.",
+				"prizes": "Grandes premios"
+			},
+			"inscription": {
+				"title": "Inscripción",
+				"details": [
+					"Anotate en mesa de informes el día del evento.",
+					"Tenés que llevar tu audio instrumental versión TV size en PENDRIVE.",
+					"No se permiten versiones extensas, deben ser versiones que duren hasta 2 minutos.",
+					"Únicamente si vas a cantar KPOP se permiten hasta 3 minutos.",
+					"No se permite el uso de instrumentos, es obligatorio llevar pista."
+				]
+			},
+			"prizes": {
+				"title": "Premios",
+				"details": [
+					""
+				]
+			},
+			"rules": {
+				"title": "Reglamento",
+				"details": [
+					""
+				]
+			},
+			"additional": {
+				"title": "Información Adicional",
+				"details": [
+					"Cupo máximo: 10 participantes (pista obligatoria).",
+					"¡Premios en merchandising!."
+				]
+			}
+		},
+
+		{
+			"id": "fandancers",
+			"icon": "fa-music",
+			"title": "Concurso de Fandancers",
+			"tags": [
+				"Presencial"
+			],
+			"cardInfo": {
+				"inscription": "Inscripción online disponible",
+				"prizes": "Grandes premios"
+			},
+			"inscription": {
+				"title": "Inscripción",
+				"details": [
+					"INSCRIPCIONES ABIERTAS DESDE 03/01/2025 HASTA EL 30/01/2025 a las 23:59hs.",
+					"FORM DE INSCRIPCIÓN: <a href=\"https://forms.gle/EaPrmAa3ZpLbFjNfA\" target=\"_blank\">Haz clic aquí</a>."
+				]
+			},
+			"prizes": {
+				"title": "Premios",
+				"details": [
+					"Categoría Grupos: $70.000.",
+					"Categoría Solistas/Dúos: $30.000."
+				]
+			},
+			"rules": {
+				"title": "Reglamento",
+				"details": [
+					"Reglamento Fandancers: <a href=\"https://bit.ly/4aUvS1D\" target=\"_blank\">Haz clic aquí</a>."
+				]
+			},
+			"additional": {
+				"title": "Información Adicional",
+				"details": [
+					""
+				]
+			}
+		}
+	]
+}
