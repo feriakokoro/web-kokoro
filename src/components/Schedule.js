@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa"; // Ícono de ubicación
-import scheduleData from "../data/cronograma.json"; // Importa tu JSON
+import scheduleData from "../data/schedule.json"; // Importa tu JSON
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);

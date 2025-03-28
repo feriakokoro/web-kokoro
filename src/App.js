@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 import Footer from "./components/Footer";
-import Guests from "./components/Invitados";
-import Schedule from "./components/Cronograma";
-import Contests from "./components/Concursos";
+import Guests from "./components/Guests";
+import Schedule from "./components/Schedule";
+import Contests from "./components/Contests";
 import About from "./components/About";
-import Inicio from "./components/Inicio";
+import Home from "./components/Home";
 import Stands from "./components/Stands";
 import Navbar from "./components/Navbar";
 
@@ -23,7 +23,7 @@ function App() {
         <Navbar />
         <main style={{ flex: 1, paddingBottom: "50px" }}>
           <Routes>
-            <Route path="/" element={<Inicio />} />
+            <Route path="/" element={<Home />} />
             <Route path="/guests" element={<Guests />} />
             <Route path="/stands" element={<Stands />} />
             <Route path="/schedule" element={<Schedule />} />

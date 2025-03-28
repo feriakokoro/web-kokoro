@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import strawberryLogo from "../assets/strawberry-logo.webp";
+import strawberryLogo from "../assets/icons/strawberry-logo.webp";
 import "./Navbar.css";
 
 const Navbar = () => {

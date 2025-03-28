@@ -1,7 +1,7 @@
 import React from "react";
-import './Inicio.css';
+import './Home.css';
 
-const inicioJson = require("../data/inicio.json");
+const inicioJson = require("../data/home.json");
 
 const ActivitiesList = () => (
   <ul className="list">
@@ -13,25 +13,7 @@ const ActivitiesList = () => (
   </ul>
 );
 
-{/*
-const ActivitiesList = () => (
-  <ul className="list">
-    {[
-      { icon: '🌸', text: 'Desfile y concursos de Cosplay' },
-      { icon: '🛍️', text: 'Stands con productos exclusivos' },
-      { icon: '🎤', text: 'Invitados especiales y paneles' },
-      { icon: '🎮', text: 'Zona gamer con torneos épicos' },
-      { icon: '🍜', text: 'Gastronomía temática japonesa' }
-    ].map(({ icon, text }, index) => (
-      <li key={index} className="activity-item">
-        <span className="activity-icon">{icon} {text}</span>
-      </li>
-    ))}
-  </ul>
-);
-*/}
-
-const Inicio = () => {
+const Home = () => {
 
   const handleTicketPurchase = () => {
     window.open('/tickets', '_blank');
@@ -81,4 +63,4 @@ const Inicio = () => {
   );
 };
 
-export default Inicio;
+export default Home;
