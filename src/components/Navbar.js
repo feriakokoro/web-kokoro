@@ -5,6 +5,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
+    <div className="navbar-wrapper">
     <nav className="navbar">
       <div className="logo-container">
         <img src={strawberryLogo} alt="Feria Kokoro Logo" className="logo" />
@@ -19,6 +20,7 @@ const Navbar = () => {
         <Link to="/about" className="link">MAS INFORMACION</Link>
       </div>
     </nav>
+    </div>
   );
 };
 
