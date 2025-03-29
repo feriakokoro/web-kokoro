@@ -3,7 +3,7 @@ body,
 html {
   height: 100%;
   margin: 0;
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 #root {
