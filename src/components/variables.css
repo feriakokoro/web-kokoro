@@ -1,0 +1,14 @@
+/* src/variables.css */
+:root {
+  --primary: #fde5ec; /* Rosa pastel suave */
+  --secondary: #ffc8dd; /* Rosa chicle pastel */
+  --accent: #ffafcc; /* Rosa vibrante pero suave */
+  --background: #fff0f5; /* Fondo lavanda pálido */
+  --text: #6d597a; /* Morado grisáceo suave para mejor lectura */
+  --text-secondary: #b5838d; /* Color de texto sutil para detalles */
+  --border: #ffb4a2; /* Naranja pastel para bordes y detalles */
+  --highlight: #ff85a1; /* Color llamativo pero pastel para resaltar */
+  --gradient: linear-gradient(135deg, #ffc8dd 0%, #ffafcc 100%);
+  --glass: rgba(255, 255, 255, 0.6); /* Transparencia para efecto glassmorphism */
+  --glass-border: rgba(255, 255, 255, 0.3); /* Bordes sutiles */
+}
