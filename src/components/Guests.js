@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import "./Guests.css";
+import "./global.css";
 
-const invitadosJson = require("../data/guests.json").Invitados;
+const guestsJson = require("../data/guests.json").Invitados;
 
 const Guests = () => {
   const [selectedTag, setSelectedTag] = useState(null);
 
   // Obtener todos los tags sin duplicados
-  const tags = [...new Set(invitadosJson.flatMap(guest => guest.tags))];
+  const tags = [...new Set(guestsJson.flatMap(guest => guest.tags))];
 
   // Filtrar los invitados según el tag seleccionado
   const filteredGuests = selectedTag 
-    ? invitadosJson.filter(guest => guest.tags.includes(selectedTag)) 
-    : invitadosJson;
+    ? guestsJson.filter(guest => guest.tags.includes(selectedTag)) 
+    : guestsJson;
 
   return (
+    <div className="page-container">
     <div className="guests-container">
       <h2>Invitados</h2>
 
@@ -61,6 +63,7 @@ const Guests = () => {
           </a>
         ))}
       </div>
+    </div>
     </div>
   );
 };

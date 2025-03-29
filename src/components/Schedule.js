@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { FaMapMarkerAlt } from "react-icons/fa"; // Ícono de ubicación
-import scheduleData from "../data/schedule.json"; // Importa tu JSON
+import { FaMapMarkerAlt } from "react-icons/fa";
+import scheduleData from "../data/schedule.json";
+import "./global.css";
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);
@@ -14,9 +15,9 @@ const Schedule = () => {
     : scheduleData.Cronograma;
 
   return (
+    <div className="page-container">
     <div className="schedule-container">
       <h1 className="title">CRONOGRAMA</h1>
-
       {/* Botones de filtro por día */}
       
       {/*
@@ -59,6 +60,7 @@ const Schedule = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Contests.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMask, faPaintBrush, faMicrophone, faMusic } from "@fortawesome/free-solid-svg-icons";
+import "./Contests.css";
+import "./global.css";
 
-// Importar el archivo JSON con los datos de los concursos
 const contestData = require("../data/contests.json").Concursos;
 
 // Mapear los iconos
@@ -26,6 +26,7 @@ const Contests = () => {
   };
 
   return (
+    <div className="page-container">
     <div className="contests-container">
       <h1 className="title">✨ Concursos ✨</h1>
       <div className="contests-grid">
@@ -86,6 +87,7 @@ const Contests = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };
