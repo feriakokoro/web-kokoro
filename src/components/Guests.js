@@ -18,7 +18,7 @@ const Guests = () => {
   return (
     <div className="page-container">
       <div className="guests-container">
-        <h2>Invitados</h2>
+        <h2 className="title">INVITADOS</h2>
 
         {/* Filtros de Tags */}
         <div className="filters">

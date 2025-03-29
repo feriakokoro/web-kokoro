@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
 .filters {
   display: flex;
   justify-content: center;
