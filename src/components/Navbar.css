@@ -58,4 +58,9 @@
 .navbar-wrapper {
   background-color: var(--primary);
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary);
+  z-index: 1000; /* Asegura que quede sobre otros elementos */
 }
