@@ -5,26 +5,6 @@ body {
   text-align: center;
 }
 
-.navbar {
-  background-color: #333;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
 section {
   padding: 50px;
 }

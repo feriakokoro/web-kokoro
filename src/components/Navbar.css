@@ -1,45 +1,51 @@
-/* Navbar.css */
+@import url('./variables.css');
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f9c8d7;
-    color: #333;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-family: 'Pacifico', cursive; /* Fuente kawaii */
-    font-size: 24px;
-    color: #ff4081; /* Color rosado kawaii */
-    font-weight: bold;
-  }
-  
-  .links-container {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .link {
-    color: black; /* Cambiado a negro */
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .link:hover {
-    color: #ff4081; /* Cambio de color al pasar el mouse */
-  }
-  
+  background-color: var(--primary);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  background: var(--acent);
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #311119; /* Rosado kawaii pero más suave */
+  font-weight: bold;
+}
+
+.links-container {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  color: #6b4e71; /* Lavanda pastel */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #e44069; /* Cambio de color pastel al pasar el mouse */
+}

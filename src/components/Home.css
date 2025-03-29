@@ -1,8 +1,9 @@
 /* Home.css */
+@import url('./variables.css');
 .container {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: #fce4ec; /* Fondo rosa pastel suave */
+    background: var(--primary); /* Fondo rosa pastel suave */
     color: #333;
   }
   
