@@ -7,7 +7,7 @@
     padding: 20px 0;
     font-size: 14px;
   }
-  .container {
+  .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -16,15 +16,15 @@
     align-items: center;
     text-align: center;
   }
-  .contact {
+  .footer-contact {
     margin-bottom: 15px;
   }
-  .link {
+  .footer-link {
     color: #4DB6AC;
     text-decoration: none;
     margin-left: 5px;
   }
-  .rights {
+  .footer-rights {
     border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 10px;
     width: 100%;
