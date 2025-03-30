@@ -1,0 +1,68 @@
+.stands-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.stands-title {
+    font-size: 2rem;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.stands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.stand-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stand-card:hover {
+    transform: translateY(-5px);
+}
+
+.stand-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stand-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff66b2;
+    margin: 10px 0;
+}
+
+.stand-location {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon {
+    color: #ff66b2;
+    font-size: 1.2rem;
+}
+
+.stand-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #ff66b2;
+    transition: color 0.2s ease-in-out;
+}
+
+.stand-link:hover {
+    color: #d1478c;
+}

@@ -1,159 +1,89 @@
 {
     "Invitados": [
-		{
+        {
             "name": "Camuy Valoy",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/camuy-valoy-jurado-de-cosplay_new.webp",
-            "days": ["Domingo"],
-            "tags": ["JURADO"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/camuy-valoy-jurado-de-cosplay_new.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
+            "tags": [
+                "JURADO"
+            ],
             "socialUrl": "https://www.instagram.com/camivaloy/"
         },
-		{
+        {
             "name": "Hika",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/hika-jurado-de-cosplay_new.webp",
-            "days": ["Domingo"],
-            "tags": ["JURADO"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/hika-jurado-de-cosplay_new.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
+            "tags": [
+                "JURADO"
+            ],
             "socialUrl": "https://www.instagram.com/hikitaok/"
         },
-		{
+        {
             "name": "Mmidra Knight",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/midra-knight-jurado-de-cosplay_new.webp",
-            "days": ["Domingo"],
-            "tags": ["JURADO"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/midra-knight-jurado-de-cosplay_new.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
+            "tags": [
+                "JURADO"
+            ],
             "socialUrl": "https://www.instagram.com/midraknight/"
         },
-		{
+        {
             "name": "Joe Potter",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/joe-potter-cosplayer-invitado.webp",
-            "days": ["Domingo"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/joe-potter-cosplayer-invitado.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
             "tags": [],
             "socialUrl": "https://www.instagram.com/"
         },
-		{
+        {
             "name": "Lady Elune",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/lady-elune-cosplayer-invitada.webp",
-            "days": ["Domingo"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/lady-elune-cosplayer-invitada.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
             "tags": [],
             "socialUrl": "https://www.instagram.com/"
         },
-		{
+        {
             "name": "Lewinx",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/lewinx-cosplayer-invitado.webp",
-            "days": ["Domingo"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/lewinx-cosplayer-invitado.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
             "tags": [],
             "socialUrl": "https://www.instagram.com/"
         },
-		{
+        {
             "name": "Orion",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/orion-cosplayer-invitada.webp",
-            "days": ["Domingo"],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/orion-cosplayer-invitada.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
             "tags": [],
             "socialUrl": "https://www.instagram.com/"
         },
-		{
+        {
             "name": "Sirephim",
             "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/sirephim-cosplayer-invitada.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-		{
-            "name": "Solci",
-            "category": "cosplayers",
-            "image": "assets/images/invitados/domingo/cosplayer/solci-cosplayer-invitada.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-
-
-
-		{
-            "name": "Fran Hen",
-            "category": "kpop",
-            "image": "assets/images/invitados/domingo/kpop/franhen-show-y-jurado-de-fandancers.webp",
-            "days": ["Domingo"],
-            "tags": ["JURADO"],
-            "socialUrl": "https://www.instagram.com/imfranhen/"
-        },
-		{
-            "name": "Fran Hen",
-            "category": "kpop",
-            "image": "assets/images/invitados/domingo/kpop/icequeen-profesora-de-kpop.webp",
-            "days": ["Domingo"],
-            "tags": ["PROFESORA"],
-            "socialUrl": "https://www.instagram.com/"
-        },
-
-
-
-		{
-            "name": "Paw Depp",
-            "category": "host",
-            "image": "assets/images/invitados/domingo/host/paw-depp-host.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-		{
-            "name": "Stephanie Giorgi",
-            "category": "host",
-            "image": "assets/images/invitados/domingo/host/stephanie-giorgi-host.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-		{
-            "name": "Yuriken",
-            "category": "host",
-            "image": "assets/images/invitados/domingo/host/yuriken-host.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-
-
-
-		{
-            "name": "Maricel Lasetz",
-            "category": "ilustradores",
-            "image": "assets/images/invitados/domingo/ilustradores/maricel-lasetz-jurado-de-dibujo.webp",
-            "days": ["Domingo"],
-            "tags": ["JURADO"],
-            "socialUrl": "https://www.instagram.com/"
-        },
-		{
-            "name": "Qinecko",
-            "category": "ilustradores",
-            "image": "assets/images/invitados/domingo/ilustradores/qinecko-ilustrador.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-
-
-
-		{
-            "name": "Fioly",
-            "category": "tiktokers",
-            "image": "assets/images/invitados/domingo/tiktokers/fioly-tiktoker-invitada.webp",
-            "days": ["Domingo"],
-            "tags": [],
-            "socialUrl": "https://www.instagram.com/"
-        },
-		{
-            "name": "UnXavi",
-            "category": "tiktokers",
-            "image": "assets/images/invitados/domingo/tiktokers/unxavi-tiktoker-invitado.webp",
-            "days": ["Domingo"],
-            "tags": [],
+            "image": "https://jigoku-random.com.ar/assets/images/invitados/domingo/cosplayer/sirephim-cosplayer-invitada.webp?v=0.18.0",
+            "days": [
+                "Domingo"
+            ],
+            "tags": ["PROFESOR"],
             "socialUrl": "https://www.instagram.com/"
         }
     ]

@@ -1,0 +1,116 @@
+/* Estilos para la página del cronograma en formato lista */
+@import url('./variables.css');
+
+.schedule-container {
+    text-align: center;
+    padding: 8rem 0 2rem;
+}
+.schedule-category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+
+.schedule-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.5rem;
+    padding-block: 2%;
+}
+
+.schedule-item {
+    background: var(--glass);
+    border: 2px;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding-inline: 40px;
+}
+
+.schedule-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-header,
+.schedule-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.schedule-header {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: -25px;
+}
+
+.schedule-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.schedule-location {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.schedule-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.schedule-day {
+    font-size: 1rem;
+}
+
+.location-icon {
+    color: var(--accent);
+}
+
+.schedule-tags {
+    display: flex;
+    margin-left: autor;
+    gap: 5px;
+}
+
+.tag {
+    background: var(--accent);
+    color: var(--text);
+    padding: 0.1rem 0.5rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .schedule-item {
+        text-align: center;
+    }
+
+    .schedule-header,
+    .schedule-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule-location,
+    .schedule-tags {
+        justify-content: center;
+    }
+}

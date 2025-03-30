@@ -25,7 +25,7 @@ const Home = () => {
       <section className="hero">
         <div className="overlay" aria-hidden="true"></div>
         <div className="heroContent">
-          <h1 className="title">🎌 Feria Kokoro 2025 🎌</h1>
+          <h1 className="home-title">🎌 Feria Kokoro 2025 🎌</h1>
           <p className="subtitle">
             El evento más kawaii de anime, manga, cosplay y cultura geek
           </p>
