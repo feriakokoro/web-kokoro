@@ -1,15 +1,10 @@
+@import url('./variables.css');
+
 .contests-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
-}
-
-.title {
-  text-align: center;
-  font-size: 2rem;
-  color: #ff4081;
-  margin-bottom: 20px;
 }
 
 .contests-grid {
@@ -21,9 +16,10 @@
 }
 
 .contest-card {
-  background-color: #fffcf9;
+  /*background-color: #fffcf9;*/
+  background-color: var(--glass);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   width: 250px;
   padding: 20px;
   transition: transform 0.3s ease;
@@ -36,8 +32,25 @@
 }
 
 .contest-title {
+  align-items: center;
+}
+
+.contest-content {
+  text-align: left;
+  padding-inline: 20px;
+}
+
+.contest-title {
   font-size: 1.2rem;
   color: #f48fb1;
+}
+
+.contest-subtitle {
+  color: #f48fb1;
+}
+
+.contest-description {
+  color: var(--text-secondary);
 }
 
 .contest-tags {
@@ -61,14 +74,7 @@
   font-size: 2rem;
   color: #f48fb1;
   display: block;
-  margin-bottom: 10px;
-}
-
-.contest-prizes {
-  text-align: center;
-  color: #ff4081;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin: 0 auto;
 }
 
 /* Modal */

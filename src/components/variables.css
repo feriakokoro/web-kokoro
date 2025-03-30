@@ -6,9 +6,8 @@
   --background: #fff0f5; /* Fondo lavanda pálido */
   --text: #6d597a; /* Morado grisáceo suave para mejor lectura */
   --text-secondary: #b5838d; /* Color de texto sutil para detalles */
-  --border: #ffb4a2; /* Naranja pastel para bordes y detalles */
   --highlight: #ff85a1; /* Color llamativo pero pastel para resaltar */
-  --gradient: linear-gradient(135deg, #ffc8dd 0%, #ffafcc 100%);
   --glass: rgba(255, 255, 255, 0.6); /* Transparencia para efecto glassmorphism */
-  --glass-border: rgba(255, 255, 255, 0.3); /* Bordes sutiles */
+  --overlay-background: rgba(255, 224, 230, 0.8); /* Transparencia para la imagen de fondo*/
+  --box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Sombreado de boxes */
 }

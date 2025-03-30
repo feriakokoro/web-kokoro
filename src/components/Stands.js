@@ -7,7 +7,7 @@ const Stands = () => {
     return (
         <div className="page-container">
         <div className="stands-container">
-            <h1 className="stands-title">STANDS</h1>
+            <h1 className="title">STANDS</h1>
             <div className="stands-grid">
                 {standsData.Stands.filter(stand => stand.estado === "Aprobado").map((stand, index) => (
                     <div className="stand-card" key={index}>
