@@ -12,11 +12,6 @@
   margin: 0 auto;
 }
 
-.button {
-  background: var(--acent);
-  color: #fff;
-}
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -61,6 +56,41 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;  /* Se oculta por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--primary);
-  z-index: 1000; /* Asegura que quede sobre otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;  /* Se muestra cuando el mouse está encima */
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #6b4e71;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  color: #e44069;
 }
