@@ -9,12 +9,13 @@ import Footer from "./components/Footer";
 import Guests from "./components/Guests";
 import Schedule from "./components/Schedule";
 import Contests from "./components/Contests";
-import About from "./components/About";
 import Home from "./components/Home";
 import Stands from "./components/Stands";
 import Navbar from "./components/Navbar";
 
 import "./App.css";
+import Gallery from "./components/Gallery";
+import Location from "./components/Location";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Route path="/stands" element={<Stands />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/contests" element={<Contests />} /> 
-            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

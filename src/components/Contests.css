@@ -16,7 +16,6 @@
 }
 
 .contest-card {
-  /*background-color: #fffcf9;*/
   background-color: var(--glass);
   border-radius: 12px;
   box-shadow: var(--box-shadow);

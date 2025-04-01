@@ -1,5 +1,14 @@
 @import url('./variables.css');
 
+.navbar-wrapper {
+  background-color: var(--primary);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 .navbar {
   background-color: var(--primary);
   color: var(--text);
@@ -12,11 +21,7 @@
   margin: 0 auto;
 }
 
-.button {
-  background: var(--acent);
-  color: #fff;
-}
-
+/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
@@ -36,6 +41,7 @@
   font-weight: bold;
 }
 
+/* Links en escritorio */
 .links-container {
   display: flex;
   gap: 20px;
@@ -55,12 +61,54 @@
   color: #e44069;
 }
 
-.navbar-wrapper {
-  background-color: var(--primary);
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--primary);
-  z-index: 1000; /* Asegura que quede sobre otros elementos */
+/* Menú Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilos del menú en móvil */
+@media (max-width: 768px) {
+  .links-container {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .links-container.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }

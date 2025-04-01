@@ -6,7 +6,6 @@ import "./global.css";
 
 const contestData = require("../data/contests.json").Concursos;
 
-// Mapear los iconos
 const iconMap = {
   "fa-mask": faMask,
   "fa-paint-brush": faPaintBrush,
@@ -28,7 +27,6 @@ const Contests = () => {
   return (
     <div className="page-container">
       <div className="contests-container">
-        {/*<h1 className="title">✨ CONCURSOS ✨</h1>*/}
         <h1 className="title">CONCURSOS</h1>
         <div className="contests-grid">
           {contestData.map((contest) => (
