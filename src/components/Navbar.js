@@ -17,13 +17,16 @@ const Navbar = () => {
           <Link to="/stands" className="link">STANDS</Link>
           <Link to="/schedule" className="link">CRONOGRAMA</Link>
           <Link to="/contests" className="link">CONCURSOS</Link>
+          <Link to="/gallery" className="link">GALERÍA</Link>
+         {/*
           <div className="dropdown">
-            <Link to="/about" className="link">MÁS INFORMACIÓN</Link>
+            <Link to="/" className="link">MÁS INFORMACIÓN</Link>
             <div className="dropdown-menu">
               <Link to="/gallery" className="dropdown-item">GALERÍA</Link>
               <Link to="/location" className="dropdown-item">CÓMO LLEGAR</Link>
             </div>
           </div>
+          */}
         </div>
       </nav>
     </div>
