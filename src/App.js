@@ -15,7 +15,6 @@ import Navbar from "./components/Navbar";
 
 import "./App.css";
 import Gallery from "./components/Gallery";
-import Location from "./components/Location";
 
 function App() {
   return (
