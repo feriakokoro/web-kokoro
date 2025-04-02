@@ -1,20 +1,18 @@
 import React from "react";
 
-/*import * as ReactRouterDom from "react-router-dom";
-const { BrowserRouter: Router, Routes, Route } = ReactRouterDom;*/
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 import Guests from "./components/Guests";
 import Schedule from "./components/Schedule";
 import Contests from "./components/Contests";
-import Home from "./components/Home";
 import Stands from "./components/Stands";
-import Navbar from "./components/Navbar";
+import Gallery from "./components/Gallery";
 
 import "./App.css";
-import Gallery from "./components/Gallery";
 
 function App() {
   return (
