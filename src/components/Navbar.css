@@ -1,47 +1,37 @@
 @import url('./variables.css');
 
-.navbar-wrapper {
-  background-color: var(--primary);
-  width: 100%;
+.navbar {
+  background: var(--primary);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  background-color: var(--primary);
-  color: var(--text);
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 1.5rem max(4rem, calc((100% - 1200px) / 2));
+  z-index: 1000;
 }
 
-/* Logo */
-.logo-container {
+.navbar-logo-container {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-.logo {
+.navbar-image-logo {
   width: 42px;
   height: 42px;
   margin-right: 12px;
 }
 
-.logo-text {
+.navbar-logo-text {
   font-family: 'Pacifico', cursive;
   font-size: 24px;
   color: #311119;
   font-weight: bold;
 }
 
-/* Links en escritorio */
 .links-container {
   display: flex;
   gap: 20px;
@@ -61,12 +51,12 @@
   color: #e44069;
 }
 
-/* Menú Hamburguesa */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  position: relative;
 }
 
 .bar {
@@ -89,8 +79,11 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Estilos del menú en móvil */
 @media (max-width: 768px) {
+  .navbar {
+    width: 75%;
+  }
+
   .links-container {
     display: none;
     flex-direction: column;

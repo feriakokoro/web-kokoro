@@ -11,11 +11,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar-wrapper">
+    <div className="page-container">
       <nav className="navbar">
-        <div className="logo-container">
-          <img src={strawberryLogo} alt="Feria Kokoro Logo" className="logo" />
-          <span className="logo-text">Feria Kokoro</span>
+        <div className="navbar-logo-container">
+          <img src={strawberryLogo} alt="Feria Kokoro Logo" className="navbar-image-logo" />
+          <span className="navbar-logo-text">Feria Kokoro</span>
         </div>
         <div className={`links-container ${menuOpen ? "active" : ""}`}>
           <Link to="/" className="link" onClick={() => setMenuOpen(false)}>INICIO</Link>
@@ -25,10 +25,10 @@ const Navbar = () => {
           <Link to="/contests" className="link" onClick={() => setMenuOpen(false)}>CONCURSOS</Link>
           <Link to="/gallery" className="link" onClick={() => setMenuOpen(false)}>GALERÍA</Link>
         </div>
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <div className={menuOpen ? "bar open" : "bar"}></div>
-          <div className={menuOpen ? "bar open" : "bar"}></div>
-          <div className={menuOpen ? "bar open" : "bar"}></div>
+        <div className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
         </div>
       </nav>
     </div>
