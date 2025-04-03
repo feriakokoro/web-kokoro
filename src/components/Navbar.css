@@ -6,13 +6,16 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 85%;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem max(4rem, calc((100% - 1200px) / 2));
   z-index: 1000;
 }
+
 
 .navbar-logo-container {
   display: flex;

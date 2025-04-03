@@ -21,7 +21,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      {/* Hero Section */}
       <section className="hero">
         <div className="overlay" aria-hidden="true"></div>
         <div className="heroContent">
@@ -39,13 +38,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sección de Información */}
       <section className="info">
         <h2 className="sectionTitle">🎭 Actividades Imperdibles 🎭</h2>
         <ActivitiesList />
       </section>
 
-      {/* Ubicación */}
       <section className="location">
         <h2 className="sectionTitle">📍 Ubicación 📍</h2>
         <div className="location-details">
