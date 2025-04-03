@@ -1,13 +1,42 @@
-/* src/variables.css */
 :root {
-  --primary: #ffe0e6; /* Rosa pastel suave */
-  --secondary: #f9f3ff; /* Rosa chicle pastel */
-  --accent: #ffafcc; /* Rosa vibrante pero suave */
-  --background: #fff0f5; /* Fondo lavanda pálido */
-  --text: #6d597a; /* Morado grisáceo suave para mejor lectura */
-  --text-secondary: #b5838d; /* Color de texto sutil para detalles */
-  --highlight: #ff85a1; /* Color llamativo pero pastel para resaltar */
-  --glass: rgba(255, 255, 255, 0.6); /* Transparencia para efecto glassmorphism */
-  --overlay-background: rgba(255, 224, 230, 0.8); /* Transparencia para la imagen de fondo*/
-  --box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Sombreado de boxes */
+  --primary: #ffe0e6;
+  --secondary: #f9f3ff;
+  --accent: #ffafcc;
+  --background: #fff0f5;
+  --text: #6d597a;
+  --text-secondary: #b5838d;
+  --highlight: #ff85a1;
+  --glass: rgba(255, 255, 255, 0.6);
+  --overlay-background: rgba(255, 224, 230, 0.8);
+  --box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
