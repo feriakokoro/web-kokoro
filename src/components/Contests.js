@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMask, faPaintBrush, faMicrophone, faMusic } from "@fortawesome/free-solid-svg-icons";
-import "./contests.css";
-import "./global.css";
-import "./section.css";
+import "../assets/styles/contests.css";
+import "../assets/styles/global.css";
+import "../assets/styles/section.css";
 
 const contestData = require("../data/contests.json").Concursos;
 

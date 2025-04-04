@@ -1,7 +1,8 @@
 import React from "react";
-import "./stands.css";
 import { FaMapMarkerAlt, FaInstagram } from "react-icons/fa";
 import standsData from "../data/stands.json";
+
+import "../assets/styles/stands.css";
 
 const Stands = () => {
     return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import strawberryLogo from "../assets/icons/strawberry-logo.webp";
-import "./navbar.css";
-import "./global.css";
+import "../assets/styles/navbar.css";
+import "../assets/styles/global.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

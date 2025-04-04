@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import scheduleData from "../data/schedule.json";
-import "./global.css";
-import "./schedule.css";
-import "./section.css";
+import "../assets/styles/global.css";
+import "../assets/styles/schedule.css";
+import "../assets/styles/section.css";
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);

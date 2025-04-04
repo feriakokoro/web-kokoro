@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./guests.css";
-import "./global.css";
-import "./section.css";
+import "../assets/styles/guests.css";
+import "../assets/styles/global.css";
+import "../assets/styles/section.css";
 
 const guestsJson = require("../data/guests.json").Invitados;
 

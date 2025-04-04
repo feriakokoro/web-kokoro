@@ -1,7 +1,7 @@
 import React from "react";
-import "./gallery.css";
-import "./global.css";
-import "./section.css";
+import "../assets/styles/gallery.css";
+import "../assets/styles/global.css";
+import "../assets/styles/section.css";
 
 const galleryJson = require("../data/gallery.json").Gallery;
 

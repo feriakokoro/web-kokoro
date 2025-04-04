@@ -1,5 +1,5 @@
 import React from "react";
-import './home.css';
+import '../assets/styles/home.css';
 
 const inicioJson = require("../data/home.json");
 
