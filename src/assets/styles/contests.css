@@ -69,7 +69,6 @@
   margin: 0 auto;
 }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -87,9 +86,15 @@
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
-  width: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 800px;
+  max-height: 90vh;
+  margin: auto;
+  overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #000;
 }
 
 .modal-content h2,

@@ -66,9 +66,9 @@ const Contests = () => {
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
-              <h3>{selectedContest.cmo_se_evalua.title}</h3>
+              <h3>{selectedContest.como_se_evalua.title}</h3>
               <ul>
-                {selectedContest.cmo_se_evalua.details.map((detail, index) => (
+                {selectedContest.como_se_evalua.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
               </ul>
@@ -94,6 +94,7 @@ const Contests = () => {
             </div>
           </div>
         )}
+
       </div>
     </div>
   );
