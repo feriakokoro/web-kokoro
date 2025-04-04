@@ -109,7 +109,6 @@
 			"rules": {
 				"title": "Reglamento",
 				"details": [
-					""
 				]
 			},
 			"additional": {
@@ -152,13 +151,11 @@
 			"prizes": {
 				"title": "Premios",
 				"details": [
-					""
 				]
 			},
 			"rules": {
 				"title": "Reglamento",
 				"details": [
-					""
 				]
 			},
 			"puntaje_y_desempates": {
@@ -225,9 +222,7 @@
 			},
 			"additional": {
 				"title": "Información Adicional",
-				"details": [
-					""
-				]
+				"details": []
 			}
 		}
 	]
