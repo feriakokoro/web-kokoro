@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import scheduleData from "../data/schedule.json";
-import "./global.css";
-import "./Schedule.css";
+import "../assets/styles/global.css";
+import "../assets/styles/schedule.css";
+import "../assets/styles/section.css";
 
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);
@@ -21,22 +22,20 @@ const Schedule = () => {
         <h1 className="title"> CRONOGRAMA</h1>
 
         <div className="schedule-category-filters">
-
           {uniqueDays.map(day => (
             <button
               key={day}
-              className={`filter-btn ${selectedDay === day ? "active" : ""}`}
+              className={`filter-button ${selectedDay === day ? "active" : ""}`}
               onClick={() => setSelectedDay(day)}
             >
               {day}
             </button>
           ))}
-          <button className="filter-btn" onClick={() => setSelectedDay(null)}>
+          <button className="filter-button" onClick={() => setSelectedDay(null)}>
             Mostrar Todo
           </button>
         </div>
 
-        {/* Lista de eventos */}
         <div className="schedule-list">
           {filteredEvents.map((event, index) => (
 

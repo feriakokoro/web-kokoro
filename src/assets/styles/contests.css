@@ -1,12 +1,5 @@
 @import url('./variables.css');
 
-.contests-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
 .contests-grid {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +20,7 @@
 }
 
 .contest-card:hover {
-  transform: translateY(-10px);
+  transform: var(--transform);
 }
 
 .contest-title {
@@ -76,7 +69,6 @@
   margin: 0 auto;
 }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -91,12 +83,17 @@
 }
 
 .modal-content {
-  background-color: #fff;
-  border-radius: 12px;
+  background-color: #f1e1eb;
+  border-radius: 20px;
   padding: 20px;
-  width: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 800px;
+  max-height: 90vh;
+  margin: auto;
+  overflow-y: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 .modal-content h2,
@@ -105,26 +102,23 @@
 }
 
 .modal-content ul {
-  list-style: none;
+  list-style: disc;
   padding-left: 0;
 }
 
 .modal-content li {
   margin-bottom: 10px;
-  color: #333;
+  color: var(--text-secondary);
 }
 
-button {
-  background-color: #ff80ab;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.contest-section {
+  text-align: left;
+  padding: 20px;
 }
 
-button:hover {
-  background-color: #f48fb1;
+.contest-section ul li::before {
+  content: '.';
+  position: absolute;
+  left: 0;
+  color: #f48fb1;
 }

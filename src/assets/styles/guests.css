@@ -1,0 +1,29 @@
+@import url('./variables.css');
+
+.name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #ff4081;
+}
+
+.category {
+  color: #ff4081;
+  font-size: 1em;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.day-tag {
+  background-color: #ff4081;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}

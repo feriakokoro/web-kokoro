@@ -60,7 +60,6 @@
 				]
 			}
 		},
-
 		{
 			"id": "dibujo",
 			"icon": "fa-paint-brush",
@@ -74,7 +73,7 @@
 				"prizes": "Grandes premios"
 			},
 			"inscription": {
-				"title": "Inscripción",
+				"title": "¿Cómo me anoto?",
 				"details": [
 					"Modalidad: Temática Libre.",
 					"Te anotás en mesa de informes el día del evento.",
@@ -83,12 +82,28 @@
 					"Podés dibujar desde que comienza el evento hasta las 16:45 hs, horario límite para entregar tu dibujo en mesa de informes."
 				]
 			},
+			"como_se_evalua": {
+				"title": "¿Cómo se evalúa?",
+				"details": [
+					"El jurado calificará tres aspectos:",
+					"Confección del cosplay → Se priorizan trajes hechos por los participantes o con modificaciones significativas propias.",
+					"Maquillaje → Se revisará la caracterización y los detalles que aporten fidelidad al personaje.",
+					"Performance en escenario → Se evaluará tu interpretación y presencia escénica."
+				]
+			},
 			"prizes": {
 				"title": "Premios",
 				"details": [
 					"Premio para categoría kids.",
 					"Premio para categoría juvenil.",
 					"Premio para categoría adultos."
+				]
+			},
+			"puntaje_y_desempates": {
+				"title": "Puntaje y desempates",
+				"details": [
+					"Se sumarán los puntos de cada categoría para definir a los ganadores.",
+					"En caso de empate, el jurado debatirá hasta llegar a un acuerdo."
 				]
 			},
 			"rules": {
@@ -104,7 +119,6 @@
 				]
 			}
 		},
-
 		{
 			"id": "karaoke",
 			"icon": "fa-microphone",
@@ -117,13 +131,22 @@
 				"prizes": "Grandes premios"
 			},
 			"inscription": {
-				"title": "Inscripción",
+				"title": "¿Cómo me anoto?",
 				"details": [
 					"Anotate en mesa de informes el día del evento.",
 					"Tenés que llevar tu audio instrumental versión TV size en PENDRIVE.",
 					"No se permiten versiones extensas, deben ser versiones que duren hasta 2 minutos.",
 					"Únicamente si vas a cantar KPOP se permiten hasta 3 minutos.",
 					"No se permite el uso de instrumentos, es obligatorio llevar pista."
+				]
+			},
+			"como_se_evalua": {
+				"title": "¿Cómo se evalúa?",
+				"details": [
+					"El jurado calificará tres aspectos:",
+					"Confección del cosplay → Se priorizan trajes hechos por los participantes o con modificaciones significativas propias.",
+					"Maquillaje → Se revisará la caracterización y los detalles que aporten fidelidad al personaje.",
+					"Performance en escenario → Se evaluará tu interpretación y presencia escénica."
 				]
 			},
 			"prizes": {
@@ -138,6 +161,13 @@
 					""
 				]
 			},
+			"puntaje_y_desempates": {
+				"title": "Puntaje y desempates",
+				"details": [
+					"Se sumarán los puntos de cada categoría para definir a los ganadores.",
+					"En caso de empate, el jurado debatirá hasta llegar a un acuerdo."
+				]
+			},
 			"additional": {
 				"title": "Información Adicional",
 				"details": [
@@ -146,7 +176,6 @@
 				]
 			}
 		},
-
 		{
 			"id": "fandancers",
 			"icon": "fa-music",
@@ -159,10 +188,19 @@
 				"prizes": "Grandes premios"
 			},
 			"inscription": {
-				"title": "Inscripción",
+				"title": "¿Cómo me anoto?",
 				"details": [
 					"INSCRIPCIONES ABIERTAS DESDE 03/01/2025 HASTA EL 30/01/2025 a las 23:59hs.",
 					"FORM DE INSCRIPCIÓN: <a href=\"https://forms.gle/EaPrmAa3ZpLbFjNfA\" target=\"_blank\">Haz clic aquí</a>."
+				]
+			},
+			"como_se_evalua": {
+				"title": "¿Cómo se evalúa?",
+				"details": [
+					"El jurado calificará tres aspectos:",
+					"Confección del cosplay → Se priorizan trajes hechos por los participantes o con modificaciones significativas propias.",
+					"Maquillaje → Se revisará la caracterización y los detalles que aporten fidelidad al personaje.",
+					"Performance en escenario → Se evaluará tu interpretación y presencia escénica."
 				]
 			},
 			"prizes": {
@@ -176,6 +214,13 @@
 				"title": "Reglamento",
 				"details": [
 					"Reglamento Fandancers: <a href=\"https://bit.ly/4aUvS1D\" target=\"_blank\">Haz clic aquí</a>."
+				]
+			},
+			"puntaje_y_desempates": {
+				"title": "Puntaje y desempates",
+				"details": [
+					"Se sumarán los puntos de cada categoría para definir a los ganadores.",
+					"En caso de empate, el jurado debatirá hasta llegar a un acuerdo."
 				]
 			},
 			"additional": {
