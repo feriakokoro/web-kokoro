@@ -14,6 +14,22 @@ const iconMap = {
   "fa-music": faMusic,
 };
 
+function buildContest(contestData) {
+  if (contestData.details.length === 0) {
+    return;
+  }
+  return (
+    < div className="contest-section" >
+      <h3>{contestData.title}</h3>
+      <ul>
+        {contestData.details.map((detail, index) => (
+          <li key={index}>{detail}</li>
+        ))}
+      </ul>
+    </div >
+  );
+}
+
 const Contests = () => {
   const [selectedContest, setSelectedContest] = useState(null);
 
@@ -63,6 +79,13 @@ const Contests = () => {
                 <h2>{selectedContest.title}</h2>
               </div>
 
+              {buildContest(selectedContest.inscription)}
+              {buildContest(selectedContest.como_se_evalua)}
+              {buildContest(selectedContest.rules)}
+              {buildContest(selectedContest.puntaje_y_desempates)}
+              {buildContest(selectedContest.additional)}
+
+              {/*
               <div className="contest-section">
                 <h3>{selectedContest.inscription.title}</h3>
                 <ul>
@@ -108,6 +131,7 @@ const Contests = () => {
                   ))}
                 </ul>
               </div>
+              */}
 
               <button className="filter-button" onClick={closeModal}>Cerrar</button>
             </div>
