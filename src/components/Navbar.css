@@ -83,7 +83,7 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 940px) {
+@media (max-width: 990px) {
   .navbar {
     max-width: none;
     width: 100%;

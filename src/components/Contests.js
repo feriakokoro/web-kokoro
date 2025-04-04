@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMask, faPaintBrush, faMicrophone, faMusic } from "@fortawesome/free-solid-svg-icons";
-import "./Contests.css";
+import "./contests.css";
 import "./global.css";
+import "./section.css";
 
 const contestData = require("../data/contests.json").Concursos;
 
@@ -26,7 +27,7 @@ const Contests = () => {
 
   return (
     <div className="page-container">
-      <div className="contests-container">
+      <div className="section-container">
         <h1 className="title">CONCURSOS</h1>
         <div className="contests-grid">
           {contestData.map((contest) => (

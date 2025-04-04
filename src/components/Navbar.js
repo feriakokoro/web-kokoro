@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import strawberryLogo from "../assets/icons/strawberry-logo.webp";
-import "./Navbar.css";
+import "./navbar.css";
 import "./global.css";
 
 const Navbar = () => {

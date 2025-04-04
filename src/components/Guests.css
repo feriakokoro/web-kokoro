@@ -1,68 +1,5 @@
 @import url('./variables.css');
 
-.guests-container {
-  padding: 20px;
-  text-align: center;
-}
-
-.title {
-  text-align: center;
-  font-size: 2rem;
-  color: #ff4081;
-  margin-bottom: 20px;
-}
-
-.filters {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.filter-button {
-  background-color: #f0c9ff;
-  color: #333;
-  border: 2px solid #ff4081;
-  border-radius: 15px;
-  padding: 8px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.filter-button.active {
-  background-color: #ff4081;
-  color: white;
-}
-
-.grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 200px;
-  padding: 15px;
-  border-radius: 15px;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--glass);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: var(--box-shadow);
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.image {
-  width: 100%;
-  border-radius: 10px;
-}
-
 .name {
   font-weight: bold;
   font-size: 1.1em;
@@ -85,14 +22,6 @@
 
 .day-tag {
   background-color: #ff4081;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
-
-.tag {
-  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;

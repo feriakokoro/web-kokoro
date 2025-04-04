@@ -1,17 +1,16 @@
-/* Estilos para la página del cronograma en formato lista */
 @import url('./variables.css');
 
 .schedule-container {
     text-align: center;
     padding: 8rem 0 2rem;
 }
+
 .schedule-category-filters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-  }
-  
+}
 
 .schedule-list {
     max-width: 1000px;
@@ -88,14 +87,6 @@
     display: flex;
     margin-left: autor;
     gap: 5px;
-}
-
-.tag {
-    background: var(--accent);
-    color: var(--text);
-    padding: 0.1rem 0.5rem;
-    border-radius: 50px;
-    font-size: 0.7rem;
 }
 
 @media (max-width: 768px) {

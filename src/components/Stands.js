@@ -1,17 +1,17 @@
 import React from "react";
-import "./Stands.css";
+import "./stands.css";
 import { FaMapMarkerAlt, FaInstagram } from "react-icons/fa";
 import standsData from "../data/stands.json";
 
 const Stands = () => {
     return (
         <div className="page-container">
-        <div className="stands-container">
+        <div className="section-container">
             <h1 className="title">STANDS</h1>
-            <div className="stands-grid">
+            <div className="grid">
                 {standsData.Stands.filter(stand => stand.estado === "Aprobado").map((stand, index) => (
-                    <div className="stand-card" key={index}>
-                        <img src={stand.imagen} alt={stand.nombre} className="stand-image" />
+                    <div className="card" key={index}>
+                        <img src={stand.imagen} alt={stand.nombre} className="image" />
                         <h2 className="stand-name">{stand.nombre}</h2>
                         <p className="stand-location">
                             <FaMapMarkerAlt className="icon" /> {stand.ubicacion}

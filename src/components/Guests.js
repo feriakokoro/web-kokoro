@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Guests.css";
+import "./guests.css";
 import "./global.css";
+import "./section.css";
 
 const guestsJson = require("../data/guests.json").Invitados;
 
@@ -17,7 +18,7 @@ const Guests = () => {
 
   return (
     <div className="page-container">
-      <div className="guests-container">
+      <div className="section-container">
         <h2 className="title">INVITADOS</h2>
 
         {/* Filtros de Tags */}

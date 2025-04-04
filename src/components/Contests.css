@@ -1,12 +1,5 @@
 @import url('./variables.css');
 
-.contests-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
 .contests-grid {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +20,7 @@
 }
 
 .contest-card:hover {
-  transform: translateY(-10px);
+  transform: var(--transform);
 }
 
 .contest-title {
@@ -112,19 +105,4 @@
 .modal-content li {
   margin-bottom: 10px;
   color: #333;
-}
-
-button {
-  background-color: #ff80ab;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #f48fb1;
 }

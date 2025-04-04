@@ -14,28 +14,12 @@ section {
 .title {
   font-size: 2rem;
   color: #f48fb1;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .filter-buttons {
   margin: 15px 0;
-}
-
-.filter-button {
-  background: #ffcdf4;
-  color: #7d003b;
-  border: none;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.filter-button.active,
-.filter-button:hover {
-  background: #ff69b4;
-  color: white;
 }
 
 .filter-button.reset {
@@ -67,4 +51,31 @@ hr {
   border-radius: 15px;
   font-size: 0.9rem;
   margin: 3px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--glass);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+  transform: var(--transform);
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
 }
