@@ -85,54 +85,6 @@ const Contests = () => {
               {buildContest(selectedContest.puntaje_y_desempates)}
               {buildContest(selectedContest.additional)}
 
-              {/*
-              <div className="contest-section">
-                <h3>{selectedContest.inscription.title}</h3>
-                <ul>
-                  {selectedContest.inscription.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="contest-section">
-                <h3>{selectedContest.como_se_evalua.title}</h3>
-                <ul>
-                  {selectedContest.como_se_evalua.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-
-
-              <div className="contest-section">
-                <h3>{selectedContest.rules.title}</h3>
-                <ul>
-                  {selectedContest.rules.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="contest-section">
-                <h3>{selectedContest.puntaje_y_desempates.title}</h3>
-                <ul>
-                  {selectedContest.puntaje_y_desempates.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="contest-section">
-                <h3>{selectedContest.additional.title}</h3>
-                <ul>
-                  {selectedContest.additional.details.map((detail, index) => (
-                    <li key={index}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-              */}
-
               <button className="filter-button" onClick={closeModal}>Cerrar</button>
             </div>
           </div>
