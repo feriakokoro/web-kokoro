@@ -55,42 +55,61 @@ const Contests = () => {
           ))}
         </div>
 
-        {/* Modal */}
         {selectedContest && (
           <div className="modal-overlay" onClick={closeModal}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <h2>{selectedContest.title}</h2>
-              <h3>{selectedContest.inscription.title}</h3>
-              <ul>
-                {selectedContest.inscription.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-              <h3>{selectedContest.como_se_evalua.title}</h3>
-              <ul>
-                {selectedContest.como_se_evalua.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-              <h3>{selectedContest.rules.title}</h3>
-              <ul>
-                {selectedContest.rules.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-              <h3>{selectedContest.puntaje_y_desempates.title}</h3>
-              <ul>
-                {selectedContest.puntaje_y_desempates.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-              <h3>{selectedContest.additional.title}</h3>
-              <ul>
-                {selectedContest.additional.details.map((detail, index) => (
-                  <li key={index}>{detail}</li>
-                ))}
-              </ul>
-              <button onClick={closeModal}>Cerrar</button>
+
+              <div className="modal-header">
+                <h2>{selectedContest.title}</h2>
+              </div>
+
+              <div className="contest-section">
+                <h3>{selectedContest.inscription.title}</h3>
+                <ul>
+                  {selectedContest.inscription.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="contest-section">
+                <h3>{selectedContest.como_se_evalua.title}</h3>
+                <ul>
+                  {selectedContest.como_se_evalua.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+
+              <div className="contest-section">
+                <h3>{selectedContest.rules.title}</h3>
+                <ul>
+                  {selectedContest.rules.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="contest-section">
+                <h3>{selectedContest.puntaje_y_desempates.title}</h3>
+                <ul>
+                  {selectedContest.puntaje_y_desempates.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="contest-section">
+                <h3>{selectedContest.additional.title}</h3>
+                <ul>
+                  {selectedContest.additional.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="filter-button" onClick={closeModal}>Cerrar</button>
             </div>
           </div>
         )}
