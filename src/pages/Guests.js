@@ -8,10 +8,8 @@ const guestsJson = require("../data/guests.json").Invitados;
 const Guests = () => {
   const [selectedTag, setSelectedTag] = useState(null);
 
-  // Obtener todos los tags sin duplicados
   const tags = [...new Set(guestsJson.flatMap(guest => guest.tags))];
 
-  // Filtrar los invitados según el tag seleccionado
   const filteredGuests = selectedTag
     ? guestsJson.filter(guest => guest.tags.includes(selectedTag))
     : guestsJson;

@@ -8,10 +8,8 @@ import "../assets/styles/section.css";
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);
 
-  // Extraer días únicos
   const uniqueDays = [...new Set(scheduleData.Cronograma.map(event => event.day))];
 
-  // Filtrar eventos por día seleccionado
   const filteredEvents = selectedDay
     ? scheduleData.Cronograma.filter(event => event.day === selectedDay)
     : scheduleData.Cronograma;

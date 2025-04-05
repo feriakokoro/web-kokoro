@@ -3,11 +3,11 @@
       { "icon": "🌸", "text": "Desfile y concursos de Cosplay" },
       { "icon": "🛍️", "text": "Stands con productos exclusivos" },
       { "icon": "🎤", "text": "Invitados especiales y paneles" },
-      { "icon": "🎮", "text": "Zona gamer con torneos épicos" },
       { "icon": "🍜", "text": "Gastronomía temática japonesa" }
     ],
     "ubicacion": {
         "fecha": "12 y 13 de Octubre 2025",
-        "lugar": "Centro de Convenciones Kokoro, Buenos Aires"
+        "lugar": "Centro de Convenciones Kokoro, Buenos Aires",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13134.916679125134!2d-58.42670995!3d-34.5825281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b3792514cb%3A0x6deae388f42d06ee!2sLa%20Rural%20Predio%20Ferial%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712328315914!5m2!1ses-419!2sar"
     }
 }
