@@ -1,13 +1,35 @@
 import React from "react";
 import "../assets/styles/home.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
-const inicioJson = require("../data/home.json");
+import homeJson from "../data/home.json";
+
+const pastEventsJson = homeJson.pastEvents;
+
+const buildCarousel = (imagesJson) => {
+  return (
+    <Carousel
+      showThumbs={false}
+      showStatus={false}
+      showArrows={false}
+      infiniteLoop
+      autoPlay
+    >
+      {imagesJson.map((image) => (
+        <div>
+          <img src={image.url} alt={image.description}></img>
+        </div>
+      ))}
+    </Carousel>
+  );
+};
+
+const handleTicketPurchase = () => {
+  window.open("/tickets", "_blank");
+};
 
 const Home = () => {
-  const handleTicketPurchase = () => {
-    window.open("/tickets", "_blank");
-  };
-
   return (
     <div className="container">
       <section className="hero">
@@ -28,11 +50,11 @@ const Home = () => {
       </section>
 
       <section id="activities">
-        <div className="activities-container">
-          <div className="activities-image">
+        <div className="section-flex-container">
+          <div className="section-image">
             <img src="https://animangapop.co.uk/wp-content/uploads/2024/03/3_rev-2.png"></img>
           </div>
-          <div className="activities-text">
+          <div className="section-text">
             <h2 className="section-title">¿Qué podés hacer?</h2>
             <ul>
               <li className="activity-item">
@@ -55,12 +77,28 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="location">
-        <div className="location-container">
+      <section id="past-events">
+        <div className="section-flex-container">
+          <div className="section-text">
+            <h2>Momentos kawaii</h2>
+            <p>
+              Cálido, inclusivo y lleno de emoción. Ideal si querés conectar con
+              quienes ya participaron antes.
+            </p>
+          </div>
+
+          <div className="past-events-image">
+            {buildCarousel(pastEventsJson)}
+          </div>
+        </div>
+      </section>
+
+      <section id="past-events">
+        <div className="section-flex-container">
           <div className="location-map">
-            <div class="map-container">
+            <div className="map-container">
               <iframe
-                src={inicioJson.ubicacion.url}
+                src={homeJson.ubicacion.url}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -68,10 +106,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="location-text">
+          <div className="section-text">
             <h2 className="section-title">Ubicación</h2>
-            <p>Fecha: {inicioJson.ubicacion.fecha}</p>
-            <p>Lugar: {inicioJson.ubicacion.lugar}</p>
+            <p>Fecha: {homeJson.ubicacion.fecha}</p>
+            <p>Lugar: {homeJson.ubicacion.lugar}</p>
           </div>
         </div>
       </section>
