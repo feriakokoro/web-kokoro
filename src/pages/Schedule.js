@@ -8,10 +8,12 @@ import "../assets/styles/section.css";
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);
 
-  const uniqueDays = [...new Set(scheduleData.Cronograma.map(event => event.day))];
+  const uniqueDays = [
+    ...new Set(scheduleData.Cronograma.map((event) => event.day)),
+  ];
 
   const filteredEvents = selectedDay
-    ? scheduleData.Cronograma.filter(event => event.day === selectedDay)
+    ? scheduleData.Cronograma.filter((event) => event.day === selectedDay)
     : scheduleData.Cronograma;
 
   return (
@@ -19,9 +21,8 @@ const Schedule = () => {
       <div className="schedule-section">
         <h1 className="title"> CRONOGRAMA</h1>
 
-{/*}
         <div className="schedule-category-filters">
-          {uniqueDays.map(day => (
+          {uniqueDays.map((day) => (
             <button
               key={day}
               className={`filter-button ${selectedDay === day ? "active" : ""}`}
@@ -30,17 +31,16 @@ const Schedule = () => {
               {day}
             </button>
           ))}
-          <button className="filter-button" onClick={() => setSelectedDay(null)}>
+          <button
+            className="filter-button"
+            onClick={() => setSelectedDay(null)}
+          >
             Mostrar Todo
           </button>
         </div>
-        */}
-
         <div className="schedule-list">
           {filteredEvents.map((event, index) => (
-
             <div key={index} className="schedule-item">
-
               <div className="schedule-header">
                 <p className="schedule-time">{event.time}</p>
                 <h3 className="schedule-title">{event.title}</h3>
@@ -56,10 +56,11 @@ const Schedule = () => {
 
               <div className="schedule-tags">
                 {event.tags.map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
+                  <span key={i} className="tag">
+                    {tag}
+                  </span>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
