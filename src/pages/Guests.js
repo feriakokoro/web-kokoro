@@ -32,7 +32,6 @@ const Guests = () => {
           ))}
         </div>
 
-        {/* Grid de Tarjetas */}
         <div className="grid">
           {filteredGuests.map((guest) => (
             <a

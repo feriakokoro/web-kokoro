@@ -1,11 +1,26 @@
 import React from "react";
-import "../assets/styles/home.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import "../assets/styles/home.css";
 
 import homeJson from "../data/home.json";
 
 const pastEventsJson = homeJson.pastEvents;
+const newsJson = homeJson.news;
+
+const buildNewsGrid = (imagesJson) => {
+  return (
+    <div className="grid">
+      {imagesJson.map((image) => (
+        <div className="card">
+          <img className="image" src={image.url} alt=""></img>
+          <h2>{image.title}</h2>
+          <p>{image.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const buildCarousel = (imagesJson) => {
   return (
@@ -48,7 +63,6 @@ const Home = () => {
           </button>
         </div>
       </section>
-
       <section id="activities">
         <div className="section-flex-container">
           <div className="section-image">
@@ -76,7 +90,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <section id="news">
+        <div className="section-flex-container">
+          <div className="section-text">
+            <h2>Novedades</h2>
+          </div>
+          {buildNewsGrid(newsJson)}
+        </div>
+      </section>
       <section id="past-events">
         <div className="section-flex-container">
           <div className="section-text">
@@ -86,14 +107,12 @@ const Home = () => {
               quienes ya participaron antes.
             </p>
           </div>
-
           <div className="past-events-image">
             {buildCarousel(pastEventsJson)}
           </div>
         </div>
       </section>
-
-      <section id="past-events">
+      <section id="location">
         <div className="section-flex-container">
           <div className="location-map">
             <div className="map-container">
@@ -105,7 +124,6 @@ const Home = () => {
               ></iframe>
             </div>
           </div>
-
           <div className="section-text">
             <h2 className="section-title">Ubicación</h2>
             <p>Fecha: {homeJson.ubicacion.fecha}</p>

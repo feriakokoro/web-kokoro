@@ -1,27 +1,49 @@
 {
-    "actividades": [
-      { "icon": "🌸", "text": "Desfile y concursos de Cosplay" },
-      { "icon": "🛍️", "text": "Stands con productos exclusivos" },
-      { "icon": "🎤", "text": "Invitados especiales y paneles" },
-      { "icon": "🍜", "text": "Gastronomía temática japonesa" }
-    ],
-    "ubicacion": {
-        "fecha": "12 y 13 de Octubre 2025",
-        "lugar": "Centro de Convenciones Kokoro, Buenos Aires",
-        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13134.916679125134!2d-58.42670995!3d-34.5825281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b3792514cb%3A0x6deae388f42d06ee!2sLa%20Rural%20Predio%20Ferial%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712328315914!5m2!1ses-419!2sar"
+  "actividades": [
+    { "icon": "🌸", "text": "Desfile y concursos de Cosplay" },
+    { "icon": "🛍️", "text": "Stands con productos exclusivos" },
+    { "icon": "🎤", "text": "Invitados especiales y paneles" },
+    { "icon": "🍜", "text": "Gastronomía temática japonesa" }
+  ],
+  "ubicacion": {
+    "fecha": "12 y 13 de Octubre 2025",
+    "lugar": "Centro de Convenciones Kokoro, Buenos Aires",
+    "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13134.916679125134!2d-58.42670995!3d-34.5825281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b3792514cb%3A0x6deae388f42d06ee!2sLa%20Rural%20Predio%20Ferial%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712328315914!5m2!1ses-419!2sar"
+  },
+  "pastEvents": [
+    {
+      "url": "https://www.ciudadweb.com.ar/wp-content/uploads/2019/08/12-de-Julio-Se-realizara-la-decima-edici%C3%B3n-de-Anime-Friends-en-el-Centro-de-Exposiciones-de-Costa-Salguero.jpeg",
+      "description": "Evento Costa Salguero"
     },
-    "pastEvents": [
-      {
-        "url": "https://www.ciudadweb.com.ar/wp-content/uploads/2019/08/12-de-Julio-Se-realizara-la-decima-edici%C3%B3n-de-Anime-Friends-en-el-Centro-de-Exposiciones-de-Costa-Salguero.jpeg",
-        "description": "Evento Costa Salguero"
-      },
-      {
-        "url": "https://www.clarin.com/2018/07/12/r1lSEo8mQ_340x340__1.jpg",
-        "description": "Evento Costa Salguero"
-      },
-      {
-        "url": "https://sisanjuan.b-cdn.net/media/k2/items/cache/f0f9952847074d3519032fbfec18e969_XL.jpg?t=20220817_155352",
-        "description": "Evento Costa Salguero"
-      }
-    ]
+    {
+      "url": "https://www.clarin.com/2018/07/12/r1lSEo8mQ_340x340__1.jpg",
+      "description": "Evento Costa Salguero"
+    },
+    {
+      "url": "https://sisanjuan.b-cdn.net/media/k2/items/cache/f0f9952847074d3519032fbfec18e969_XL.jpg?t=20220817_155352",
+      "description": "Evento Costa Salguero"
+    }
+  ],
+  "news": [
+    {
+      "url": "https://i.pinimg.com/736x/1d/b7/4f/1db74f9a42abdd7f6bc364410c1402fd.jpg",
+      "title": "Concurso Cosplay",
+      "description": "Competencias de cosplay temática \"Candy Candy\""
+    },
+    {
+      "url": "https://i.pinimg.com/736x/05/74/51/0574511da648a9c6b84240b104afa5b8.jpg",
+      "title": "Rata Fest",
+      "description": "Charlas de concientización sobre las ratas de laboratorio"
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjc3tiL9NeaQb9DhLatErdTAuw2ubCnAl6YnBL14tvVsEf4vGAIuwZJTgmYZ9YQpY4AmlDJK8te4OQK5Vg56iXkoppo25duADFg0OQvwURTbWf99EjNEky6AWz2ojtMZMzgqmz_slUHLs/s1600/20170511_131830.jpg",
+      "title": "Taller Poesía",
+      "description": "Múltiples talleres donde podrán participar chicxs y grandes"
+    },
+    {
+      "url": "https://magicfest.com.ar/wp-content/uploads/2-300x300.png",
+      "title": "PotterHead",
+      "description": "Cosplay \"PotterHead\" en beneficencia"
+    }
+  ]
 }
