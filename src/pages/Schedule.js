@@ -8,10 +8,8 @@ import "../assets/styles/section.css";
 const Schedule = () => {
   const [selectedDay, setSelectedDay] = useState(null);
 
-  // Extraer días únicos
   const uniqueDays = [...new Set(scheduleData.Cronograma.map(event => event.day))];
 
-  // Filtrar eventos por día seleccionado
   const filteredEvents = selectedDay
     ? scheduleData.Cronograma.filter(event => event.day === selectedDay)
     : scheduleData.Cronograma;
@@ -21,6 +19,7 @@ const Schedule = () => {
       <div className="schedule-section">
         <h1 className="title"> CRONOGRAMA</h1>
 
+{/*}
         <div className="schedule-category-filters">
           {uniqueDays.map(day => (
             <button
@@ -35,6 +34,7 @@ const Schedule = () => {
             Mostrar Todo
           </button>
         </div>
+        */}
 
         <div className="schedule-list">
           {filteredEvents.map((event, index) => (

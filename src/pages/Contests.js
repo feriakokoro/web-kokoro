@@ -14,7 +14,7 @@ const iconMap = {
   "fa-music": faMusic,
 };
 
-function buildContest(contestData) {
+const buildContest = (contestData) => {
   if (contestData.details.length === 0) {
     return;
   }

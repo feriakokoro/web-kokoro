@@ -1,7 +1,7 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 .container {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   background: var(--primary);
 }
@@ -9,7 +9,8 @@
 .hero {
   position: relative;
   height: 80vh;
-  background: url('https://images6.alphacoders.com/756/756831.jpg') center/cover no-repeat;
+  background: url("https://images6.alphacoders.com/756/756831.jpg") center/cover
+    no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +18,7 @@
   color: white;
 }
 
-.overlay {
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,11 +27,12 @@
   background: var(--overlay-background);
 }
 
-.heroContent {
+.hero-content {
   position: relative;
   z-index: 2;
   max-width: 600px;
   padding: 20px;
+  font-family: "Baloo 2", cursive;
 }
 
 .home-title {
@@ -61,31 +63,135 @@
   background: #d81b60;
 }
 
-.info {
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.sectionTitle {
+.section-title {
   font-size: 2em;
   color: #ff4081;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.list {
+h1,
+h2 {
+  font-family: "Baloo 2", cursive;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.section-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  font-family: "Baloo 2", cursive;
+}
+
+.section-image {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-image img {
+  max-width: 100%;
+  /* height: auto;*/
+  height: 500px;
+  border-radius: 20px;
+}
+
+.section-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff66a3;
+}
+
+.section-text ul {
   list-style: none;
   padding: 0;
-  font-size: 1.2em;
 }
 
-.location {
-  margin-top: 40px;
+.section-text ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.news-text {
+  font-family: 'Baloo 2', cursive;
+}
+
+.news-title {
+  color: #ff66a3;
+}
+
+.activity-item span:hover {
+  color: #ff66a3;
+  transition: color 0.3s ease;
+}
+
+.location-map {
+  flex: 1;
+  min-width: 300px;
   padding: 20px;
+  text-align: center;
 }
 
-.location p {
-  font-size: 1.2em;
-  color: #333;
-  margin: 5px 0;
+.map-container {
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 16px;
+}
+
+.past-events-image {
+  flex: 1;
+  max-width: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.past-events-image img {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.carousel .legend {
+  color: #ff66a3;
+  font-family: "Baloo 2", cursive;
+  font-size: 1.1rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 990px) {
+  .section-flex-container {
+    flex-direction: column-reverse;
+  }
+}
+
+.grid-image {
+  align-items: center;
+  width: 170px;
+  height: 255px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
 }
