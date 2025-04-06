@@ -19,6 +19,7 @@ const Schedule = () => {
       <div className="schedule-section">
         <h1 className="title"> CRONOGRAMA</h1>
 
+{/*}
         <div className="schedule-category-filters">
           {uniqueDays.map(day => (
             <button
@@ -33,6 +34,7 @@ const Schedule = () => {
             Mostrar Todo
           </button>
         </div>
+        */}
 
         <div className="schedule-list">
           {filteredEvents.map((event, index) => (
