@@ -1,6 +1,7 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+
 import "../assets/styles/home.css";
 
 import homeJson from "../data/home.json";
@@ -13,9 +14,9 @@ const buildNewsGrid = (imagesJson) => {
     <div className="grid">
       {imagesJson.map((image) => (
         <div className="card">
-          <img className="image" src={image.url} alt=""></img>
-          <h2>{image.title}</h2>
-          <p>{image.description}</p>
+          <img className="grid-image" src={image.url} alt=""></img>
+          <h2 className="news-title">{image.title}</h2>
+          <p className="news-text">{image.description}</p>
         </div>
       ))}
     </div>

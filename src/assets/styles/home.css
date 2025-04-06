@@ -32,7 +32,7 @@
   z-index: 2;
   max-width: 600px;
   padding: 20px;
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
 }
 
 .home-title {
@@ -126,11 +126,18 @@ section {
   font-size: 1.1rem;
 }
 
+.news-text {
+  font-family: 'Baloo 2', cursive;
+}
+
+.news-title {
+  color: #ff66a3;
+}
+
 .activity-item span:hover {
   color: #ff66a3;
   transition: color 0.3s ease;
 }
-
 
 .location-map {
   flex: 1;
@@ -178,4 +185,13 @@ iframe {
   .section-flex-container {
     flex-direction: column-reverse;
   }
+}
+
+.grid-image {
+  align-items: center;
+  width: 170px;
+  height: 255px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
 }
