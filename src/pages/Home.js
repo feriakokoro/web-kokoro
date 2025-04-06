@@ -68,7 +68,7 @@ const Home = () => {
       <section id="activities">
         <div className="section-flex-container">
           <div className="section-image">
-            <img src="https://animangapop.co.uk/wp-content/uploads/2024/03/3_rev-2.png"></img>
+            <img alt="render-kokoro" src="https://animangapop.co.uk/wp-content/uploads/2024/03/3_rev-2.png"></img>
           </div>
           <div className="section-text">
             <h2 className="section-title">¿Qué podés hacer?</h2>
@@ -119,7 +119,8 @@ const Home = () => {
           <div className="location-map">
             <div className="map-container">
               <iframe
-                src={homeJson.location.url}
+                src={locationJson.url}
+                title="colegio san jose"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -128,8 +129,8 @@ const Home = () => {
           </div>
           <div className="section-text">
             <h2 className="section-title">Ubicación</h2>
-            <p>Fecha: {homeJson.location.date}</p>
-            <p>Lugar: {homeJson.location.place}</p>
+            <p>Fecha: {locationJson.date}</p>
+            <p>Lugar: {locationJson.place}</p>
           </div>
         </div>
       </section>
