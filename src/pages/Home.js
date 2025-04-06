@@ -8,6 +8,7 @@ import homeJson from "../data/home.json";
 
 const pastEventsJson = homeJson.pastEvents;
 const newsJson = homeJson.news;
+const locationJson = homeJson.location;
 
 const buildNewsGrid = (imagesJson) => {
   return (
@@ -118,7 +119,7 @@ const Home = () => {
           <div className="location-map">
             <div className="map-container">
               <iframe
-                src={homeJson.ubicacion.url}
+                src={homeJson.location.url}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -127,8 +128,8 @@ const Home = () => {
           </div>
           <div className="section-text">
             <h2 className="section-title">Ubicación</h2>
-            <p>Fecha: {homeJson.ubicacion.fecha}</p>
-            <p>Lugar: {homeJson.ubicacion.lugar}</p>
+            <p>Fecha: {homeJson.location.date}</p>
+            <p>Lugar: {homeJson.location.place}</p>
           </div>
         </div>
       </section>
