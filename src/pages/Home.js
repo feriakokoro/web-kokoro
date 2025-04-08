@@ -6,6 +6,8 @@ import "../assets/styles/home.css";
 
 import homeJson from "../data/home.json";
 
+import nanaCat from "../assets/images/nana_cat.png";
+
 const pastEventsJson = homeJson.pastEvents;
 const newsJson = homeJson.news;
 const locationJson = homeJson.location;
@@ -54,7 +56,7 @@ const Home = () => {
         <div className="hero-content">
           <h1 className="home-title">Feria Kokoro 2025</h1>
           <p className="subtitle">
-            El evento más kawaii de anime, manga, cosplay y cultura geek
+            Un espacio cultural que celebra el arte en todas sus formas
           </p>
           <button
             className="button"
@@ -68,7 +70,7 @@ const Home = () => {
       <section id="activities">
         <div className="section-flex-container">
           <div className="section-image">
-            <img alt="render-kokoro" src="https://animangapop.co.uk/wp-content/uploads/2024/03/3_rev-2.png"></img>
+            <img alt="render-kokoro" src={nanaCat}></img>
           </div>
           <div className="section-text">
             <h2 className="section-title">¿Qué podés hacer?</h2>
@@ -103,7 +105,7 @@ const Home = () => {
       <section id="past-events">
         <div className="section-flex-container">
           <div className="section-text">
-            <h2>Momentos kawaii</h2>
+            <h2>Recuerdos Kokoro</h2>
             <p>
               Cálido, inclusivo y lleno de emoción. Ideal si querés conectar con
               quienes ya participaron antes.
