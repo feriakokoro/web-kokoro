@@ -30,9 +30,9 @@
 }
 
 .navbar-logo-text {
-  font-family: 'Pacifico', cursive;
-  font-size: 24px;
-  color: #311119;
+  font-family: 'Grisly Beast', sans-serif;
+  font-size: 20px;
+  color: #bb96f2;
   font-weight: bold;
 }
 
@@ -44,8 +44,8 @@
 }
 
 .link {
-  font-family: 'Baloo 2';
-  color: #6b4e71;
+  font-family: 'Quenda', sans-serif;
+  color: #5c6a96;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -53,7 +53,7 @@
 }
 
 .link:hover {
-  color: #e44069;
+  color: #4569de;
 }
 
 .menu-toggle {
