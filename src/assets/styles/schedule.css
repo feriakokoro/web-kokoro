@@ -34,10 +34,12 @@
     padding-inline: 40px;
 }
 
+/*
 .schedule-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+    */
 
 .schedule-header,
 .schedule-details {
@@ -60,7 +62,7 @@
     align-items: center;
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: #8fa1d8;
 }
 
 .schedule-location {
@@ -72,15 +74,11 @@
 .schedule-time {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff69b4;
+    color: var(--accent);
 }
 
 .schedule-day {
     font-size: 1rem;
-}
-
-.location-icon {
-    color: var(--accent);
 }
 
 .schedule-tags {

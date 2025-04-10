@@ -34,15 +34,15 @@
 
 .contest-title {
   font-size: 1.2rem;
-  color: #f48fb1;
+  color: var(--accent);
 }
 
 .contest-subtitle {
-  color: #f48fb1;
+  color: var(--accent);
 }
 
 .contest-description {
-  color: var(--text-secondary);
+  color: #7693f1;
 }
 
 .contest-tags {
@@ -54,7 +54,7 @@
 }
 
 .contest-tag {
-  background-color: #ff80ab;
+  background-color: var(--highlight);
   border-radius: 20px;
   padding: 5px 10px;
   font-size: 0.9rem;
@@ -64,7 +64,7 @@
 
 .contest-icon {
   font-size: 2rem;
-  color: #f48fb1;
+  color: var(--accent);
   display: block;
   margin: 0 auto;
 }
@@ -83,7 +83,7 @@
 }
 
 .modal-content {
-  background-color: #f1e1eb;
+  background-color: var(--primary);
   border-radius: 20px;
   padding: 20px;
   width: 70%;
@@ -98,7 +98,7 @@
 
 .modal-content h2,
 .modal-content h3 {
-  color: #f48fb1;
+  color: var(--highlight);
 }
 
 .modal-content ul {
@@ -108,7 +108,7 @@
 
 .modal-content li {
   margin-bottom: 10px;
-  color: var(--text-secondary);
+  color: #5d73bb;
 }
 
 .contest-section {

@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link to="/guests" className="link" onClick={() => setMenuOpen(false)}>INVITADOS</Link>
         <Link to="/stands" className="link" onClick={() => setMenuOpen(false)}>STANDS</Link>
         <Link to="/schedule" className="link" onClick={() => setMenuOpen(false)}>CRONOGRAMA</Link>
-        <Link to="/contests" className="link" onClick={() => setMenuOpen(false)}>CONCURSOS</Link>
+        <Link to="/contests" className="link" onClick={() => setMenuOpen(false)}>ACTIVIDADES</Link>
         <Link to="/gallery" className="link" onClick={() => setMenuOpen(false)}>GALERÍA</Link>
       </div>
       <div className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>

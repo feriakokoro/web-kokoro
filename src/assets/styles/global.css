@@ -13,6 +13,7 @@
 }
 
 .filter-button {
+    font-family: 'Quenda', sans-serif;
     background: var(--accent);
     color: #ffffff;
     border: none;
@@ -26,6 +27,6 @@
 
 .filter-button.active,
 .filter-button:hover {
-    background: #ff4081;
+    background: var(--highlight);
     color: white;
 }

@@ -63,7 +63,7 @@ const Home = () => {
             onClick={handleTicketPurchase}
             aria-label="Comprar entrada para Feria Kokoro"
           >
-            ¡Compra tu Entrada!
+            ¡Participa!
           </button>
         </div>
       </section>

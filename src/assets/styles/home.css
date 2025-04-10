@@ -39,7 +39,7 @@
 .home-title {
   font-size: 3em;
   font-weight: bold;
-  color: var(--accent);
+  color: var(--title);
 }
 
 .subtitle {
@@ -185,8 +185,29 @@ iframe {
 }
 
 @media (max-width: 990px) {
+  /*
   .section-flex-container {
     flex-direction: column-reverse;
+  }
+    */
+
+  .hero {
+    padding: 80px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .home-title {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 10px 20px;
   }
 }
 

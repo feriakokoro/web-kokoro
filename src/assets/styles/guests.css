@@ -4,11 +4,11 @@
   font-weight: bold;
   font-size: 1.1em;
   margin: 10px 0;
-  color: #ff4081;
+  color: var(--highlight);
 }
 
 .category {
-  color: #ff4081;
+  color: #5c6a96;
   font-size: 1em;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .day-tag {
-  background-color: #ff4081;
+  background-color: var(--accent);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;

@@ -50,7 +50,7 @@ hr {
 }
 
 .location-icon {
-  color: #ff69b4;
+  color: var(--highlight);
   margin-right: 8px;
 }
 
@@ -60,7 +60,7 @@ hr {
 
 .tag {
   display: inline-block;
-  background: #ff69b4;
+  background: #bb96f2;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;

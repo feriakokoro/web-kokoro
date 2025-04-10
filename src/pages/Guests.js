@@ -19,7 +19,6 @@ const Guests = () => {
       <div className="section-container">
         <h2 className="title">INVITADOS</h2>
 
-        {/* Filtros de Tags */}
         <div className="filters">
           {tags.map((tag) => (
             <button
