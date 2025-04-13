@@ -20,8 +20,7 @@ const Guests = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await guestsService.getData();
-        setGuestsJson(data);
+        setGuestsJson(await guestsService.getData());
       } catch (error) {
         console.error("Error getting gallery data", error);
       }
@@ -31,7 +30,6 @@ const Guests = () => {
   }, []);
 
   return (
-    <div className="page-container">
       <div className="section-container">
         <h2 className="title">INVITADOS</h2>
 
@@ -77,7 +75,6 @@ const Guests = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

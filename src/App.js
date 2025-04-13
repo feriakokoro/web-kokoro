@@ -6,11 +6,12 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Guests from "./pages/Guests";
 import Schedule from "./pages/Schedule";
 import Contests from "./pages/Contests";
-import Stands from "./pages/Stands";
+//import Guests from "./pages/Guests";
+//import Stands from "./pages/Stands";
 import Gallery from "./pages/Gallery";
+import Participants from "./pages/Participants";
 
 import "./App.css";
 
@@ -22,8 +23,9 @@ function App() {
         <main style={{ flex: 1, paddingBottom: "50px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/guests" element={<Guests />} />
-            <Route path="/stands" element={<Stands />} />
+            <Route path="/participants" element={<Participants />} />
+            {/*<Route path="/guests" element={<Guests />} />
+            <Route path="/stands" element={<Stands />} />*/}
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/contests" element={<Contests />} />
             <Route path="/gallery" element={<Gallery />} />

@@ -1,4 +1,3 @@
-//import { RESULT_CODE_FAIL_DESC } from "@/utils/constants";
 import { API_FAIL_DESC, API_RESPONSE_DESC, RESULT_CODE_FAIL_DESC } from "../utils/constants";
 
 class StandsService {

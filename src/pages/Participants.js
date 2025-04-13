@@ -1,7 +1,14 @@
 import React from "react";
+import Stands from "./Stands";
+import Guests from "./Guests";
 
 const Participants = () => {
-  return (<h1>Participantes</h1>);
+  return (
+    <div className="page-container">
+      <Guests />
+      <Stands />
+    </div>
+  );
 };
 
 export default Participants;
