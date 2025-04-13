@@ -20,4 +20,5 @@ class GuestsService {
   };
 }
 
-export default new GuestsService();
+const guestsService = new GuestsService();
+export default guestsService;

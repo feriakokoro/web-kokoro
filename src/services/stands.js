@@ -20,4 +20,6 @@ class StandsService {
   };
 }
 
-export default new StandsService();
+const standsService = new StandsService();
+
+export default standsService;
