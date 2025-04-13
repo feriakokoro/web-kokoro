@@ -5,16 +5,16 @@ import "../assets/styles/section.css";
 import galleryService from "../services/gallery";
 
 const Gallery = () => {
+  const GALLERY_SEARCH_FAIL = "Error al cargar la galería:";
 
   const [galleryJson, setGalleryJson] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await galleryService.getData();
-        setGalleryJson(data);
+        setGalleryJson(await galleryService.getData());
       } catch (error) {
-        console.error("Error al cargar la galería:", error);
+        console.error(GALLERY_SEARCH_FAIL, error);
       }
     };
 

@@ -19,8 +19,9 @@ const Navbar = () => {
       </div>
       <div className={`links-container ${menuOpen ? "active" : ""}`}>
         <Link to="/" className="link" onClick={() => setMenuOpen(false)}>INICIO</Link>
-        <Link to="/guests" className="link" onClick={() => setMenuOpen(false)}>INVITADOS</Link>
-        <Link to="/stands" className="link" onClick={() => setMenuOpen(false)}>STANDS</Link>
+        <Link to="/participants" className="link" onClick={() => setMenuOpen(false)}>PARTICIPANTES</Link>
+        {/*<Link to="/guests" className="link" onClick={() => setMenuOpen(false)}>INVITADOS</Link>
+        <Link to="/stands" className="link" onClick={() => setMenuOpen(false)}>STANDS</Link>*/}
         <Link to="/schedule" className="link" onClick={() => setMenuOpen(false)}>CRONOGRAMA</Link>
         <Link to="/contests" className="link" onClick={() => setMenuOpen(false)}>ACTIVIDADES</Link>
         <Link to="/gallery" className="link" onClick={() => setMenuOpen(false)}>GALERÍA</Link>
