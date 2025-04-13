@@ -23,7 +23,7 @@ const Guests = () => {
         const data = await guestsService.getData();
         setGuestsJson(data);
       } catch (error) {
-        console.error("Error al cargar la galería:", error);
+        console.error("Error getting gallery data", error);
       }
     };
 
