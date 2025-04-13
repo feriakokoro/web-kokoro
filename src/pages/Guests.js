@@ -1,25 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "../assets/styles/guests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
-const guestsJson = require("../data/guests.json").Invitados;
+import guestsService from "../services/guests";
 
 const Guests = () => {
+  const [guestsJson, setGuestsJson] = useState([]);
+
   const [selectedTag, setSelectedTag] = useState(null);
 
-  const tags = [...new Set(guestsJson.flatMap(guest => guest.tags))];
+  const tags = [...new Set(guestsJson.flatMap((guest) => guest.tags))];
 
   const filteredGuests = selectedTag
-    ? guestsJson.filter(guest => guest.tags.includes(selectedTag))
+    ? guestsJson.filter((guest) => guest.tags.includes(selectedTag))
     : guestsJson;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await guestsService.getData();
+        setGuestsJson(data);
+      } catch (error) {
+        console.error("Error al cargar la galería:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="page-container">
       <div className="section-container">
         <h2 className="title">INVITADOS</h2>
 
-        {/* Filtros de Tags */}
         <div className="filters">
           {tags.map((tag) => (
             <button

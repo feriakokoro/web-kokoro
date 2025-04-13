@@ -44,7 +44,7 @@ const Contests = () => {
   return (
     <div className="page-container">
       <div className="section-container">
-        <h1 className="title">CONCURSOS</h1>
+        <h1 className="title">ACTIVIDADES</h1>
         <div className="contests-grid">
           {contestData.map((contest) => (
             <div
