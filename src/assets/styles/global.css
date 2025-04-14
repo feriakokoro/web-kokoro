@@ -1,32 +1,32 @@
 .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 20px;
 }
 
 .filters {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .filter-button {
-    font-family: 'Quenda', sans-serif;
-    background: var(--accent);
-    color: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+  font-family: "Quenda", sans-serif;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .filter-button.active,
 .filter-button:hover {
-    background: var(--highlight);
-    color: white;
+  background: var(--highlight);
+  color: white;
 }

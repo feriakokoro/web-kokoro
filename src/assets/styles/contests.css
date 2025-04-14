@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 .contests-grid {
   display: flex;
@@ -117,7 +117,7 @@
 }
 
 .contest-section ul li::before {
-  content: '.';
+  content: ".";
   position: absolute;
   left: 0;
   color: #f48fb1;

@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 .navbar {
   background: var(--primary);
@@ -16,7 +16,6 @@
   z-index: 1000;
 }
 
-
 .navbar-logo-container {
   display: flex;
   align-items: center;
@@ -30,7 +29,7 @@
 }
 
 .navbar-logo-text {
-  font-family: 'Grisly Beast', sans-serif;
+  font-family: "Grisly Beast", sans-serif;
   font-size: 20px;
   color: #bb96f2;
   font-weight: bold;
@@ -44,7 +43,7 @@
 }
 
 .link {
-  font-family: 'Quenda', sans-serif;
+  font-family: "Quenda", sans-serif;
   color: #5c6a96;
   text-decoration: none;
   font-size: 20px;
