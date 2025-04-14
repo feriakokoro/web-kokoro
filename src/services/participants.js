@@ -1,24 +1,18 @@
-import {
-  API_FAIL_DESC,
-  API_RESPONSE_DESC,
-  RESULT_CODE_FAIL_DESC,
-} from "../utils/constants";
+import { API_FAIL_DESC, API_RESPONSE_DESC, RESULT_CODE_FAIL_DESC } from "../utils/constants";
 
-class GuestsService {
+class ParticipantsService {
+
   getData = async () => {
     try {
-      const response = await fetch(
-        `${process.env.PUBLIC_URL}/data/guests.json`
-      );
+      const response = await fetch(`${process.env.PUBLIC_URL}/data/participants.json`);
       if (!response.ok) {
         throw new Error(RESULT_CODE_FAIL_DESC);
       }
 
       const text = await response.text();
       console.log(API_RESPONSE_DESC, text);
-
       const data = JSON.parse(text);
-      return data.Invitados;
+      return data.Participantes;
     } catch (error) {
       console.error(API_FAIL_DESC, error);
       throw error;
@@ -26,5 +20,5 @@ class GuestsService {
   };
 }
 
-const guestsService = new GuestsService();
-export default guestsService;
+const participantsService = new ParticipantsService();
+export default participantsService;

@@ -1,34 +1,22 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 .stand-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ff66b2;
-    margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 10px 0;
 }
 
 .stand-location {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .icon {
-    color: #ff66b2;
-    font-size: 1.2rem;
-}
-
-.stand-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #ff66b2;
-    transition: color 0.2s ease-in-out;
-}
-
-.stand-link:hover {
-    color: #d1478c;
+  color: #ff66b2;
+  font-size: 1.2rem;
 }

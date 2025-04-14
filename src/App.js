@@ -2,7 +2,6 @@ import React from "react";
 
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -18,7 +17,9 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
         <Navbar />
         <main style={{ flex: 1, paddingBottom: "50px" }}>
           <Routes>
