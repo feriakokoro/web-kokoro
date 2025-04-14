@@ -43,20 +43,22 @@ const Schedule = () => {
             </button>
           ))}
         </div>
-        <div className="schedule-list">
+        <div className="schedule-grid">
           {filteredCategories.map((event, index) => (
             <div key={index} className="schedule-item">
-              <div className="schedule-header">
-                <p className="schedule-time">{event.time}</p>
-                <h3 className="schedule-title">{event.title}</h3>
+              <div className="schedule-time">
+                <p className="time">{event.time}</p>
+                <p className="day">{event.day}</p>
               </div>
-              <div className="schedule-details">
-                <p className="schedule-day">{event.day}</p>
+
+              <div className="schedule-info">
+                <h3 className="schedule-title">{event.title}</h3>
                 <p className="schedule-location">
                   <FaMapMarkerAlt className="location-icon" />
                   {event.location}
                 </p>
               </div>
+
               <div className="schedule-tags">
                 {event.tags.map((tag, i) => (
                   <span key={i} className="tag">
