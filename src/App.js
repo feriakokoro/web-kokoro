@@ -4,13 +4,9 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Schedule from "./pages/Schedule";
-import Contests from "./pages/Contests";
-import Gallery from "./pages/Gallery";
-import Participants from "./pages/Participants";
 
 import "./App.css";
+import { routes } from "./config/routes";
 
 function App() {
   return (
@@ -21,11 +17,9 @@ function App() {
         <Navbar />
         <main style={{ flex: 1, paddingBottom: "50px" }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/participants" element={<Participants />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/contests" element={<Contests />} />
-            <Route path="/gallery" element={<Gallery />} />
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
           </Routes>
         </main>
         <Footer />
