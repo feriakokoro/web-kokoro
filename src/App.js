@@ -7,8 +7,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Schedule from "./pages/Schedule";
 import Contests from "./pages/Contests";
-//import Guests from "./pages/Guests";
-//import Stands from "./pages/Stands";
 import Gallery from "./pages/Gallery";
 import Participants from "./pages/Participants";
 
@@ -25,8 +23,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/participants" element={<Participants />} />
-            {/*<Route path="/guests" element={<Guests />} />
-            <Route path="/stands" element={<Stands />} />*/}
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/contests" element={<Contests />} />
             <Route path="/gallery" element={<Gallery />} />
