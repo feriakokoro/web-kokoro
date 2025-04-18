@@ -51,7 +51,7 @@
 .schedule-time {
   text-align: center;
   padding-right: 2rem;
-  border-right: 2px solid var(--accent);
+  border-right: 2px solid #bb96f2;
 }
 
 .schedule-time .time {
@@ -59,6 +59,7 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
+  color: var(--accent);
 }
 
 .schedule-time .day {

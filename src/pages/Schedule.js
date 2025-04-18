@@ -1,26 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "../assets/styles/global.css";
 import "../assets/styles/schedule.css";
 import "../assets/styles/section.css";
 
-import scheduleJson from "../data/schedule.json";
+import scheduleService from "../services/schedule";
 
 const Schedule = () => {
+  const SCHEDULE_SEARCH_FAIL = "Error al cargar el cronograma";
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [scheduleJson, setScheduleJson] = useState([]);
   const categories = [
-    ...new Set(
-      scheduleJson.Cronograma.flatMap((scheduleData) => scheduleData.category)
-    ),
+    ...new Set(scheduleJson.flatMap((scheduleData) => scheduleData.category)),
   ];
 
   const filteredCategories = selectedCategory
-    ? scheduleJson.Cronograma.filter(
+    ? scheduleJson.filter(
         (scheduleData) => scheduleData.category === selectedCategory
       )
-    : scheduleJson.Cronograma;
+    : scheduleJson;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setScheduleJson(await scheduleService.getData());
+      } catch (error) {
+        console.error(SCHEDULE_SEARCH_FAIL, error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="page-container">

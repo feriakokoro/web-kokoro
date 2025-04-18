@@ -1,0 +1,172 @@
+{
+  "Cronograma": [
+    {
+      "time": "12:00",
+      "day": "DOMINGO 06",
+      "title": "Apertura Openings",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Expresionista",
+      "tags": []
+    },
+    {
+      "time": "13:00",
+      "day": "DOMINGO 06",
+      "title": "Modo Cine ANIMÉ",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Ateneo",
+      "tags": ["anime"]
+    },
+    {
+      "time": "13:00",
+      "day": "DOMINGO 06",
+      "title": "BLOQUE Kim Hyun Joong",
+      "location": "CUARTO PISO",
+      "category": "Conocimiento",
+      "tags": ["kpop"]
+    },
+    {
+      "time": "14:00",
+      "day": "DOMINGO 06",
+      "title": "Concurso de Karaoke",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Conocimiento",
+      "tags": ["concurso"]
+    },
+    {
+      "time": "14:00",
+      "day": "DOMINGO 06",
+      "title": "CLASE KPOP - FUTW Lisa por @icequeen10_",
+      "location": "SALON, SEGUNDO PISO",
+      "category": "Aventura",
+      "tags": ["kpop", "clase"]
+    },
+    {
+      "time": "14:00",
+      "day": "DOMINGO 06",
+      "title": "RANDOM CHALLENGE - Especial Votación",
+      "location": "PATIO",
+      "category": "Ateneo",
+      "tags": ["juego"]
+    },
+    {
+      "time": "14:00",
+      "day": "DOMINGO 06",
+      "title": "BLOQUE (G)I-DLE",
+      "location": "CUARTO PISO",
+      "category": "Conocimiento",
+      "tags": ["kpop"]
+    },
+    {
+      "time": "14:45",
+      "day": "DOMINGO 06",
+      "title": "Show Kpop: FranHen",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Ateneo",
+      "tags": ["kpop", "show"]
+    },
+    {
+      "time": "15:00",
+      "day": "DOMINGO 06",
+      "title": "Concurso de Cosplay",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Expresionista",
+      "tags": ["concurso", "cosplay"]
+    },
+    {
+      "time": "15:00",
+      "day": "DOMINGO 06",
+      "title": "CLASE KPOP por @kpopschool.xp",
+      "location": "SALON, SEGUNDO PISO",
+      "category": "Expresionista",
+      "tags": ["kpop", "clase"]
+    },
+    {
+      "time": "15:00",
+      "day": "DOMINGO 06",
+      "title": "RANDOM CHALLENGE - Especial BLACKPINK",
+      "location": "PATIO",
+      "category": "Aventura",
+      "tags": ["juego", "kpop"]
+    },
+    {
+      "time": "15:00",
+      "day": "DOMINGO 06",
+      "title": "BLOQUE Stray Kids",
+      "location": "CUARTO PISO",
+      "category": "Aventura",
+      "tags": ["kpop"]
+    },
+    {
+      "time": "16:00",
+      "day": "DOMINGO 06",
+      "title": "RANDOM CHALLENGE DOBLE - Especial BTS",
+      "location": "PATIO",
+      "category": "Aventura",
+      "tags": ["juego", "kpop"]
+    },
+    {
+      "time": "16:00",
+      "day": "DOMINGO 06",
+      "title": "BLOQUE AESPA",
+      "location": "CUARTO PISO",
+      "category": "Aventura",
+      "tags": ["kpop"]
+    },
+    {
+      "time": "16:30",
+      "day": "DOMINGO 06",
+      "title": "Desafio UNXAVI",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Aventura",
+      "tags": ["juego"]
+    },
+    {
+      "time": "17:00",
+      "day": "DOMINGO 06",
+      "title": "TRIVIAS",
+      "location": "PATIO",
+      "category": "Ateneo",
+      "tags": ["juego"]
+    },
+    {
+      "time": "17:15",
+      "day": "DOMINGO 06",
+      "title": "GRAN Sorteo con UNXAVI y Fiooly",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Ateneo",
+      "tags": ["sorteo"]
+    },
+    {
+      "time": "17:30",
+      "day": "DOMINGO 06",
+      "title": "Concurso de Fandancers",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Ateneo",
+      "tags": ["concurso", "baile"]
+    },
+    {
+      "time": "18:30",
+      "day": "DOMINGO 06",
+      "title": "Premiaciones cosplay y fandancer",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Aventura",
+      "tags": ["premiacion"]
+    },
+    {
+      "time": "19:00",
+      "day": "DOMINGO 06",
+      "title": "Cierre",
+      "location": "ESCENARIO, SEGUNDO PISO",
+      "category": "Aventura",
+      "tags": []
+    },
+    {
+      "time": "TODO EL DIA",
+      "day": "DOMINGO 06",
+      "title": "SECTOR GAMER - TORNEO YUHI",
+      "location": "PATIO",
+      "category": "Aventura",
+      "tags": ["gaming", "torneo"]
+    }
+  ]
+}
