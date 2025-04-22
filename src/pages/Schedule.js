@@ -6,6 +6,7 @@ import "../assets/styles/schedule.css";
 import "../assets/styles/section.css";
 
 import scheduleService from "../services/schedule";
+import Buttons from "../components/Buttons";
 
 const Schedule = () => {
   const SCHEDULE_SEARCH_FAIL = "Error al cargar el cronograma";
@@ -37,23 +38,11 @@ const Schedule = () => {
     <div className="page-container">
       <div className="schedule-section">
         <h1 className="title"> CRONOGRAMA</h1>
-        <div className="filters">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-button ${
-                selectedCategory === category ? "active" : ""
-              }`}
-              onClick={() =>
-                setSelectedCategory(
-                  selectedCategory === category ? null : category
-                )
-              }
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <Buttons
+          tags={categories}
+          selectedTag={selectedCategory}
+          onTagSelect={setSelectedCategory}
+        />
         <div className="schedule-grid">
           {filteredCategories.map((event, index) => (
             <div key={index} className="schedule-item">
