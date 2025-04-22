@@ -1,8 +1,10 @@
-import Home from "../pages/Home";
-import Participants from "../pages/Participants";
-import Schedule from "../pages/Schedule";
-import Contests from "../pages/Contests";
-import Gallery from "../pages/Gallery";
+import React from "react";
+
+const Home = React.lazy(() => import("../pages/Home"));
+const Participants = React.lazy(() => import("../pages/Participants"));
+const Schedule = React.lazy(() => import("../pages/Schedule"));
+const Contests = React.lazy(() => import("../pages/Contests"));
+const Gallery = React.lazy(() => import("../pages/Gallery"));
 
 export const routes = [
   { path: "/", element: <Home />, label: "INICIO" },

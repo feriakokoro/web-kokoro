@@ -28,6 +28,7 @@ const Navbar = () => {
             to={route.path}
             className="link"
             onClick={() => setMenuOpen(false)}
+            aria-label={`Navegar a ${route.label}`}
           >
             {route.label}
           </Link>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -16,11 +16,17 @@ function App() {
       >
         <Navbar />
         <main style={{ flex: 1, paddingBottom: "50px" }}>
-          <Routes>
-            {routes.map((route, index) => (
-              <Route key={index} path={route.path} element={route.element} />
-            ))}
-          </Routes>
+          <Suspense fallback={<div>Cargando...</div>}>
+            <Routes>
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={route.element}
+                />
+              ))}
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>
