@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
 import standsService from "../services/stands";
+import Buttons from "../components/Buttons";
 
 const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
@@ -29,18 +30,11 @@ const Stands = () => {
   return (
     <div className="section-container">
       <h1 className="title">STANDS</h1>
-      <div className="filters">
-        {tags.map((tag) => (
-          <button
-            key={tag}
-            className={`filter-button ${selectedTag === tag ? "active" : ""}`}
-            onClick={() => setSelectedTag(selectedTag === tag ? null : tag)}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
-
+      <Buttons
+        tags={tags}
+        selectedTag={selectedTag}
+        onTagSelect={setSelectedTag}
+      />
       <div className="grid">
         {filteredStands
           .filter((stand) => stand.status === "Aprobado")
