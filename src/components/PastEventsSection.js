@@ -2,22 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Carousel } from "react-responsive-carousel";
 import "../assets/styles/home.css";
+import "../assets/styles/past_events.css";
 
 const buildCarousel = (imagesJson) => {
   return (
-    <Carousel
-      showThumbs={false}
-      showStatus={false}
-      showArrows={false}
-      infiniteLoop
-      autoPlay
-    >
-      {imagesJson.map((image, index) => (
-        <div key={index}>
-          <img src={image.url} alt={image.description}></img>
-        </div>
-      ))}
-    </Carousel>
+    <div className="carousel-container">
+      <Carousel
+        showThumbs={false}
+        showStatus={false}
+        showArrows={false}
+        infiniteLoop
+        autoPlay
+      >
+        {imagesJson.map((image, index) => (
+          <div key={index} className="carousel-slide">
+            <img src={image.url} alt={image.description} loading="lazy"></img>
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 
