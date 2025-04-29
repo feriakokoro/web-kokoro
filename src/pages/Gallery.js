@@ -30,7 +30,7 @@ const Gallery = () => {
             <img
               key={index}
               src={element.url}
-              alt={`Imagen ${index + 1}`}
+              alt={element.name}
               className="gallery-image"
             />
           ))}

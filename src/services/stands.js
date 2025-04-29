@@ -1,3 +1,4 @@
+import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
   API_FAIL_DESC,
   API_RESPONSE_DESC,
@@ -5,20 +6,25 @@ import {
 } from "../utils/constants";
 
 class StandsService {
+  constructor() {
+    this.cache = new Map();
+    this.cacheTimeout = getCachedTimeout();
+  }
   getData = async () => {
     try {
-      const response = await fetch(
-        `${process.env.PUBLIC_URL}/data/stands.json`
-      );
+      const cachedData = this.cache.get("stands");
+      if (cachedData && Date.now() - cachedData.timestamp < this.cacheTimeout) {
+        return cachedData.data;
+      }
+      const API_URL = getApiUrl();
+      const response = await fetch(`${API_URL}/stands`);
       if (!response.ok) {
         throw new Error(RESULT_CODE_FAIL_DESC);
       }
-
-      const text = await response.text();
-      console.log(API_RESPONSE_DESC, text);
-
-      const data = JSON.parse(text);
-      return data.Stands;
+      const data = await response.json();
+      this.cache.set("stands", { data, timestamp: Date.now() });
+      console.log(API_RESPONSE_DESC, data);
+      return data;
     } catch (error) {
       console.error(API_FAIL_DESC, error);
       throw error;
