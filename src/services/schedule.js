@@ -1,4 +1,4 @@
-import { getApiUrl } from "../utils/helper";
+import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
   API_FAIL_DESC,
   API_RESPONSE_DESC,
@@ -6,14 +6,24 @@ import {
 } from "../utils/constants";
 
 class ScheduleService {
+  constructor() {
+    this.cache = new Map();
+    this.cacheTimeout = getCachedTimeout();
+  }
+
   getData = async () => {
     try {
+      const cachedData = this.cache.get("schedule");
+      if (cachedData && Date.now() - cachedData.timestamp < this.cacheTimeout) {
+        return cachedData.data;
+      }
       const API_URL = getApiUrl();
       const response = await fetch(`${API_URL}/schedule`);
       if (!response.ok) {
         throw new Error(RESULT_CODE_FAIL_DESC);
       }
       const data = await response.json();
+      this.cache.set("schedule", { data, timestamp: Date.now() });
       console.log(API_RESPONSE_DESC, data);
       return data;
     } catch (error) {
