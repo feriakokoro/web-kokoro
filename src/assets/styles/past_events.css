@@ -1,0 +1,44 @@
+.section-flex-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.past-events-image {
+  flex: 2;
+  min-width: 300px;
+  width: 100%;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel .slide img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .section-flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .past-events-image {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .carousel .slide img {
+    max-height: 300px;
+  }
+}
