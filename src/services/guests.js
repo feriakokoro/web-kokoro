@@ -1,5 +1,6 @@
 import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
+  API_ABORT_DESC,
   API_FAIL_DESC,
   API_RESPONSE_DESC,
   RESULT_CODE_FAIL_DESC,
@@ -17,8 +18,16 @@ class GuestsService {
         return cachedData.data;
       }
 
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
       const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/guests`);
+      const response = await fetch(`${API_URL}/guests`, {
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
       if (!response.ok) {
         throw new Error(RESULT_CODE_FAIL_DESC);
       }
@@ -27,6 +36,9 @@ class GuestsService {
       console.log(API_RESPONSE_DESC, data);
       return data;
     } catch (error) {
+      if (error.name === "AbortError") {
+        throw new Error(API_ABORT_DESC);
+      }
       console.error(API_FAIL_DESC, error);
       throw error;
     }

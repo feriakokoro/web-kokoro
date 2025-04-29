@@ -1,8 +1,8 @@
 import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
+  API_ABORT_DESC,
   API_FAIL_DESC,
   API_RESPONSE_DESC,
-  RESULT_CODE_FAIL_DESC,
 } from "../utils/constants";
 
 class GalleryService {
@@ -17,16 +17,25 @@ class GalleryService {
       if (cachedData && Date.now() - cachedData.timestamp < this.cacheTimeout) {
         return cachedData.data;
       }
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
       const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/gallery`);
-      if (!response.ok) {
-        throw new Error(RESULT_CODE_FAIL_DESC);
-      }
+      const response = await fetch(`${API_URL}/gallery`, {
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
       const data = await response.json();
       this.cache.set("gallery", { data, timestamp: Date.now() });
       console.log(API_RESPONSE_DESC, data);
       return data;
     } catch (error) {
+      if (error.name === "AbortError") {
+        throw new Error(API_ABORT_DESC);
+      }
       console.error(API_FAIL_DESC, error);
       throw error;
     }
