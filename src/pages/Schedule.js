@@ -7,11 +7,15 @@ import "../assets/styles/section.css";
 
 import scheduleService from "../services/schedule";
 import Buttons from "../components/Buttons";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Schedule = () => {
   const SCHEDULE_SEARCH_FAIL = "Error al cargar el cronograma";
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [scheduleJson, setScheduleJson] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const categories = [
     ...new Set(scheduleJson.flatMap((scheduleData) => scheduleData.category)),
   ];
@@ -25,14 +29,23 @@ const Schedule = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setScheduleJson(await scheduleService.getData());
+        setIsLoading(true);
+        setError(null);
+        const data = await scheduleService.getData();
+        setScheduleJson(data);
       } catch (error) {
+        setError(SCHEDULE_SEARCH_FAIL);
         console.error(SCHEDULE_SEARCH_FAIL, error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <div className="error-message">{error}</div>;
 
   return (
     <div className="page-container">
