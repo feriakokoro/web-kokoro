@@ -9,6 +9,7 @@ class GalleryService {
   constructor() {
     this.cache = new Map();
     this.cacheTimeout = getCachedTimeout();
+    this.apiUrl = `${getApiUrl()}/gallery`;
   }
 
   getData = async () => {
@@ -21,8 +22,7 @@ class GalleryService {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/gallery`, {
+      const response = await fetch(this.apiUrl, {
         signal: controller.signal,
       });
 

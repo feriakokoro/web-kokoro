@@ -10,6 +10,7 @@ class GuestsService {
   constructor() {
     this.cache = new Map();
     this.cacheTimeout = getCachedTimeout();
+    this.apiUrl = `${getApiUrl()}/guests`;
   }
   getData = async () => {
     try {
@@ -21,8 +22,7 @@ class GuestsService {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/guests`, {
+      const response = await fetch(this.apiUrl, {
         signal: controller.signal,
       });
 

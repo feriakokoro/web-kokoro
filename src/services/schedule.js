@@ -10,6 +10,7 @@ class ScheduleService {
   constructor() {
     this.cache = new Map();
     this.cacheTimeout = getCachedTimeout();
+    this.apiUrl = `${getApiUrl()}/schedule`;
   }
 
   getData = async () => {
@@ -22,8 +23,7 @@ class ScheduleService {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      const API_URL = getApiUrl();
-      const response = await fetch(`${API_URL}/schedule`, {
+      const response = await fetch(this.apiUrl, {
         signal: controller.signal,
       });
 
