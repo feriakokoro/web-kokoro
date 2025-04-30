@@ -5,17 +5,19 @@ import "../assets/styles/modal.css";
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
-        <button
-          className="modal-close"
-          onClick={onClose}
-          aria-label="Cerrar modal"
-        >
-          &times;
-        </button>
         {children}
+        <button className="filter-button" onClick={onClose}>
+          Cerrar
+        </button>
       </div>
     </div>
   );
