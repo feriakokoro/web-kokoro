@@ -13,21 +13,28 @@ const Gallery = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    let isMounted = true;
+
+    const fetchGallery = async () => {
       try {
-        setIsLoading(true);
         setError(null);
         const data = await galleryService.getData();
-        setGalleryJson(data);
+        if (isMounted) {
+          setGalleryJson(data);
+          setIsLoading(false);
+        }
       } catch (error) {
         setError(GALLERY_SEARCH_FAIL);
         console.error(GALLERY_SEARCH_FAIL, error);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchData();
+    fetchGallery();
   }, []);
 
   if (isLoading) return <LoadingSpinner />;
