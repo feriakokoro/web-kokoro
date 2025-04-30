@@ -6,16 +6,20 @@
   },
   "pastEvents": [
     {
-      "url": "https://www.elteclado.com.ar/fotos/2024/11/15_1722028853408_010.jpeg",
-      "description": "Evento Costa Salguero"
+      "url": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/public/public-kokoro/past_events/JSN_4383.webp",
+      "description": "JSN_4383.webp"
     },
     {
-      "url": "https://media.0221.com.ar/p/377ef207b43164f5e76f80360a037dc5/adjuntos/357/imagenes/100/174/0100174579/1400x0/smart/la-plata-comic-1jpeg.jpeg",
-      "description": "Evento Costa Salguero"
+      "url": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/public/public-kokoro/past_events/JSN_4420.webp",
+      "description": "JSN_4420.webp"
     },
     {
-      "url": "https://ahoramardelplata.com.ar/wp-content/uploads/2023/07/whatsapp-image-2023-07-12-at-114154jpeg.jpeg",
-      "description": "Evento Costa Salguero"
+      "url": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/public/public-kokoro/past_events/JSN_4440.webp",
+      "description": "JSN_4440.webp"
+    },
+    {
+      "url": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/public/public-kokoro/past_events/JSN_4443.webp",
+      "description": "JSN_4443.webp"
     }
   ],
   "news": [
