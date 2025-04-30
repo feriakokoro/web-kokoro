@@ -5,7 +5,7 @@ import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
 import guestsService from "../services/guests";
-import Buttons from "../components/Buttons";
+import Buttons from "./Buttons";
 
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
@@ -53,7 +53,12 @@ const Guests = () => {
             key={guest.id}
             className="card"
           >
-            <img src={guest.image} alt={guest.name} className="image" />
+            <img
+              src={guest.image}
+              alt={guest.name}
+              className="image"
+              loading="lazy"
+            />
             <h3 className="name">{guest.name}</h3>
             <p className="category">{guest.category}</p>
             <div className="tags-container">

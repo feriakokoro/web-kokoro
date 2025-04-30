@@ -29,7 +29,6 @@
 
 @media (max-width: 768px) {
   .section-flex-container {
-    flex-direction: column;
     text-align: center;
   }
 
