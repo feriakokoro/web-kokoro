@@ -57,6 +57,7 @@
   transition: background-color 0.3s ease;
   border: none;
   font-family: "Quenda", sans-serif;
+  text-decoration: none;
 }
 
 .button:hover {

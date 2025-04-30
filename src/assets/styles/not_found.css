@@ -1,0 +1,25 @@
+.not-found-container {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.not-found-container h1 {
+  font-size: 6rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.not-found-container h2 {
+  color: var(--title);
+  margin-bottom: 1rem;
+}
+
+.not-found-image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.not-found-button-container {
+    padding: 4%;
+}
