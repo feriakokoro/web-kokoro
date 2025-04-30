@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/not_found.css";
 import "../assets/styles/home.css";
-import kiwiFondo from "../assets/images/KIWI_FONDO.png";
+import kiwiFondo from "../assets/images/KIWI_FONDO.webp";
 
 const NotFound = () => {
   return (
