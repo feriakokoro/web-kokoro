@@ -83,10 +83,11 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1100px) {
   .navbar {
     max-width: none;
     width: 100%;
+    padding: 1rem 1.5rem;
   }
 
   .links-container {
@@ -108,5 +109,11 @@
 
   .menu-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 405px) {
+  .navbar-logo-text {
+    font-size: 18px;
   }
 }

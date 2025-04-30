@@ -15,7 +15,7 @@ const Gallery = () => {
   useEffect(() => {
     let isMounted = true;
 
-    const fetchGallery = async () => {
+    const fetchData = async () => {
       try {
         setError(null);
         const data = await galleryService.getData();
@@ -34,7 +34,7 @@ const Gallery = () => {
       }
     };
 
-    fetchGallery();
+    fetchData();
   }, []);
 
   if (isLoading) return <LoadingSpinner />;

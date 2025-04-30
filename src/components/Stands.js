@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
 import standsService from "../services/stands";
-import Buttons from "../components/Buttons";
+import Buttons from "./Buttons";
 
 const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
@@ -45,7 +45,12 @@ const Stands = () => {
               rel="noopener noreferrer"
               className="card"
             >
-              <img src={stand.image} alt={stand.name} className="image" />
+              <img
+                src={stand.image}
+                alt={stand.name}
+                className="image"
+                loading="lazy"
+              />
               <h2 className="stand-name">{stand.name}</h2>
               <p className="stand-location">
                 <FaMapMarkerAlt className="icon" /> {stand.location}

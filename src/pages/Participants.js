@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Stands from "./Stands";
-import Guests from "./Guests";
+import Stands from "../components/Stands";
+import Guests from "../components/Guests";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 const Participants = () => {
