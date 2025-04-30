@@ -9,7 +9,6 @@ import Buttons from "../components/Buttons";
 
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
-
   const [selectedTag, setSelectedTag] = useState(null);
 
   const tags = [...new Set(guestsJson.flatMap((guest) => guest.tags))];
@@ -19,11 +18,17 @@ const Guests = () => {
     : guestsJson;
 
   useEffect(() => {
+    let isMounted = true;
     const fetchData = async () => {
       try {
-        setGuestsJson(await guestsService.getData());
+        const data = await guestsService.getData();
+        if (isMounted) {
+          setGuestsJson(data);
+        }
       } catch (error) {
-        console.error("Error getting gallery data", error);
+        console.error("Error al cargar los datos de los invitados", error);
+        if (isMounted) {
+        }
       }
     };
 

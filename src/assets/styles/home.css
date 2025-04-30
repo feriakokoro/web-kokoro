@@ -10,7 +10,7 @@
   position: relative;
   height: auto;
   padding: 350px 20px;
-  background: url("../images/maravillas_invernales.png") center/cover no-repeat;
+  background: url("../images/maravillas_invernales.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,14 +100,11 @@ section {
 .section-image {
   flex: 1;
   min-width: 300px;
-  padding: 20px;
-  text-align: center;
 }
 
 .section-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
 }
 
 .section-text h2 {
@@ -133,13 +130,6 @@ section {
 .news-title {
   color: var(--accent);
 }
-
-/*
-.activity-item span:hover {
-  color: #ff66a3;
-  transition: color 0.3s ease;
-}
-  */
 
 .location-map {
   flex: 1;
@@ -184,12 +174,6 @@ iframe {
 }
 
 @media (max-width: 990px) {
-  /*
-  .section-flex-container {
-    flex-direction: column-reverse;
-  }
-    */
-
   .hero {
     padding: 80px 20px;
     background-repeat: no-repeat;

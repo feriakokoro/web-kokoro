@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/home.css";
-import nanaCat from "../assets/images/nana_cat.png";
+import nanaCat from "../assets/images/nana_cat.webp";
 
 const ActivitiesSection = () => {
   return (
