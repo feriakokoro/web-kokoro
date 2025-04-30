@@ -7,6 +7,8 @@ import {
 
 class GuestsService {
   constructor() {
+    this.isLoading = false;
+    this.pendingPromise = null;
     this.cache = new Map();
     this.cacheTimeout = getCachedTimeout();
     this.apiUrl = `${getApiUrl()}/guests`;
@@ -18,22 +20,34 @@ class GuestsService {
         return cachedData.data;
       }
 
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-      const response = await fetch(this.apiUrl, {
-        signal: controller.signal,
-      });
-
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(RESULT_CODE_FAIL_DESC);
+      if (this.isLoading) {
+        return this.pendingPromise;
       }
-      const data = await response.json();
-      this.cache.set("guests", { data, timestamp: Date.now() });
-      
-      return data;
+
+      this.isLoading = true;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+      this.pendingPromise = fetch(this.apiUrl, {
+        signal: controller.signal,
+      })
+        .then((response) => {
+          clearTimeout(timeoutId);
+          if (!response.ok) {
+            throw new Error(RESULT_CODE_FAIL_DESC);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          this.cache.set("guests", { data, timestamp: Date.now() });
+          return data;
+        })
+        .finally(() => {
+          this.isLoading = false;
+          this.pendingPromise = null;
+        });
+
+      return this.pendingPromise;
     } catch (error) {
       if (error.name === "AbortError") {
         throw new Error(API_ABORT_DESC);
