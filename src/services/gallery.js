@@ -2,7 +2,6 @@ import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
   API_ABORT_DESC,
   API_FAIL_DESC,
-  API_RESPONSE_DESC,
 } from "../utils/constants";
 
 class GalleryService {
@@ -30,7 +29,7 @@ class GalleryService {
 
       const data = await response.json();
       this.cache.set("gallery", { data, timestamp: Date.now() });
-      console.log(API_RESPONSE_DESC, data);
+      
       return data;
     } catch (error) {
       if (error.name === "AbortError") {

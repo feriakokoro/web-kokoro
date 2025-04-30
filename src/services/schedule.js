@@ -2,7 +2,6 @@ import { getApiUrl, getCachedTimeout } from "../utils/helper";
 import {
   API_ABORT_DESC,
   API_FAIL_DESC,
-  API_RESPONSE_DESC,
   RESULT_CODE_FAIL_DESC,
 } from "../utils/constants";
 
@@ -34,7 +33,7 @@ class ScheduleService {
       }
       const data = await response.json();
       this.cache.set("schedule", { data, timestamp: Date.now() });
-      console.log(API_RESPONSE_DESC, data);
+      
       return data;
     } catch (error) {
       if (error.name === "AbortError") {

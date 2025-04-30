@@ -12,7 +12,7 @@ class HomeService {
         throw new Error(RESULT_CODE_FAIL_DESC);
       }
       const text = await response.text();
-      console.log(API_RESPONSE_DESC, text);
+
       const data = JSON.parse(text);
       return data;
     } catch (error) {
