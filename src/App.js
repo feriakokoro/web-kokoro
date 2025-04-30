@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 import { routes } from "./config/routes";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                   element={route.element}
                 />
               ))}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
