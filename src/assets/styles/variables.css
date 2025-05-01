@@ -12,6 +12,13 @@
   --box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   --transition: transform 0.3s ease, box-shadow 0.3s ease;
   --transform: scale(1.05);
+
+  --font-primary: "Quenda", sans-serif;
+  --font-secondary: "Baloo 2", cursive;
+  --font-heading: "Grisly Beast", sans-serif;
+
+  --background-img: url("../images/maravillas_invernales.webp") center/cover
+    no-repeat;
 }
 
 * {

@@ -1,7 +1,7 @@
 @import url("./variables.css");
 
 .container {
-  font-family: "Quenda", sans-serif;
+  font-family: var(--font-primary);
   text-align: center;
   background: var(--primary);
 }
@@ -10,7 +10,7 @@
   position: relative;
   height: auto;
   padding: 350px 20px;
-  background: url("../images/maravillas_invernales.webp") center/cover no-repeat;
+  background: var(--background-img);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: none;
-  font-family: "Quenda", sans-serif;
+  font-family: var(--font-primary);
   text-decoration: none;
 }
 
@@ -73,7 +73,7 @@
 
 h1,
 h2 {
-  font-family: "Grisly Beast", sans-serif;
+  font-family: var(--font-heading);
 }
 
 section {
@@ -94,12 +94,14 @@ section {
   flex: 1;
   min-width: 300px;
   padding: 20px;
-  font-family: "Baloo 2", cursive;
+  font-family: var(--font-secondary);
+  order: 1;
 }
 
 .section-image {
   flex: 1;
   min-width: 300px;
+  order: 2;
 }
 
 .section-image img {
@@ -124,7 +126,7 @@ section {
 }
 
 .news-text {
-  font-family: "Baloo 2", cursive;
+  font-family: var(--font-secondary);
 }
 
 .news-title {
@@ -157,6 +159,7 @@ iframe {
   max-width: auto;
   padding: 20px;
   text-align: center;
+  order: 2;
 }
 
 .past-events-image img {
@@ -168,7 +171,7 @@ iframe {
 
 .carousel .legend {
   color: #ff66a3;
-  font-family: "Baloo 2", cursive;
+  font-family: var(--font-secondary);
   font-size: 1.1rem;
   border-radius: 12px;
 }
@@ -201,4 +204,8 @@ iframe {
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
+}
+
+.grid {
+  order: 2;
 }
