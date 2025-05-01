@@ -4,11 +4,9 @@ import Modal from "./Modal";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
-
   const handleModalClose = () => {
     setIsModalOpen(false);
   };

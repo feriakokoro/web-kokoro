@@ -10,9 +10,7 @@ import Buttons from "./Buttons";
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
-
   const tags = [...new Set(guestsJson.flatMap((guest) => guest.tags))];
-
   const filteredGuests = selectedTag
     ? guestsJson.filter((guest) => guest.tags.includes(selectedTag))
     : guestsJson;
@@ -38,7 +36,6 @@ const Guests = () => {
   return (
     <div className="section-container">
       <h2 className="title">INVITADOS</h2>
-
       <Buttons
         tags={tags}
         selectedTag={selectedTag}

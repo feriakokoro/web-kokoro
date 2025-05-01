@@ -2,7 +2,11 @@ import React from "react";
 import "../assets/styles/home.css";
 import PropTypes from "prop-types";
 
-const LocationSection = ({ locationJson = [] }) => {
+const LocationSection = ({ locationJson = {} }) => {
+  if (!locationJson?.url || !locationJson?.date || !locationJson?.place) {
+    console.log("LocationSection", "No data to display");
+    return null;
+  }
   return (
     <section id="location">
       <div className="section-flex-container">
@@ -11,9 +15,9 @@ const LocationSection = ({ locationJson = [] }) => {
             <iframe
               src={locationJson.url}
               title="colegio san jose"
-              allowfullscreen=""
+              allowFullScreen
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer"
             ></iframe>
           </div>
         </div>
@@ -32,7 +36,7 @@ LocationSection.propTypes = {
     url: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     place: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default LocationSection;
