@@ -28,9 +28,9 @@ const HeroSection = () => {
         </button>
       </div>
       <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-        <h2>¡Bienvenido a Feria Kokoro 2025!</h2>
-        <p>Precio de la entrada: $3.000 en efectivo</p>
-        <p>Lugar: Lavalle 1330 Piso 1 Dto 3</p>
+        <h2>¡Bienvenides a Feria Kokoro: Maravillas Invernales!</h2>
+        <p>Precio de la entrada anticipada: $3.000 en efectivo</p>
+        <p>Lugar: Montevideo 1009, P1 Kuma Pinku Atelier</p>
         <p>Con tu entrada obtenés Photocards Exclusivas el día del evento.</p>
       </Modal>
     </section>

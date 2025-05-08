@@ -35,7 +35,7 @@ const Guests = () => {
 
   return (
     <div className="section-container">
-      <h2 className="title">INVITADOS</h2>
+      <h2 className="title">INVITADES</h2>
       <Buttons
         tags={tags}
         selectedTag={selectedTag}

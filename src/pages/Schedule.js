@@ -50,7 +50,7 @@ const Schedule = () => {
   return (
     <div className="page-container">
       <div className="schedule-section">
-        <h1 className="title"> CRONOGRAMA</h1>
+        <h1 className="title"> CRONOGRAMA DE ACTIVIDADES</h1>
         <Buttons
           tags={categories}
           selectedTag={selectedCategory}

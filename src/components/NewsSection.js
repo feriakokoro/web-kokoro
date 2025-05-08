@@ -15,11 +15,17 @@ const NewsSection = ({ newsJson = [] }) => {
         </div>
         <div className="grid">
           {newsJson.map((image, index) => (
-            <div className="card" key={index}>
-              <img className="grid-image" src={image.url} alt=""></img>
-              <h2 className="news-title">{image.title}</h2>
-              <p className="news-text">{image.description}</p>
-            </div>
+            <a
+              href={image.socialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="card"
+            >
+                <img className="grid-image" src={image.imageUrl} alt=""></img>
+                <h2 className="news-title">{image.title}</h2>
+                <p className="news-text">{image.description}</p>
+            </a>
           ))}
         </div>
       </div>

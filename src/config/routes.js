@@ -12,6 +12,6 @@ export const routes = [
   { path: "/participants", element: <Participants />, label: "PARTICIPANTES" },
   { path: "/schedule", element: <Schedule />, label: "CRONOGRAMA" },
   { path: "/contests", element: <Contests />, label: "ACTIVIDADES" },
-  { path: "/stamps", element: <Stamps />, label: "COLECCIONADOR" },
+  //{ path: "/stamps", element: <Stamps />, label: "COLECCIONADOR" },
   { path: "/gallery", element: <Gallery />, label: "GALERÍA" },
 ];
