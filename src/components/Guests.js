@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "../assets/styles/guests.css";
 import "../assets/styles/global.css";
@@ -9,10 +10,12 @@ import Buttons from "./Buttons";
 
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
-  const [selectedTag, setSelectedTag] = useState(null);
-  const tags = [...new Set(guestsJson.flatMap((guest) => guest.tags))];
-  const filteredGuests = selectedTag
-    ? guestsJson.filter((guest) => guest.tags.includes(selectedTag))
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const categories = [
+    ...new Set(guestsJson.flatMap((guest) => guest.category)),
+  ];
+  const filteredGuests = selectedCategory
+    ? guestsJson.filter((guest) => guest.category.includes(selectedCategory))
     : guestsJson;
 
   useEffect(() => {
@@ -37,9 +40,9 @@ const Guests = () => {
     <div className="section-container">
       <h2 className="title">INVITADES</h2>
       <Buttons
-        tags={tags}
-        selectedTag={selectedTag}
-        onTagSelect={setSelectedTag}
+        tags={categories}
+        selectedTag={selectedCategory}
+        onTagSelect={setSelectedCategory}
       />
       <div className="grid">
         {filteredGuests.map((guest) => (
@@ -51,27 +54,15 @@ const Guests = () => {
             className="card"
           >
             <img
-              src={guest.image}
+              src={guest.imageUrl}
               alt={guest.name}
               className="image"
               loading="lazy"
             />
             <h3 className="name">{guest.name}</h3>
-            <p className="category">{guest.category}</p>
-            <div className="tags-container">
-              {guest.days.map((day, index) => (
-                <span key={index} className="day-tag">
-                  {day}
-                </span>
-              ))}
-            </div>
-            <div className="tags-container">
-              {guest.tags.map((tag, index) => (
-                <span key={index} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <p className="location">
+              <FaMapMarkerAlt className="icon" /> {guest.location}
+            </p>
           </a>
         ))}
       </div>
