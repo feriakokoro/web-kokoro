@@ -8,10 +8,8 @@ const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
 
-  // Extraer categorías únicas para usar como tags
   const tags = [...new Set(standsJson.map((stand) => stand.category))];
 
-  // Filtrar stands por categoría seleccionada
   const filteredStands = selectedTag
     ? standsJson.filter((stand) => stand.category === selectedTag)
     : standsJson;
