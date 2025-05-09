@@ -60,9 +60,11 @@ const Guests = () => {
               loading="lazy"
             />
             <h3 className="name">{guest.name}</h3>
-            <p className="location">
-              <FaMapMarkerAlt className="icon" /> {guest.location}
-            </p>
+            {guest.location && (
+              <p className="location">
+                <FaMapMarkerAlt className="icon" /> {guest.location}
+              </p>
+            )}
           </a>
         ))}
       </div>
