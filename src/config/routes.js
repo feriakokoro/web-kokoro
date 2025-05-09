@@ -5,7 +5,7 @@ const Participants = React.lazy(() => import("../pages/Participants"));
 const Schedule = React.lazy(() => import("../pages/Schedule"));
 const Contests = React.lazy(() => import("../pages/Contests"));
 const Gallery = React.lazy(() => import("../pages/Gallery"));
-const Stamps = React.lazy(() => import("../pages/Stamps"));
+//const Stamps = React.lazy(() => import("../pages/Stamps"));
 
 export const routes = [
   { path: "/", element: <Home />, label: "INICIO" },
