@@ -6,21 +6,23 @@ import Buttons from "./Buttons";
 
 const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
-
   const [selectedTag, setSelectedTag] = useState(null);
 
-  const tags = [...new Set(standsJson.flatMap((stand) => stand.tags))];
+  // Extraer categorías únicas para usar como tags
+  const tags = [...new Set(standsJson.map((stand) => stand.category))];
 
+  // Filtrar stands por categoría seleccionada
   const filteredStands = selectedTag
-    ? standsJson.filter((stand) => stand.tags.includes(selectedTag))
+    ? standsJson.filter((stand) => stand.category === selectedTag)
     : standsJson;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setStandsJson(await standsService.getData());
+        const data = await standsService.getData();
+        setStandsJson(data);
       } catch (error) {
-        console.error("Error al cargar la galería:", error);
+        console.error("Error al cargar los stands:", error);
       }
     };
 
@@ -36,34 +38,29 @@ const Stands = () => {
         onTagSelect={setSelectedTag}
       />
       <div className="grid">
-        {filteredStands
-          .filter((stand) => stand.status === "Aprobado")
-          .map((stand, index) => (
-            <a
-              href={stand.socialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card"
-            >
-              <img
-                src={stand.image}
-                alt={stand.name}
-                className="image"
-                loading="lazy"
-              />
-              <h2 className="stand-name">{stand.name}</h2>
-              <p className="stand-location">
-                <FaMapMarkerAlt className="icon" /> {stand.location}
-              </p>
-              <div className="tags-container">
-                {stand.tags.map((tag, index) => (
-                  <span key={index} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))}
+        {filteredStands.map((stand, index) => (
+          <a
+            key={`${stand.name}-${index}`}
+            href={stand.socialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
+            <img
+              src={stand.imageUrl}
+              alt={stand.name}
+              className="image"
+              loading="lazy"
+            />
+            <h2 className="stand-name">{stand.name}</h2>
+            <p className="stand-location">
+              <FaMapMarkerAlt className="icon" /> {stand.location}
+            </p>
+            {/*<div className="tags-container">
+              <span className="tag">{stand.category}</span>
+            </div>*/}
+          </a>
+        ))}
       </div>
     </div>
   );
