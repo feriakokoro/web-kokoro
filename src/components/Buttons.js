@@ -9,7 +9,7 @@ const Buttons = ({ tags, selectedTag, onTagSelect }) => {
           className={`filter-button ${selectedTag === tag ? "active" : ""}`}
           onClick={() => onTagSelect(selectedTag === tag ? null : tag)}
         >
-          {tag}
+          {tag.toUpperCase()}
         </button>
       ))}
     </div>
