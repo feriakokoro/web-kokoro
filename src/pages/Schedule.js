@@ -65,7 +65,9 @@ const Schedule = () => {
               </div>
 
               <div className="schedule-info">
-                <h3 className="schedule-title">{event.title}</h3>
+                <h3 className="schedule-title">
+                  {event.title} ({event.participant})
+                </h3>
                 <p className="schedule-location">
                   <FaMapMarkerAlt className="location-icon" />
                   {event.location}
