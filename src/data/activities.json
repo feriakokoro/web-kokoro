@@ -1,0 +1,76 @@
+[
+  {
+    "capacity": "42",
+    "cardDetails": {
+      "icon": "fa-book",
+      "imageUrl": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/sign/kokoro-backend/activities/example.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzYwYWIxMmRlLTZjZjMtNDM1ZC1hM2IzLTNkN2I4ZWY5MTBiOSJ9.eyJ1cmwiOiJrb2tvcm8tYmFja2VuZC9hY3Rpdml0aWVzL2V4YW1wbGUud2VicCIsImlhdCI6MTc0Njg0Nzg2OCwiZXhwIjoxNzQ2OTM0MjY4fQ.RTTlM3OkfQYXhH0cZonm2zDjcLPATTIZPpeu3SodDGw",
+      "registrationDate": "2 de junio",
+      "title": "Lectura"
+    },
+    "createdAt": "2025-05-09T18:34:25.444671+00:00",
+    "descriptions": ["parrafo A", "ParrafoB"],
+    "exhibitors": ["linda", "lindo"],
+    "id": 1,
+    "urlForm": "https://jigoku-random.com.ar/concursos.html",
+    "urlPost": "https://jigoku-random.com.ar/concursos.html",
+    "tags": ["Escritura"]
+  },
+  {
+    "capacity": "42",
+    "cardDetails": {
+      "icon": "fa-book",
+      "imageUrl": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/sign/kokoro-backend/activities/example.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzYwYWIxMmRlLTZjZjMtNDM1ZC1hM2IzLTNkN2I4ZWY5MTBiOSJ9.eyJ1cmwiOiJrb2tvcm8tYmFja2VuZC9hY3Rpdml0aWVzL2V4YW1wbGUud2VicCIsImlhdCI6MTc0Njg0Nzg2NywiZXhwIjoxNzQ2OTM0MjY3fQ.hkjMzxOf5I-EYGRFM_bF8im394gUjDJ-quJYy_wLz_A",
+      "registrationDate": "2 de junio",
+      "title": "Pintura"
+    },
+    "createdAt": "2025-05-09T18:35:29.838956+00:00",
+    "descriptions": ["parrafo A", "ParrafoB"],
+    "exhibitors": ["linda", "lindo"],
+    "id": 2,
+    "urlForm": "https://jigoku-random.com.ar/concursos.html",
+    "urlPost": "https://jigoku-random.com.ar/concursos.html",
+    "tags": ["Pintura", "Expresionismo"]
+  },
+  {
+    "capacity": "42",
+    "cardDetails": {
+      "icon": "fa-book",
+      "imageUrl": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/sign/kokoro-backend/activities/example.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzYwYWIxMmRlLTZjZjMtNDM1ZC1hM2IzLTNkN2I4ZWY5MTBiOSJ9.eyJ1cmwiOiJrb2tvcm8tYmFja2VuZC9hY3Rpdml0aWVzL2V4YW1wbGUud2VicCIsImlhdCI6MTc0Njg0Nzg2OCwiZXhwIjoxNzQ2OTM0MjY4fQ.RTTlM3OkfQYXhH0cZonm2zDjcLPATTIZPpeu3SodDGw",
+      "registrationDate": "2 de junio",
+      "title": "Title"
+    },
+    "createdAt": "2025-05-09T18:44:29.868024+00:00",
+    "descriptions": ["parrafo A", "ParrafoB"],
+    "exhibitors": ["linda", "lindo"],
+    "id": 3,
+    "urlForm": "https://jigoku-random.com.ar/concursos.html",
+    "urlPost": "https://jigoku-random.com.ar/concursos.html",
+    "tags": ["Escritura"]
+  },
+  {
+    "capacity": "40",
+    "cardDetails": {
+      "icon": "fa-book",
+      "imageUrl": "https://rehynvqlfigibezkxosz.supabase.co/storage/v1/object/sign/kokoro-backend/activities/taller_escritura.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzYwYWIxMmRlLTZjZjMtNDM1ZC1hM2IzLTNkN2I4ZWY5MTBiOSJ9.eyJ1cmwiOiJrb2tvcm8tYmFja2VuZC9hY3Rpdml0aWVzL3RhbGxlcl9lc2NyaXR1cmEud2VicCIsImlhdCI6MTc0Njg0Nzg2OCwiZXhwIjoxNzQ2OTM0MjY4fQ.8-DkHJzcBi3dqs_WhjfVV4z-bii4-m0d4IvoUS8_8yA",
+      "registrationDate": "Inscripción online el 2 de junio",
+      "title": "Taller de Escritura"
+    },
+    "createdAt": "2025-05-09T18:44:29.868024+00:00",
+    "descriptions": [
+      "Cuando pensamos en la escritura, nos imaginamos a una persona encerrada en su habitación, tipeando sobre el teclado a una velocidad frenética, presa de la inspiración. Y pensamos que es un arte solitario, alejado, distante.",
+      "Sin embargo, lo más importante en la escritura es la retroalimentación y lo que compartimos con los demás. Porque, al fin y al cabo, la escritura busca comunicar algo y para eso necesitamos al otro. Solo así podemos crecer, nutrir nuestra escritura, conocer cosas nuevas, puntos de vista distintos, errores que no notábamos y que nos llevan a ser mejores escritores.",
+      "Por eso en esta feria te invitamos a nutrir tu escritura. Vamos a hacer un taller de escritura para compartir y debatir nuestros escritos. Será una mesa redonda donde nos leeremos y retroalimentaremos. Es importante que traigas algo escrito de hasta 3000 palabras, que vengas predispuesto y con respeto. La idea es construir, no destruir. ¡Te esperamos!"
+    ],
+    "exhibitors": [
+      "Lucía Colella",
+      "Carolina Perazzo",
+      "Ximena García",
+      "Natasha Domíngues Di Virgilio",
+      "Mara Ávila"
+    ],
+    "id": 4,
+    "urlForm": "https://jigoku-random.com.ar/concursos.html",
+    "urlPost": "https://jigoku-random.com.ar/concursos.html",
+    "tags": ["Escritura"]
+  }
+]
