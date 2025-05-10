@@ -91,9 +91,9 @@ const Contests = () => {
                 <p className="contest-description">
                   {activity.cardDetails.registrationDate}
                 </p>
-                <h3 className="contest-title">Capacidad</h3>
+                <h3 className="contest-title">Cupo</h3>
                 <p className="contest-description">
-                  {activity.capacity} personas
+                  Hasta {activity.capacity} personas
                 </p>
               </div>
             </div>
@@ -102,19 +102,47 @@ const Contests = () => {
 
         {selectedActivity && (
           <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content activity" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
                 <h2>{selectedActivity.cardDetails.title}</h2>
               </div>
+
               {buildActivityDescription(
                 "Descripcion",
                 selectedActivity.descriptions
               )}
+
               {buildActivityModal("Exhibidores", selectedActivity.exhibitors)}
-              <p>CAPACIDAD LIMITADA {selectedActivity.capacity} PERSONAS</p>
+
+              <div className="contest-section">
+                <h3>CUPO</h3>
+                <p>
+                  Capacidad limitada hasta {selectedActivity.capacity} personas
+                </p>
+              </div>
+              <div className="modal-action-buttons">
+                <a
+                  href={selectedActivity.urlPost}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="filter-button primary"
+                >
+                  Ver publicación original
+                </a>
+                <a
+                  href={selectedActivity.urlForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="filter-button secondary"
+                >
+                  Ir al formulario
+                </a>
+              </div>
+              {/*}
               <button className="filter-button" onClick={closeModal}>
                 Cerrar
               </button>
+              */}
             </div>
           </div>
         )}
