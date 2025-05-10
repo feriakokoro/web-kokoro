@@ -171,3 +171,20 @@
 .filter-button.secondary:hover {
   background-color: #28a745;
 }
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #454b81;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: #343a6a;
+}

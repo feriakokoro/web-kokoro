@@ -102,7 +102,18 @@ const Contests = () => {
 
         {selectedActivity && (
           <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content activity" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="modal-content activity"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="modal-close-button"
+                onClick={closeModal}
+                aria-label="Cerrar modal"
+              >
+                &times;
+              </button>
+
               <div className="modal-header">
                 <h2>{selectedActivity.cardDetails.title}</h2>
               </div>
@@ -115,7 +126,7 @@ const Contests = () => {
               {buildActivityModal("Exhibidores", selectedActivity.exhibitors)}
 
               <div className="contest-section">
-                <h3>CUPO</h3>
+                <h3>Cupo</h3>
                 <p>
                   Capacidad limitada hasta {selectedActivity.capacity} personas
                 </p>
@@ -138,11 +149,6 @@ const Contests = () => {
                   Ir al formulario
                 </a>
               </div>
-              {/*}
-              <button className="filter-button" onClick={closeModal}>
-                Cerrar
-              </button>
-              */}
             </div>
           </div>
         )}
