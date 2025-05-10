@@ -48,7 +48,6 @@ class HomeService {
                 ? data.location
                 : {},
           };
-          console.log("Structured Data:", structuredData);
           this.cache.set("home", {
             data: structuredData,
             timestamp: Date.now(),

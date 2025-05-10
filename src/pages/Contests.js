@@ -1,58 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMask,
-  faPaintBrush,
-  faMicrophone,
-  faMusic,
-  faBook,
-} from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
-const activitiesData = require("../data/activities.json");
-
-const iconMap = {
-  "fa-mask": faMask,
-  "fa-paint-brush": faPaintBrush,
-  "fa-microphone": faMicrophone,
-  "fa-music": faMusic,
-  "fa-book": faBook,
-};
-
-const buildActivityModal = (modalTitle, activityData) => {
-  if (activityData.length === 0) {
-    return;
-  }
-  return (
-    <div className="contest-section">
-      <h3>{modalTitle}</h3>
-      <ul>
-        {activityData.map((data, index) => (
-          <li key={index}>{data}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-const buildActivityDescription = (modalTitle, activityData) => {
-  if (activityData.length === 0) {
-    return;
-  }
-  return (
-    <div className="contest-section">
-      <h3>{modalTitle}</h3>
-      {activityData.map((data, index) => (
-        <p>{data}</p>
-      ))}
-    </div>
-  );
-};
+import LoadingSpinner from "../components/LoadingSpinner";
+import activityService from "../services/activity";
+import { iconMap } from "../utils/iconMap";
 
 const Contests = () => {
+  const CONTEST_SEARCH_FAIL = "Error al cargar la info";
   const [selectedActivity, setSelectedActivity] = useState(null);
+  const [activityJson, setActivityJson] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const data = await activityService.getData();
+        setActivityJson(data);
+      } catch (error) {
+        setError(CONTEST_SEARCH_FAIL);
+        console.error(CONTEST_SEARCH_FAIL, error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleContestClick = (contest) => {
     setSelectedActivity(contest);
@@ -62,13 +41,46 @@ const Contests = () => {
     setSelectedActivity(null);
   };
 
+  const buildActivityModal = (modalTitle, activityData) => {
+    if (activityData.length === 0) {
+      return;
+    }
+    return (
+      <div className="contest-section">
+        <h3>{modalTitle}</h3>
+        <ul>
+          {activityData.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  const buildActivityDescription = (modalTitle, activityData) => {
+    if (activityData.length === 0) {
+      return;
+    }
+    return (
+      <div className="contest-section">
+        <h3>{modalTitle}</h3>
+        {activityData.map((data, index) => (
+          <p>{data}</p>
+        ))}
+      </div>
+    );
+  };
+
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <div className="error-message">{error}</div>;
   return (
     <div className="page-container">
       <div className="section-container">
         <h1 className="title">ACTIVIDADES</h1>
         <div className="contests-grid">
-          {activitiesData.map((activity) => (
+          {activityJson.map((activity, index) => (
             <div
+              key={index}
               className="contest-card"
               onClick={() => handleContestClick(activity)}
             >
