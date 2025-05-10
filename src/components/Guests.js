@@ -45,12 +45,12 @@ const Guests = () => {
         onTagSelect={setSelectedCategory}
       />
       <div className="grid">
-        {filteredGuests.map((guest) => (
+        {filteredGuests.map((guest, index) => (
           <a
             href={guest.socialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            key={guest.id}
+            key={index}
             className="card"
           >
             <img

@@ -78,7 +78,6 @@ class ActivityService {
         return {
           cardDetails: {
             icon: data.cardDetails?.icon || "fa-book",
-            imageUrl: data.cardDetails?.imageUrl || "",
             registrationDate: data.cardDetails?.registrationDate || "",
             title: data.cardDetails?.title || "",
           },

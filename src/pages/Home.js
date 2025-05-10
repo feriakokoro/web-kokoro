@@ -15,6 +15,7 @@ const Home = () => {
   const HOME_SEARCH_FAIL = "Error al cargar datos de la home";
 
   const [homeJson, setHomeJson] = useState({
+    earlyTicket: {},
     pastEvents: [],
     news: [],
     location: {},
@@ -33,6 +34,7 @@ const Home = () => {
 
         if (isMounted && data) {
           setHomeJson({
+            earlyTicket: data.earlyTicket,
             pastEvents: data.pastEvents || [],
             news: data.news || [],
             location: data.location || {},
@@ -57,10 +59,10 @@ const Home = () => {
 
   if (isLoading) return <LoadingSpinner />;
   if (error) return <div className="error-message">{error}</div>;
-
+  
   return (
     <div className="container">
-      <HeroSection />
+      <HeroSection earlyTicket={homeJson.earlyTicket} />
       <ActivitiesSection />
       {homeJson.news.length > 0 && <NewsSection newsJson={homeJson.news} />}
       {homeJson.pastEvents.length > 0 && (
