@@ -11,7 +11,7 @@ class HomeService {
     this.pendingPromise = null;
     this.cache = new Map();
     this.cacheTimeout = getCachedTimeout();
-    this.apiUrl = `${getApiUrl()}/get-home-info`;
+    this.apiUrl = `${getApiUrl()}/home`;
   }
   getData = async () => {
     try {
