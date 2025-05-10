@@ -65,6 +65,9 @@ const Guests = () => {
                 <FaMapMarkerAlt className="icon" /> {guest.location}
               </p>
             )}
+            <div className="tags-container">
+              <span className="tag">{guest.category.toLowerCase()}</span>
+            </div>
           </a>
         ))}
       </div>
