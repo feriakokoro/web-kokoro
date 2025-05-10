@@ -1,70 +1,97 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMask,
-  faPaintBrush,
-  faMicrophone,
-  faMusic,
-} from "@fortawesome/free-solid-svg-icons";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
-const contestData = require("../data/contests.json").Concursos;
-
-const iconMap = {
-  "fa-mask": faMask,
-  "fa-paint-brush": faPaintBrush,
-  "fa-microphone": faMicrophone,
-  "fa-music": faMusic,
-};
-
-const buildContest = (contestData) => {
-  if (contestData.details.length === 0) {
-    return;
-  }
-  return (
-    <div className="contest-section">
-      <h3>{contestData.title}</h3>
-      <ul>
-        {contestData.details.map((detail, index) => (
-          <li key={index}>{detail}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+import LoadingSpinner from "../components/LoadingSpinner";
+import activityService from "../services/activity";
+import { iconMap } from "../utils/iconMap";
 
 const Contests = () => {
-  const [selectedContest, setSelectedContest] = useState(null);
+  const CONTEST_SEARCH_FAIL = "Error al cargar la info";
+  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [activityJson, setActivityJson] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const data = await activityService.getData();
+        setActivityJson(data);
+      } catch (error) {
+        setError(CONTEST_SEARCH_FAIL);
+        console.error(CONTEST_SEARCH_FAIL, error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleContestClick = (contest) => {
-    setSelectedContest(contest);
+    setSelectedActivity(contest);
   };
 
   const closeModal = () => {
-    setSelectedContest(null);
+    setSelectedActivity(null);
   };
 
+  const buildActivityModal = (modalTitle, activityData) => {
+    if (activityData.length === 0) {
+      return;
+    }
+    return (
+      <div className="contest-section">
+        <h3>{modalTitle}</h3>
+        <ul>
+          {activityData.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  const buildActivityDescription = (modalTitle, activityData) => {
+    if (activityData.length === 0) {
+      return;
+    }
+    return (
+      <div className="contest-section">
+        <h3>{modalTitle}</h3>
+        {activityData.map((data, index) => (
+          <p>{data}</p>
+        ))}
+      </div>
+    );
+  };
+
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <div className="error-message">{error}</div>;
   return (
     <div className="page-container">
       <div className="section-container">
         <h1 className="title">ACTIVIDADES</h1>
         <div className="contests-grid">
-          {contestData.map((contest) => (
+          {activityJson.map((activity, index) => (
             <div
-              key={contest.id}
+              key={index}
               className="contest-card"
-              onClick={() => handleContestClick(contest)}
+              onClick={() => handleContestClick(activity)}
             >
               <div className="contest-title">
                 <FontAwesomeIcon
-                  icon={iconMap[contest.icon]}
+                  icon={iconMap[activity.cardDetails.icon]}
                   className="contest-icon"
                 />
-                <h2 className="contest-title">{contest.title}</h2>
+                <h2 className="contest-title">{activity.cardDetails.title}</h2>
                 <p className="contest-tags">
-                  {contest.tags.map((tag, index) => (
+                  {activity.tags.map((tag, index) => (
                     <span key={index} className="contest-tag">
                       {tag}
                     </span>
@@ -72,31 +99,68 @@ const Contests = () => {
                 </p>
               </div>
               <div className="contest-content">
-                <h3 className="contest-subtitle">Inscripción</h3>
+                <h3 className="contest-title">Inscripción</h3>
                 <p className="contest-description">
-                  {contest.cardInfo.inscription}
+                  {activity.cardDetails.registrationDate}
                 </p>
-                <h3 className="contest-subtitle">Premios</h3>
-                <p className="contest-description">{contest.cardInfo.prizes}</p>
+                <h3 className="contest-title">Cupo</h3>
+                <p className="contest-description">
+                  Hasta {activity.capacity} personas
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {selectedContest && (
+        {selectedActivity && (
           <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <div className="modal-header">
-                <h2>{selectedContest.title}</h2>
-              </div>
-              {buildContest(selectedContest.inscription)}
-              {buildContest(selectedContest.como_se_evalua)}
-              {buildContest(selectedContest.rules)}
-              {buildContest(selectedContest.puntaje_y_desempates)}
-              {buildContest(selectedContest.additional)}
-              <button className="filter-button" onClick={closeModal}>
-                Cerrar
+            <div
+              className="modal-content activity"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="modal-close-button"
+                onClick={closeModal}
+                aria-label="Cerrar modal"
+              >
+                &times;
               </button>
+
+              <div className="modal-header">
+                <h2>{selectedActivity.cardDetails.title}</h2>
+              </div>
+
+              {buildActivityDescription(
+                "Descripcion",
+                selectedActivity.descriptions
+              )}
+
+              {buildActivityModal("Exhibidores", selectedActivity.exhibitors)}
+
+              <div className="contest-section">
+                <h3>Cupo</h3>
+                <p>
+                  Capacidad limitada hasta {selectedActivity.capacity} personas
+                </p>
+              </div>
+              <div className="modal-action-buttons">
+                <a
+                  href={selectedActivity.urlPost}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="filter-button primary"
+                >
+                  Ver publicación original
+                </a>
+                <a
+                  href={selectedActivity.urlForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="filter-button secondary"
+                >
+                  Ir al formulario
+                </a>
+              </div>
             </div>
           </div>
         )}
