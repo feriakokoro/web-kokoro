@@ -10,6 +10,7 @@ import HeroSection from "../components/HeroSection";
 import PastEventsSection from "../components/PastEventsSection";
 import LocationSection from "../components/LocationSection";
 import LoadingSpinner from "../components/LoadingSpinner";
+import MapSection from "../components/MapSection";
 
 const Home = () => {
   const HOME_SEARCH_FAIL = "Error al cargar datos de la home";
@@ -19,6 +20,7 @@ const Home = () => {
     pastEvents: [],
     news: [],
     location: {},
+    map: {},
   });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,6 +40,7 @@ const Home = () => {
             pastEvents: data.pastEvents || [],
             news: data.news || [],
             location: data.location || {},
+            map: data.map || {},
           });
         }
       } catch (error) {
@@ -59,12 +62,13 @@ const Home = () => {
 
   if (isLoading) return <LoadingSpinner />;
   if (error) return <div className="error-message">{error}</div>;
-  
+
   return (
     <div className="container">
       <HeroSection earlyTicket={homeJson.earlyTicket} />
       <ActivitiesSection />
       {homeJson.news.length > 0 && <NewsSection newsJson={homeJson.news} />}
+      <MapSection mapJson={homeJson.map} />
       {homeJson.pastEvents.length > 0 && (
         <PastEventsSection pastEventsJson={homeJson.pastEvents} />
       )}

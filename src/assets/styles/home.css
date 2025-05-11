@@ -211,3 +211,26 @@ iframe {
 .grid {
   order: 2;
 }
+
+.section-map {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  order: 2;
+}
+
+.section-map img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.section-map .filter-button {
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+}

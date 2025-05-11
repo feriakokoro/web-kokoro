@@ -47,6 +47,11 @@ class HomeService {
               place: data.earlyTicket?.place || "",
               promotion: data.earlyTicket?.promotion || "",
             },
+            map: {
+              name: data.map.name,
+              url: data.map.url,
+              previewUrl: data.map.previewUrl,
+            },
             pastEvents: Array.isArray(data.pastEvents) ? data.pastEvents : [],
             news: Array.isArray(data.news) ? data.news : [],
             location:
