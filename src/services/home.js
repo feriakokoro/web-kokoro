@@ -41,6 +41,9 @@ class HomeService {
         .then((data) => {
           this.cache.set("home", { data, timestamp: Date.now() });
           const structuredData = {
+            homeActivities: Array.isArray(data.activities)
+              ? data.activities
+              : [],
             earlyTicket: {
               title: data.earlyTicket?.title || "",
               price: data.earlyTicket?.price || "",
