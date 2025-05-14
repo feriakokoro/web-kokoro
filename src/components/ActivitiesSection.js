@@ -2,6 +2,8 @@ import React from "react";
 import "../assets/styles/home.css";
 import nanaCat from "../assets/images/nana_cat.webp";
 
+const activities = require("../data/activities.json");
+
 const ActivitiesSection = () => {
   return (
     <section id="activities">
@@ -12,21 +14,11 @@ const ActivitiesSection = () => {
         <div className="section-text">
           <h2 className="section-title">¿Qué podés hacer?</h2>
           <ul>
-            <li className="activity-item">
-              <span>Comprar productos handmade kawaii</span>
-            </li>
-            <li className="activity-item">
-              <span>Participar de concursos de cosplay</span>
-            </li>
-            <li className="activity-item">
-              <span>Talleres de dibujo y arte anime</span>
-            </li>
-            <li className="activity-item">
-              <span>Sacarte fotos en espacios temáticos</span>
-            </li>
-            <li className="activity-item">
-              <span>Karaoke con openings de tus animes favoritos</span>
-            </li>
+            {activities.map((activity, index) => (
+              <li key={index} className="activity-item">
+                <span>{activity}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -34,4 +26,4 @@ const ActivitiesSection = () => {
   );
 };
 
-export default ActivitiesSection
+export default ActivitiesSection;
