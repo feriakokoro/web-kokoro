@@ -7,14 +7,12 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 const Gallery = () => {
   const GALLERY_SEARCH_FAIL = "Error al cargar la galería:";
-
   const [galleryJson, setGalleryJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
-
     const fetchData = async () => {
       try {
         setError(null);
