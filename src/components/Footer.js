@@ -1,18 +1,8 @@
 import React from "react";
 import "../assets/styles/footer.css";
 
-const socialLinks = [
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/feriakokoro",
-    ariaLabel: "Instagram de Feria Kokoro",
-  },
-  {
-    name: "TikTok",
-    url: "https://www.tiktok.com/@feria.kokoro",
-    ariaLabel: "TikTok de Feria Kokoro",
-  },
-];
+const footerData = require("../data/footer.json");
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -22,12 +12,12 @@ const Footer = () => {
           <p>
             Email:
             <a href="mailto:contacto@ejemplo.com" className="footer-link">
-              feriakokoro@gmail.com
+              {footerData.email}
             </a>
           </p>
           <p>
             Redes Sociales:
-            {socialLinks.map((link, index) => (
+            {footerData.socialLinks.map((link, index) => (
               <span key={index}>
                 <a
                   href={link.url}
@@ -38,7 +28,7 @@ const Footer = () => {
                 >
                   {link.name}
                 </a>
-                {index < socialLinks.length - 1 ? " | " : ""}
+                {index < footerData.socialLinks.length - 1 ? " | " : ""}
               </span>
             ))}
           </p>
