@@ -1,0 +1,15 @@
+{
+  "email": "feriakokoro@gmail.com",
+  "socialLinks": [
+    {
+      "name": "Instagram",
+      "ariaLabel": "Instagram de Feria Kokoro",
+      "url": "https://www.instagram.com/feria.kokoro/"
+    },
+    {
+      "name": "TikTok",
+      "ariaLabel": "TikTok de Feria Kokoro",
+      "url": "https://www.tiktok.com/@feriakokoro"
+    }
+  ]
+}
