@@ -34,14 +34,14 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <div
+      <button
         className={`menu-toggle ${menuOpen ? "open" : ""}`}
         onClick={toggleMenu}
       >
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
-      </div>
+      </button>
     </nav>
   );
 };
