@@ -56,11 +56,17 @@
 }
 
 .menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: none;
   flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle:focus {
+  outline: none;
 }
 
 .bar {
@@ -69,10 +75,15 @@
   background-color: var(--text);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 6px;
+}
+
+.bar:last-child {
+  margin-bottom: 0;
 }
 
 .menu-toggle.open .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
 }
 
 .menu-toggle.open .bar:nth-child(2) {
