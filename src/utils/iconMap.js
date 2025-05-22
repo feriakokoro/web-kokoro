@@ -4,6 +4,11 @@ import {
   faMicrophone,
   faMusic,
   faBook,
+  faCut,
+  faComments,
+  faMortarBoard,
+  faLineChart,
+  faPhotoFilm
 } from "@fortawesome/free-solid-svg-icons";
 
 export const iconMap = {
@@ -12,4 +17,9 @@ export const iconMap = {
   "fa-microphone": faMicrophone,
   "fa-music": faMusic,
   "fa-book": faBook,
+  "fa-cut": faCut,
+  "fa-comments": faComments,
+  "fa-mortar-board": faMortarBoard,
+  "fa-line-chart": faLineChart,
+  "fa-photo-film": faPhotoFilm,
 };
