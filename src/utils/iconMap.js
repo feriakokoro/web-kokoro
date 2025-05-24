@@ -8,7 +8,9 @@ import {
   faComments,
   faMortarBoard,
   faLineChart,
-  faPhotoFilm
+  faPhotoFilm,
+  faHandSpock,
+  faSmile,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const iconMap = {
@@ -22,4 +24,6 @@ export const iconMap = {
   "fa-mortar-board": faMortarBoard,
   "fa-line-chart": faLineChart,
   "fa-photo-film": faPhotoFilm,
+  "fa-hand-spock": faHandSpock,
+  "fa-smile": faSmile,
 };
