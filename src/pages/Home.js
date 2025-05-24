@@ -13,6 +13,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import MapSection from "../components/MapSection";
 
 const Home = () => {
+  const mapIsEnabled = false;
   const HOME_SEARCH_FAIL = "Error al cargar datos de la home";
 
   const [homeJson, setHomeJson] = useState({
@@ -68,7 +69,7 @@ const Home = () => {
       <HeroSection earlyTicket={homeJson.earlyTicket} />
       <ActivitiesSection />
       {homeJson.news.length > 0 && <NewsSection newsJson={homeJson.news} />}
-      <MapSection mapJson={homeJson.map} />
+      {mapIsEnabled && <MapSection mapJson={homeJson.map} />}
       {homeJson.pastEvents.length > 0 && (
         <PastEventsSection pastEventsJson={homeJson.pastEvents} />
       )}
