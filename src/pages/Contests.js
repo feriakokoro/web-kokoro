@@ -41,18 +41,16 @@ const Contests = () => {
     setSelectedActivity(null);
   };
 
-  const buildActivityModal = (modalTitle, activityData) => {
-    if (activityData.length === 0) {
+  const buildActivityModalExhibitors = (modalTitle, exhibitors) => {
+    if (exhibitors.length === 0) {
       return;
     }
     return (
       <div className="contest-section">
         <h3>{modalTitle}</h3>
-        <ul>
-          {activityData.map((data, index) => (
-            <li key={index}>{data}</li>
-          ))}
-        </ul>
+        {exhibitors.map((data, index) => (
+          <p key={index}>{data}</p>
+        ))}
       </div>
     );
   };
@@ -135,7 +133,10 @@ const Contests = () => {
                 selectedActivity.descriptions
               )}
 
-              {buildActivityModal("Exhibidores", selectedActivity.exhibitors)}
+              {buildActivityModalExhibitors(
+                "Exhibidores",
+                selectedActivity.exhibitors
+              )}
 
               <div className="contest-section">
                 <h3>Cupo</h3>
