@@ -67,7 +67,7 @@ const Schedule = () => {
               <div className="schedule-info">
                 <h3 className="schedule-title">
                   {event.title}{" "}
-                  {event.participant !== "" ? `(${event.participant})` : ""}
+                  {event.participant && event.participant !== "" ? `(${event.participant})` : ""}
                 </h3>
                 <p className="schedule-location">
                   <FaMapMarkerAlt className="location-icon" />
