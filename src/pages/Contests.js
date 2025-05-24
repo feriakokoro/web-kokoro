@@ -132,11 +132,15 @@ const Contests = () => {
                 "Descripcion",
                 selectedActivity.descriptions
               )}
-
               {buildActivityModalExhibitors(
                 "Exhibidores",
                 selectedActivity.exhibitors
               )}
+              
+              <div className="contest-section">
+                <h3>Ubicación</h3>
+                <p>{selectedActivity.location}</p>
+              </div>
 
               <div className="contest-section">
                 <h3>Cupo</h3>

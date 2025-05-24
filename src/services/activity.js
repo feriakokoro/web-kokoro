@@ -88,6 +88,7 @@ class ActivityService {
           capacity: data.capacity || "0",
           urlPost: data.urlPost || "",
           urlForm: data.urlForm || "",
+          location: data.location || "",
           tags: Array.isArray(data.tags) ? data.tags : [],
         };
       })
