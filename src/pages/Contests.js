@@ -136,7 +136,7 @@ const Contests = () => {
                 "Exhibidores",
                 selectedActivity.exhibitors
               )}
-              
+
               <div className="contest-section">
                 <h3>Ubicación</h3>
                 <p>{selectedActivity.location}</p>
@@ -149,22 +149,28 @@ const Contests = () => {
                 </p>
               </div>
               <div className="modal-action-buttons">
-                <a
-                  href={selectedActivity.urlPost}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="filter-button primary"
-                >
-                  Ver publicación original
-                </a>
-                <a
-                  href={selectedActivity.urlForm}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="filter-button secondary"
-                >
-                  Ir al formulario
-                </a>
+                {selectedActivity.urlPost &&
+                  selectedActivity.urlPost.trim() !== "" && (
+                    <a
+                      href={selectedActivity.urlPost}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="filter-button primary"
+                    >
+                      Ver publicación original
+                    </a>
+                  )}
+                {selectedActivity.urlForm &&
+                  selectedActivity.urlForm.trim() !== "" && (
+                    <a
+                      href={selectedActivity.urlForm}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="filter-button secondary"
+                    >
+                      Ir al formulario
+                    </a>
+                  )}
               </div>
             </div>
           </div>
