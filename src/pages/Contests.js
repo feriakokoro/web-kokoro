@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
-import { iconMap } from "../utils/iconMap";
+//import { iconMap } from "../utils/iconMap";
 import Buttons from "../components/Buttons";
 
 const Contests = () => {
