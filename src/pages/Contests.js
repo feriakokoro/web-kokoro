@@ -7,9 +7,11 @@ import "../assets/styles/section.css";
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
 import { iconMap } from "../utils/iconMap";
+import Buttons from "../components/Buttons";
 
 const Contests = () => {
   const CONTEST_SEARCH_FAIL = "Error al cargar la info";
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedActivity, setSelectedActivity] = useState(null);
   const [activityJson, setActivityJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +34,18 @@ const Contests = () => {
 
     fetchData();
   }, []);
+
+  const categories = [
+    ...new Set(
+      activityJson.flatMap((activity) => activity.tags).filter(Boolean)
+    ),
+  ];
+
+  const filteredActivities = selectedCategory
+    ? activityJson.filter((activity) =>
+        activity.tags.includes(selectedCategory)
+      )
+    : activityJson;
 
   const handleContestClick = (contest) => {
     setSelectedActivity(contest);
@@ -75,19 +89,31 @@ const Contests = () => {
     <div className="page-container">
       <div className="section-container">
         <h1 className="title">ACTIVIDADES</h1>
+        <Buttons
+          tags={categories}
+          selectedTag={selectedCategory}
+          onTagSelect={setSelectedCategory}
+        />
         <div className="contests-grid">
-          {activityJson.map((activity, index) => (
+          {filteredActivities.map((activity, index) => (
             <div
               key={index}
               className="contest-card"
               onClick={() => handleContestClick(activity)}
             >
               <div className="contest-title">
-                <FontAwesomeIcon
-                  icon={iconMap[activity.cardDetails.icon]}
-                  className="contest-icon"
+                <img
+                  src={activity.cardDetails.urlImage}
+                  alt=""
+                  className="image"
+                  loading="lazy"
                 />
+
+                {/*}
                 <h2 className="contest-title">{activity.cardDetails.title}</h2>
+                */}
+
+                {/*}
                 <p className="contest-tags">
                   {activity.tags.map((tag, index) => (
                     <span key={index} className="contest-tag">
@@ -95,16 +121,21 @@ const Contests = () => {
                     </span>
                   ))}
                 </p>
+                */}
               </div>
+
               <div className="contest-content">
+                {/*
                 <h3 className="contest-title">Inscripción</h3>
                 <p className="contest-description">
                   {activity.cardDetails.registrationDate}
                 </p>
+
                 <h3 className="contest-title">Cupo</h3>
                 <p className="contest-description">
                   Hasta {activity.capacity} personas
                 </p>
+                */}
               </div>
             </div>
           ))}

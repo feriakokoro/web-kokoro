@@ -71,15 +71,14 @@ class ActivityService {
     return dataArray
       .map((data) => {
         if (!data || typeof data !== "object") {
-          console.warn("Actividad inválida en el array:", data);
           return null;
         }
-
         return {
           cardDetails: {
             icon: data.cardDetails?.icon || "fa-book",
             registrationDate: data.cardDetails?.registrationDate || "",
             title: data.cardDetails?.title || "",
+            urlImage: data.cardDetails?.urlImage || "",
           },
           descriptions: Array.isArray(data.descriptions)
             ? data.descriptions
