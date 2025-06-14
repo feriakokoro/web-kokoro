@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/home.css";
-import nanaCat from "../assets/images/nana_cat.webp";
+import nanaCat from "../assets/images/nana_cat2.webp";
 
 const activities = require("../data/activities.json");
 
