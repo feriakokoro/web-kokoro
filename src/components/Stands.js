@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
 import standsService from "../services/stands";
@@ -20,7 +20,7 @@ const Stands = () => {
     ? standsJson.filter((stand) => stand.category === selectedTag)
     : standsJson;
 
-  const fetchWithRetry = async (attempt = 1) => {
+  const fetchWithRetry = useCallback(async (attempt = 1) => {
     try {
       const data = await standsService.getData();
       setStandsJson(data);
@@ -31,6 +31,7 @@ const Stands = () => {
 
       if (attempt < MAX_RETRIES) {
         const delay = INITIAL_DELAY * Math.pow(2, attempt - 1);
+        console.log(`Retrying in ${delay}ms...`);
 
         setTimeout(() => {
           fetchWithRetry(attempt + 1);
@@ -40,11 +41,11 @@ const Stands = () => {
         setIsLoading(false);
       }
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchWithRetry();
-  }, []);
+  }, [fetchWithRetry]);
 
   if (isLoading) {
     return <LoadingSpinner />;
