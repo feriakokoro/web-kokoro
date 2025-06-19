@@ -3,10 +3,16 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
 import standsService from "../services/stands";
 import Buttons from "./Buttons";
+import LoadingSpinner from "./LoadingSpinner";
+
+const MAX_RETRIES = 3;
+const INITIAL_DELAY = 1000;
 
 const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const tags = [...new Set(standsJson.map((stand) => stand.category))];
 
@@ -14,18 +20,39 @@ const Stands = () => {
     ? standsJson.filter((stand) => stand.category === selectedTag)
     : standsJson;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await standsService.getData();
-        setStandsJson(data);
-      } catch (error) {
-        console.error("Error al cargar los stands:", error);
-      }
-    };
+  const fetchWithRetry = async (attempt = 1) => {
+    try {
+      const data = await standsService.getData();
+      setStandsJson(data);
+      setIsLoading(false);
+      setError(null);
+    } catch (err) {
+      console.error(`Error loading stands (attempt ${attempt}):`, err);
 
-    fetchData();
+      if (attempt < MAX_RETRIES) {
+        const delay = INITIAL_DELAY * Math.pow(2, attempt - 1);
+
+        setTimeout(() => {
+          fetchWithRetry(attempt + 1);
+        }, delay);
+      } else {
+        setError("No se pudieron cargar los stands después de varios intentos");
+        setIsLoading(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchWithRetry();
   }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error) {
+    return <div className="error">{error}</div>;
+  }
 
   return (
     <div className="section-container">
@@ -54,9 +81,6 @@ const Stands = () => {
             <p className="stand-location">
               <FaMapMarkerAlt className="icon" /> {stand.location}
             </p>
-            {/*<div className="tags-container">
-              <span className="tag">{stand.category}</span>
-            </div>*/}
           </a>
         ))}
       </div>
