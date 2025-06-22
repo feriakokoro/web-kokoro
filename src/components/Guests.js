@@ -7,6 +7,7 @@ import "../assets/styles/section.css";
 
 import guestsService from "../services/guests";
 import Buttons from "./Buttons";
+import LoadingSpinner from "./LoadingSpinner";
 
 const MAX_RETRIES = 3;
 const INITIAL_DELAY = 1000;
@@ -52,6 +53,14 @@ const Guests = () => {
   useEffect(() => {
     fetchWithRetry();
   }, [fetchWithRetry]);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error) {
+    return <div className="error-message">{error}</div>;
+  }
 
   return (
     <div className="section-container">
