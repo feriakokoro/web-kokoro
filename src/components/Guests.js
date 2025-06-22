@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import "../assets/styles/guests.css";
@@ -8,9 +8,15 @@ import "../assets/styles/section.css";
 import guestsService from "../services/guests";
 import Buttons from "./Buttons";
 
+const MAX_RETRIES = 3;
+const INITIAL_DELAY = 1000;
+
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const categories = [
     ...new Set(guestsJson.flatMap((guest) => guest.category)),
   ];
@@ -18,23 +24,34 @@ const Guests = () => {
     ? guestsJson.filter((guest) => guest.category.includes(selectedCategory))
     : guestsJson;
 
-  useEffect(() => {
-    let isMounted = true;
-    const fetchData = async () => {
-      try {
-        const data = await guestsService.getData();
-        if (isMounted) {
-          setGuestsJson(data);
-        }
-      } catch (error) {
-        console.error("Error al cargar los datos de los invitados", error);
-        if (isMounted) {
-        }
-      }
-    };
+  const fetchWithRetry = useCallback(async (attempt = 1) => {
+    try {
+      const data = await guestsService.getData();
+      setGuestsJson(data);
+      setIsLoading(false);
+      setError(null);
+    } catch (err) {
+      console.error(`Error al cargar los invitados (intento ${attempt}):`, err);
 
-    fetchData();
+      if (attempt < MAX_RETRIES) {
+        const delay = INITIAL_DELAY * Math.pow(2, attempt - 1);
+        console.log(`Reintentando en ${delay}ms...`);
+
+        setTimeout(() => {
+          fetchWithRetry(attempt + 1);
+        }, delay);
+      } else {
+        setError(
+          "No se pudieron cargar los invitados después de varios intentos"
+        );
+        setIsLoading(false);
+      }
+    }
   }, []);
+
+  useEffect(() => {
+    fetchWithRetry();
+  }, [fetchWithRetry]);
 
   return (
     <div className="section-container">
