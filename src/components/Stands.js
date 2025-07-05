@@ -5,8 +5,8 @@ import standsService from "../services/stands";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
 
-const MAX_RETRIES = 3;
-const INITIAL_DELAY = 1000;
+const MAX_RETRIES = 5;
+const INITIAL_DELAY = 2000;
 
 const Stands = () => {
   const [standsJson, setStandsJson] = useState([]);
