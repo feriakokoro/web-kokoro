@@ -11,9 +11,12 @@ import PastEventsSection from "../components/PastEventsSection";
 import LocationSection from "../components/LocationSection";
 import LoadingSpinner from "../components/LoadingSpinner";
 import MapSection from "../components/MapSection";
+import Modal from "../components/Modal";
 
 const Home = () => {
   const mapIsEnabled = false;
+  const alertModalIsEnabled = true;
+
   const HOME_SEARCH_FAIL = "Error al cargar datos de la home";
 
   const [homeJson, setHomeJson] = useState({
@@ -25,6 +28,11 @@ const Home = () => {
   });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAlertModalOpen, setIsAlertModalOpen] = useState(true);
+
+  const handleModalClose = () => {
+    setIsAlertModalOpen(false);
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -66,6 +74,19 @@ const Home = () => {
 
   return (
     <div className="container">
+      {alertModalIsEnabled && (
+        <Modal isOpen={isAlertModalOpen} onClose={handleModalClose}>
+          <h2>LA FERIA KOKORO SE REPROGRAMA PARA EL SABADO 9 DE AGOSTO️</h2>
+          <p>
+            Reprogramamos la 5ta edición para el Sábado 9/8 de 12 a 18 hs en
+            Bartolomé Mitre 2455.
+          </p>
+          <p>Las entradas ya adquiridas siguen siendo válidas.</p>
+          <p>Pronto más info sobre convocatorias, actividades y propuestas.</p>
+          <p>Este invierno, el arte entra en calor.</p>
+          <p>Edición Maravillas Invernales – Ahora, el 9 de Agosto!</p>
+        </Modal>
+      )}
       <HeroSection earlyTicket={homeJson.earlyTicket} />
       <ActivitiesSection />
       {homeJson.news.length > 0 && <NewsSection newsJson={homeJson.news} />}
