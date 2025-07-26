@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/footer.css";
-
+import { FOOTER } from "../utils/constants";
 const footerData = require("../data/footer.json");
 
 const Footer = () => {
@@ -8,15 +8,15 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-contact">
-          <h3>Contacto</h3>
+          <h3>{FOOTER.CONTACT_TITLE}</h3>
           <p>
-            Email:
+            {FOOTER.CONTACT_EMAIL}
             <a href="mailto:contacto@ejemplo.com" className="footer-link">
               {footerData.email}
             </a>
           </p>
           <p>
-            Redes Sociales:
+            {FOOTER.SOCIAL_MEDIA}
             {footerData.socialLinks.map((link, index) => (
               <span key={index}>
                 <a
@@ -35,8 +35,7 @@ const Footer = () => {
         </div>
         <div className="footer-rights">
           <p>
-            &copy; {new Date().getFullYear()} Feria Kokoro - Todos los derechos
-            reservados
+            &copy; {new Date().getFullYear()} {FOOTER.DISCLAIMER}
           </p>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import "../assets/styles/home.css";
+
+import { HOME_SEARCH_FAIL } from "../utils/constants";
 
 import homeService from "../services/home";
 import NewsSection from "../components/NewsSection";
@@ -16,8 +17,6 @@ import Modal from "../components/Modal";
 const Home = () => {
   const mapIsEnabled = false;
   const alertModalIsEnabled = true;
-
-  const HOME_SEARCH_FAIL = "Error al cargar datos de la home";
 
   const [homeJson, setHomeJson] = useState({
     earlyTicket: {},

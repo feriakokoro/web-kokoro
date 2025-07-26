@@ -4,9 +4,9 @@ import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 import galleryService from "../services/gallery";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { GALLERY, GALLERY_SEARCH_FAIL } from "../utils/constants";
 
 const Gallery = () => {
-  const GALLERY_SEARCH_FAIL = "Error al cargar la galería:";
   const [galleryJson, setGalleryJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -41,7 +41,7 @@ const Gallery = () => {
   return (
     <div className="page-container">
       <div className="section-container">
-        <h1 className="title">GALERÍA</h1>
+        <h1 className="title">{GALLERY.title}</h1>
         <div className="gallery-grid">
           {galleryJson.map((element, index) => (
             <img

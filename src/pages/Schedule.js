@@ -9,8 +9,9 @@ import scheduleService from "../services/schedule";
 import Buttons from "../components/Buttons";
 import LoadingSpinner from "../components/LoadingSpinner";
 
+import { SCHEDULE_SEARCH_FAIL } from "../utils/constants";
+
 const Schedule = () => {
-  const SCHEDULE_SEARCH_FAIL = "Error al cargar el cronograma";
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [scheduleJson, setScheduleJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
