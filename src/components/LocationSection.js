@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/home.css";
 import PropTypes from "prop-types";
+import { LOCATION_SECTION } from "../utils/constants";
 
 const LocationSection = ({ locationJson = {} }) => {
   if (!locationJson?.url || !locationJson?.date || !locationJson?.place) {
@@ -22,9 +23,9 @@ const LocationSection = ({ locationJson = {} }) => {
           </div>
         </div>
         <div className="section-text">
-          <h2 className="section-title">Ubicación</h2>
-          <p>Fecha: {locationJson.date}</p>
-          <p>Lugar: {locationJson.place}</p>
+          <h2 className="section-title">{LOCATION_SECTION.title}</h2>
+          <p>{LOCATION_SECTION.date} {locationJson.date}</p>
+          <p>{LOCATION_SECTION.place} {locationJson.place}</p>
         </div>
       </div>
     </section>

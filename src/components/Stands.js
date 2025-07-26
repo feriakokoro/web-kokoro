@@ -4,6 +4,7 @@ import "../assets/styles/stands.css";
 import standsService from "../services/stands";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
+import { STANDS } from "../utils/constants";
 
 const MAX_RETRIES = 5;
 const INITIAL_DELAY = 2000;
@@ -57,7 +58,7 @@ const Stands = () => {
 
   return (
     <div className="section-container">
-      <h1 className="title">STANDS</h1>
+      <h1 className="title">{STANDS.title}</h1>
       <Buttons
         tags={tags}
         selectedTag={selectedTag}

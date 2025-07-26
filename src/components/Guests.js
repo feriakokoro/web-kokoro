@@ -1,16 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-
 import "../assets/styles/guests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
-
 import guestsService from "../services/guests";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
-
-const MAX_RETRIES = 3;
-const INITIAL_DELAY = 1000;
+import { API_CONFIG, GUESTS } from "../utils/constants";
 
 const Guests = () => {
   const [guestsJson, setGuestsJson] = useState([]);
@@ -34,8 +30,8 @@ const Guests = () => {
     } catch (err) {
       console.error(`Error al cargar los invitados (intento ${attempt}):`, err);
 
-      if (attempt < MAX_RETRIES) {
-        const delay = INITIAL_DELAY * Math.pow(2, attempt - 1);
+      if (attempt < API_CONFIG.MAX_RETRIES) {
+        const delay = API_CONFIG.INITIAL_RETRY_DELAY * Math.pow(2, attempt - 1);
         console.log(`Reintentando en ${delay}ms...`);
 
         setTimeout(() => {
@@ -64,7 +60,7 @@ const Guests = () => {
 
   return (
     <div className="section-container">
-      <h2 className="title">INVITADES</h2>
+      <h2 className="title">{GUESTS.title}</h2>
       <Buttons
         tags={categories}
         selectedTag={selectedCategory}

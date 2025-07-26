@@ -4,6 +4,8 @@ import { Carousel } from "react-responsive-carousel";
 import "../assets/styles/home.css";
 import "../assets/styles/past_events.css";
 
+import { PAST_EVENTS } from "../utils/constants";
+
 const buildCarousel = (imagesJson) => {
   return (
     <div className="carousel-container">
@@ -29,11 +31,8 @@ const PastEventsSection = ({ pastEventsJson = [] }) => {
     <section id="past-events">
       <div className="section-flex-container">
         <div className="section-text">
-          <h2>Recuerdos Kokoro</h2>
-          <p>
-            Cálido, inclusivo y lleno de emoción. Ideal si querés conectar con
-            quienes ya participaron antes.
-          </p>
+          <h2>{PAST_EVENTS.title}</h2>
+          <p>{PAST_EVENTS.description}</p>
         </div>
         <div className="past-events-image">{buildCarousel(pastEventsJson)}</div>
       </div>

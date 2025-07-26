@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/home.css";
 import Modal from "./Modal";
+import { HERO_SECTION } from "../utils/constants";
 
 const HeroSection = ({ earlyTicket = {} }) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -15,10 +16,8 @@ const HeroSection = ({ earlyTicket = {} }) => {
     <section className="hero">
       <div className="hero-overlay" aria-hidden="true"></div>
       <div className="hero-content">
-        <h1 className="home-title">Feria Kokoro 2025</h1>
-        <p className="subtitle">
-          Un espacio cultural que celebra el arte en todas sus formas
-        </p>
+        <h1 className="home-title">{HERO_SECTION.title}</h1>
+        <p className="subtitle">{HERO_SECTION.subtitle}</p>
         <button
           className="button"
           onClick={handleModalOpen}
