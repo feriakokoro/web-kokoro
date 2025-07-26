@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Guests from "../components/Guests";
+import Stands from "../components/Stands";
 import LoadingSpinner from "../components/LoadingSpinner";
-import { GUESTS_SEARCH_FAIL } from "../utils/constants";
+import { STANDS_SEARCH_FAIL } from "../utils/constants";
 
-const Participants = () => {
+const StandsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,8 +14,8 @@ const Participants = () => {
         setError(null);
         await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (error) {
-        setError(GUESTS_SEARCH_FAIL);
-        console.error(GUESTS_SEARCH_FAIL, error);
+        setError(STANDS_SEARCH_FAIL);
+        console.error(STANDS_SEARCH_FAIL, error);
       } finally {
         setIsLoading(false);
       }
@@ -29,9 +29,9 @@ const Participants = () => {
 
   return (
     <div className="page-container">
-      <Guests />
+      <Stands />
     </div>
   );
 };
 
-export default Participants;
+export default StandsPage;

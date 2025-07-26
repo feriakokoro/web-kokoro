@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { iconMap } from "../utils/iconMap";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
-//import { iconMap } from "../utils/iconMap";
 import Buttons from "../components/Buttons";
 
+import { CONTEST_SEARCH_FAIL } from "../utils/constants";
+
 const Contests = () => {
-  const CONTEST_SEARCH_FAIL = "Error al cargar la info";
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedActivity, setSelectedActivity] = useState(null);
   const [activityJson, setActivityJson] = useState([]);

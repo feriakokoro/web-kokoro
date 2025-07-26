@@ -4,6 +4,7 @@ import kokoroLogo from "../assets/icons/logo_kokoro.webp";
 import "../assets/styles/navbar.css";
 import "../assets/styles/global.css";
 import { routes } from "../config/routes";
+import { NAVBAR_TITLE } from "../utils/constants";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
           alt="Feria Kokoro Logo"
           className="navbar-image-logo"
         />
-        <span className="navbar-logo-text">Feria Kokoro</span>
+        <span className="navbar-logo-text">{NAVBAR_TITLE}</span>
       </div>
       <div className={`links-container ${menuOpen ? "active" : ""}`}>
         {routes.map((route, index) => (
