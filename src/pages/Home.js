@@ -15,8 +15,8 @@ import MapSection from "../components/MapSection";
 import Modal from "../components/Modal";
 
 const Home = () => {
-  const mapIsEnabled = false;
-  const alertModalIsEnabled = true;
+  const mapIsEnabled = true;
+  const alertModalIsEnabled = false;
 
   const [homeJson, setHomeJson] = useState({
     earlyTicket: {},
