@@ -15,7 +15,7 @@ import MapSection from "../components/MapSection";
 import Modal from "../components/Modal";
 
 const Home = () => {
-  const mapIsEnabled = true;
+  const mapIsEnabled = false;
   const alertModalIsEnabled = false;
 
   const [homeJson, setHomeJson] = useState({
