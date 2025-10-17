@@ -81,7 +81,7 @@ const Home = () => {
             <img
               src={kiwiImg}
               alt="kiwi"
-              className="image"
+              className="modal-image"
               loading="lazy"
             />
           <p>
