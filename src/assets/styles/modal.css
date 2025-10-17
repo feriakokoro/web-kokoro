@@ -45,3 +45,8 @@
 .modal-close:hover {
   color: #666;
 }
+
+.image {
+  width: 50%;
+  border-radius: 10px;
+}

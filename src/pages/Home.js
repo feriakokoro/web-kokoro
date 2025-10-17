@@ -14,9 +14,11 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import MapSection from "../components/MapSection";
 import Modal from "../components/Modal";
 
+import kiwiImg from "../assets/images/KIWI_FONDO.webp";
+
 const Home = () => {
   const mapIsEnabled = false;
-  const alertModalIsEnabled = false;
+  const alertModalIsEnabled = true;
 
   const [homeJson, setHomeJson] = useState({
     earlyTicket: {},
@@ -75,15 +77,17 @@ const Home = () => {
     <div className="container">
       {alertModalIsEnabled && (
         <Modal isOpen={isAlertModalOpen} onClose={handleModalClose}>
-          <h2>LA FERIA KOKORO SE REPROGRAMA PARA EL SABADO 9 DE AGOSTO️</h2>
+          <h2>WEB BAJO CONSTRUCCIÓN</h2>
+            <img
+              src={kiwiImg}
+              alt="kiwi"
+              className="image"
+              loading="lazy"
+            />
           <p>
-            Reprogramamos la 5ta edición para el Sábado 9/8 de 12 a 18 hs en
-            Bartolomé Mitre 2455.
+            Vamos a estar actualizando la web en los próximos días con toda la info
+            de la próxima edición.
           </p>
-          <p>Las entradas ya adquiridas siguen siendo válidas.</p>
-          <p>Pronto más info sobre convocatorias, actividades y propuestas.</p>
-          <p>Este invierno, el arte entra en calor.</p>
-          <p>Edición Maravillas Invernales – Ahora, el 9 de Agosto!</p>
         </Modal>
       )}
       <HeroSection earlyTicket={homeJson.earlyTicket} />
