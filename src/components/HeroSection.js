@@ -53,7 +53,11 @@ const HeroSection = ({ earlyTicket = {} }) => {
         <p>Pronto toda la info acá.</p>
         <p>
           También podés seguirnos en{" "}
-          <a href="https://www.instagram.com/feriakokoro/" target="_blank">
+          <a
+            href="https://www.instagram.com/feriakokoro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             @feriakokoro
           </a>{" "}
           para no perderte nada.
