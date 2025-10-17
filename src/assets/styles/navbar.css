@@ -52,7 +52,7 @@
 }
 
 .link:hover {
-  color: #4569de;
+  color: var(--text-secondary);
 }
 
 .menu-toggle {
