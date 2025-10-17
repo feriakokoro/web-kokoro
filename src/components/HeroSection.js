@@ -12,23 +12,6 @@ const HeroSection = ({ earlyTicket = {} }) => {
     setIsModalOpen(false);
   };
 
-  {
-    /*
-        <h2>¡Bienvenides a Feria Kokoro: {earlyTicket.title}!</h2>
-        <p>
-          Precio de la entrada anticipada: {earlyTicket.price} en efectivo
-        </p>
-        <p>Lugar: {earlyTicket.place}</p>
-        <p>Con tu entrada obtenés {earlyTicket.promotion}.</p>
-        <h2>¡Bienvenides a Feria Kokoro: {earlyTicket.title}!</h2>
-        <p>
-          Precio de la entrada anticipada: {earlyTicket.price} en efectivo
-        </p>
-        <p>Lugar: {earlyTicket.place}</p>
-        <p>Con tu entrada obtenés {earlyTicket.promotion}.</p>
-    */
-  }
-
   return (
     <section className="hero">
       <div className="hero-overlay" aria-hidden="true"></div>
