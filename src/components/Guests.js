@@ -83,7 +83,7 @@ const Guests = () => {
             />
             <h3 className="name">{guest.name}</h3>
             {guest.location && (
-              <p className="location">
+              <p className="guest-location">
                 <FaMapMarkerAlt className="icon" /> {guest.location}
               </p>
             )}
