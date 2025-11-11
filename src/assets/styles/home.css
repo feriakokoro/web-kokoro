@@ -61,7 +61,7 @@
 }
 
 .button:hover {
-  background: var(--highlight);
+  background: var(--light-accent);
 }
 
 .section-title {

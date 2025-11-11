@@ -31,7 +31,7 @@
 .navbar-logo-text {
   font-family: "Grisly Beast", sans-serif;
   font-size: 20px;
-  color: #bb96f2;
+  color: #f5559b;
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@
 
 .link {
   font-family: "Quenda", sans-serif;
-  color: #5c6a96;
+  color: #f1ece6;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
@@ -52,7 +52,7 @@
 }
 
 .link:hover {
-  color: #4569de;
+  color: var(--text-secondary);
 }
 
 .menu-toggle {
