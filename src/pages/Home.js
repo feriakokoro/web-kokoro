@@ -41,9 +41,7 @@ const Home = () => {
 
   let mapIsEnabled = sectionSetup ? sectionSetup.mapEnabled : false;
   let alertModalIsEnabled = sectionSetup ? sectionSetup.modalEnabled : false;
-
-  console.log("Section Setup:", sectionSetup);
-
+  
   useEffect(() => {
     fetchSectionSetup();
   }, []);
