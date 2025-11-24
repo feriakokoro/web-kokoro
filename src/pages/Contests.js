@@ -85,7 +85,16 @@ const Contests = () => {
   };
 
   if (isLoading) return <LoadingSpinner />;
-  if (error) return <div className="error-message">{error}</div>;
+  if (error) 
+    return (
+      <div className="page-container">
+        <div className="section-container">
+          <h1 className="title">ACTIVIDADES</h1>
+          <div className="error-message">{error}</div>
+        </div>
+      </div>
+    );
+
   return (
     <div className="page-container">
       <div className="section-container">
