@@ -59,7 +59,5 @@ class SectionSetupService {
   };
 }
 
-//export const sectionSetupService = new SectionSetupService();
-
 const sectionSetupService = new SectionSetupService();
 export default sectionSetupService;
