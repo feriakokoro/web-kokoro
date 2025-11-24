@@ -80,7 +80,9 @@ const Guests = () => {
   if (sectionSetup && !sectionSetup.guestsEnabled) {
     return (<div className="section-container">
       <h2 className="title">{GUESTS.title}</h2>
-      <div className="error-message">Estamos trabajando para tener lista esta sección. :)</div>
+      <div className="error-message">Estamos trabajando para tener lista esta sección.</div>
+      <br></br>
+      <div className="error-message">ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
     </div>);
   }
 

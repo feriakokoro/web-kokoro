@@ -6,6 +6,7 @@ import "../assets/styles/schedule.css";
 import "../assets/styles/section.css";
 
 import scheduleService from "../services/schedule";
+import sectionSetupService from "../services/sectionSetup";
 import Buttons from "../components/Buttons";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -16,6 +17,7 @@ const Schedule = () => {
   const [scheduleJson, setScheduleJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sectionSetup, setSectionSetup] = useState(null);
 
   const categories = [
     ...new Set(scheduleJson.flatMap((scheduleData) => scheduleData.category)),
@@ -26,6 +28,19 @@ const Schedule = () => {
         (scheduleData) => scheduleData.category === selectedCategory
       )
     : scheduleJson;
+
+  const fetchSectionSetup = async () => {
+    try {
+      const data = await sectionSetupService.getData();
+      setSectionSetup(data);
+    } catch (err) {
+      console.error("Error al cargar la configuración de la sección:", err);
+    }
+  };
+  
+  useEffect(() => {
+    fetchSectionSetup();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,6 +72,19 @@ const Schedule = () => {
       </div>
     );
   }
+
+  if (sectionSetup && !sectionSetup.scheduleEnabled) {
+    return (
+      <div className="page-container">
+        <div className="section-container">
+          <h1 className="title"> CRONOGRAMA DE ACTIVIDADES</h1>
+          <div className="error-message">Nuestro cronograma de actividades estará listo pronto.</div>
+          <br></br>
+          <div className="error-message">⸜(｡˃ ᵕ ˂ )⸝♡</div>
+        </div>
+      </div>
+    )
+  };
 
   return (
     <div className="page-container">
