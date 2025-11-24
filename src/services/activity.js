@@ -75,20 +75,21 @@ class ActivityService {
         }
         return {
           cardDetails: {
-            icon: data.cardDetails?.icon || "fa-book",
-            registrationDate: data.cardDetails?.registrationDate || "",
-            title: data.cardDetails?.title || "",
+            category: data.cardDetails?.category || "",
             urlImage: data.cardDetails?.urlImage || "",
           },
-          descriptions: Array.isArray(data.descriptions)
-            ? data.descriptions
-            : [],
-          exhibitors: Array.isArray(data.exhibitors) ? data.exhibitors : [],
-          capacity: data.capacity || "0",
-          urlPost: data.urlPost || "",
-          urlForm: data.urlForm || "",
-          location: data.location || "",
-          tags: Array.isArray(data.tags) ? data.tags : [],
+          content: {
+            title: data.content?.title || "",
+            registrationDate: data.content?.registrationDate || "",
+            descriptions: Array.isArray(data.content.descriptions)
+              ? data.content.descriptions
+              : [],
+            exhibitors: Array.isArray(data.content.exhibitors) ? data.content.exhibitors : [],
+            location: data.content.location || "",
+            capacity: data.content.capacity || "0",
+            urlPost: data.content.urlPost || "",
+            urlForm: data.content.urlForm || "",
+          },
         };
       })
       .filter((item) => item !== null);

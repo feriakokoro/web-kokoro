@@ -18,7 +18,7 @@ import kiwiImg from "../assets/images/KIWI_FONDO.webp";
 
 const Home = () => {
   const mapIsEnabled = false;
-  const alertModalIsEnabled = true;
+  const alertModalIsEnabled = false;
 
   const [homeJson, setHomeJson] = useState({
     earlyTicket: {},
