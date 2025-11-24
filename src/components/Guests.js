@@ -55,7 +55,10 @@ const Guests = () => {
   }
 
   if (error) {
-    return <div className="error-message">{error}</div>;
+    return (<div className="section-container">
+      <h2 className="title">{GUESTS.title}</h2>
+      <div className="error-message">{error}</div>
+    </div>);
   }
 
   return (

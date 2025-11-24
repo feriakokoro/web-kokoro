@@ -53,7 +53,12 @@ const Stands = () => {
   }
 
   if (error) {
-    return <div className="error">{error}</div>;
+    return (
+      <div className="section-container">
+        <h1 className="title">{STANDS.title}</h1>
+        <div className="error-message">{error}</div>
+      </div>
+    );
   }
 
   return (
