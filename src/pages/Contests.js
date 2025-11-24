@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { iconMap } from "../utils/iconMap";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
@@ -28,7 +26,7 @@ const Contests = () => {
       console.error("Error al cargar la configuración de la sección:", err);
     }
   };
-  
+
   useEffect(() => {
     fetchSectionSetup();
   }, []);
@@ -53,18 +51,19 @@ const Contests = () => {
 
   const categories = [
     ...new Set(
-      activityJson.flatMap((activity) => activity.tags).filter(Boolean)
+      activityJson.flatMap((activity) => activity.cardDetails.category).filter(Boolean)
     ),
   ];
 
   const filteredActivities = selectedCategory
     ? activityJson.filter((activity) =>
-        activity.tags.includes(selectedCategory)
+        activity.cardDetails.category.includes(selectedCategory)
       )
     : activityJson;
 
-  const handleContestClick = (contest) => {
-    setSelectedActivity(contest);
+  const handleContestClick = (activity) => {
+    console.log(activity);
+    setSelectedActivity(activity);
   };
 
   const closeModal = () => {
@@ -101,7 +100,7 @@ const Contests = () => {
 
   if (isLoading) return <LoadingSpinner />;
 
-  if (error) 
+  if (error)
     return (
       <div className="page-container">
         <div className="section-container">
@@ -111,18 +110,19 @@ const Contests = () => {
       </div>
     );
 
-
-  if (sectionSetup && !sectionSetup.activitiesEnabled)  {
+  if (sectionSetup && !sectionSetup.activitiesEnabled && false) {
     return (
       <div className="page-container">
         <div className="section-container">
           <h1 className="title">ACTIVIDADES</h1>
-          <div className="error-message">Prontro tendremos nuestra lista de actividades para el evento.</div>
+          <div className="error-message">
+            Prontro tendremos nuestra lista de actividades para el evento.
+          </div>
           <br></br>
           <div className="error-message">(づ๑•ᴗ•๑)づ♡</div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -148,35 +148,8 @@ const Contests = () => {
                   className="image"
                   loading="lazy"
                 />
-
-                {/*}
-                <h2 className="contest-title">{activity.cardDetails.title}</h2>
-                */}
-
-                {/*}
-                <p className="contest-tags">
-                  {activity.tags.map((tag, index) => (
-                    <span key={index} className="contest-tag">
-                      {tag}
-                    </span>
-                  ))}
-                </p>
-                */}
               </div>
-
-              <div className="contest-content">
-                {/*
-                <h3 className="contest-title">Inscripción</h3>
-                <p className="contest-description">
-                  {activity.cardDetails.registrationDate}
-                </p>
-
-                <h3 className="contest-title">Cupo</h3>
-                <p className="contest-description">
-                  Hasta {activity.capacity} personas
-                </p>
-                */}
-              </div>
+              <div className="contest-content"></div>
             </div>
           ))}
         </div>
@@ -196,34 +169,34 @@ const Contests = () => {
               </button>
 
               <div className="modal-header">
-                <h2>{selectedActivity.cardDetails.title}</h2>
+                <h2>{selectedActivity.content.title}</h2>
               </div>
 
               {buildActivityDescription(
-                "Descripcion",
-                selectedActivity.descriptions
+                "Descripción",
+                selectedActivity.content.descriptions
               )}
               {buildActivityModalExhibitors(
                 "Exhibidores",
-                selectedActivity.exhibitors
+                selectedActivity.content.exhibitors
               )}
 
               <div className="contest-section">
                 <h3>Ubicación</h3>
-                <p>{selectedActivity.location}</p>
+                <p>{selectedActivity.content.location}</p>
               </div>
 
               <div className="contest-section">
                 <h3>Cupo</h3>
                 <p>
-                  Capacidad limitada hasta {selectedActivity.capacity} personas
+                  Capacidad limitada hasta {selectedActivity.content.capacity} personas
                 </p>
               </div>
               <div className="modal-action-buttons">
-                {selectedActivity.urlPost &&
-                  selectedActivity.urlPost.trim() !== "" && (
+                {selectedActivity.content.urlPost &&
+                  selectedActivity.content.urlPost.trim() !== "" && (
                     <a
-                      href={selectedActivity.urlPost}
+                      href={selectedActivity.content.urlPost}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="filter-button primary"
@@ -231,8 +204,8 @@ const Contests = () => {
                       Ver publicación original
                     </a>
                   )}
-                {selectedActivity.urlForm &&
-                  selectedActivity.urlForm.trim() !== "" && (
+                {selectedActivity.content.urlForm &&
+                  selectedActivity.content.urlForm.trim() !== "" && (
                     <a
                       href={selectedActivity.urlForm}
                       target="_blank"
