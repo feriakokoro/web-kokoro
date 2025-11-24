@@ -5,6 +5,7 @@ import "../assets/styles/home.css";
 import { HOME_SEARCH_FAIL } from "../utils/constants";
 
 import homeService from "../services/home";
+import sectionSetupService from "../services/sectionSetup";
 import NewsSection from "../components/NewsSection";
 import ActivitiesSection from "../components/ActivitiesSection";
 import HeroSection from "../components/HeroSection";
@@ -17,9 +18,6 @@ import Modal from "../components/Modal";
 import kiwiImg from "../assets/images/KIWI_FONDO.webp";
 
 const Home = () => {
-  const mapIsEnabled = false;
-  const alertModalIsEnabled = false;
-
   const [homeJson, setHomeJson] = useState({
     earlyTicket: {},
     pastEvents: [],
@@ -30,6 +28,25 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAlertModalOpen, setIsAlertModalOpen] = useState(true);
+  const [sectionSetup, setSectionSetup] = useState(null);
+
+  const fetchSectionSetup = async () => {
+    try {
+      const data = await sectionSetupService.getData();
+      setSectionSetup(data);
+    } catch (err) {
+      console.error("Error al cargar la configuración de la sección:", err);
+    }
+  };
+
+  let mapIsEnabled = sectionSetup ? sectionSetup.mapEnabled : false;
+  let alertModalIsEnabled = sectionSetup ? sectionSetup.modalEnabled : false;
+
+  console.log("Section Setup:", sectionSetup);
+
+  useEffect(() => {
+    fetchSectionSetup();
+  }, []);
 
   const handleModalClose = () => {
     setIsAlertModalOpen(false);
@@ -71,6 +88,7 @@ const Home = () => {
   }, []);
 
   if (isLoading) return <LoadingSpinner />;
+
   if (error) return <div className="error-message">{error}</div>;
 
   return (
@@ -78,15 +96,15 @@ const Home = () => {
       {alertModalIsEnabled && (
         <Modal isOpen={isAlertModalOpen} onClose={handleModalClose}>
           <h2>WEB BAJO CONSTRUCCIÓN</h2>
-            <img
-              src={kiwiImg}
-              alt="kiwi"
-              className="modal-image"
-              loading="lazy"
-            />
+          <img
+            src={kiwiImg}
+            alt="kiwi"
+            className="modal-image"
+            loading="lazy"
+          />
           <p>
-            Vamos a estar actualizando la web en los próximos días con toda la info
-            de la próxima edición.
+            Vamos a estar actualizando la web en los próximos días con toda la
+            info de la próxima edición.
           </p>
         </Modal>
       )}
