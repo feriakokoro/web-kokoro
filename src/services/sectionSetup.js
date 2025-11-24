@@ -1,6 +1,4 @@
-import { API_ABORT_DESC, API_FAIL_DESC, RESULT_CODE_FAIL_DESC } from "@/utils/constants";
 import { getApiUrl, getCachedTimeout } from "../utils/helper";
-
 import {
     API_ABORT_DESC,
     API_FAIL_DESC,
@@ -61,7 +59,7 @@ class SectionSetupService {
     };
 }
 
-export const sectionSetupService = new SectionSetupService();
+//export const sectionSetupService = new SectionSetupService();
 
 const sectionSetupService = new SectionSetupService();
 export default sectionSetupService;

@@ -4,6 +4,7 @@ import "../assets/styles/guests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 import guestsService from "../services/guests";
+import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
 import { API_CONFIG, GUESTS } from "../utils/constants";
@@ -13,6 +14,7 @@ const Guests = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sectionSetup, setSectionSetup] = useState(null);
 
   const categories = [
     ...new Set(guestsJson.flatMap((guest) => guest.category)),
@@ -20,6 +22,20 @@ const Guests = () => {
   const filteredGuests = selectedCategory
     ? guestsJson.filter((guest) => guest.category.includes(selectedCategory))
     : guestsJson;
+
+  const fetchSectionSetup = useCallback(async () => {
+    try {
+      const data = await sectionSetupService.getData();
+      setSectionSetup(data);
+    } catch (err) {
+      console.error("Error al cargar la configuración de la sección:", err);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchSectionSetup();
+  }, [fetchSectionSetup]);
+  
 
   const fetchWithRetry = useCallback(async (attempt = 1) => {
     try {
@@ -58,6 +74,13 @@ const Guests = () => {
     return (<div className="section-container">
       <h2 className="title">{GUESTS.title}</h2>
       <div className="error-message">{error}</div>
+    </div>);
+  }
+
+  if (sectionSetup && !sectionSetup.guestsEnabled) {
+    return (<div className="section-container">
+      <h2 className="title">{GUESTS.title}</h2>
+      <div className="error-message">Estamos trabajando para tener lista esta sección. :)</div>
     </div>);
   }
 
