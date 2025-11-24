@@ -110,7 +110,7 @@ const Contests = () => {
       </div>
     );
 
-  if (sectionSetup && !sectionSetup.activitiesEnabled && false) {
+  if (sectionSetup && !sectionSetup.activitiesEnabled) {
     return (
       <div className="page-container">
         <div className="section-container">
