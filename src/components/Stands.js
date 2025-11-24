@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
 import standsService from "../services/stands";
+import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
 import { STANDS } from "../utils/constants";
@@ -14,12 +15,27 @@ const Stands = () => {
   const [selectedTag, setSelectedTag] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sectionSetup, setSectionSetup] = useState(null);
 
   const tags = [...new Set(standsJson.map((stand) => stand.category))];
 
   const filteredStands = selectedTag
     ? standsJson.filter((stand) => stand.category === selectedTag)
     : standsJson;
+
+  const fetchSectionSetup = async () => {
+    try {
+      const data = await sectionSetupService.getData();
+      setSectionSetup(data);
+    }
+    catch (err) {
+      console.error("Error al cargar la configuración de la sección:", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionSetup();
+  }, []);
 
   const fetchWithRetry = useCallback(async (attempt = 1) => {
     try {
@@ -57,6 +73,17 @@ const Stands = () => {
       <div className="section-container">
         <h1 className="title">{STANDS.title}</h1>
         <div className="error-message">{error}</div>
+      </div>
+    );
+  }
+
+  if (sectionSetup && !sectionSetup.standsEnabled) {
+    return (
+      <div className="section-container">
+        <h1 className="title">{STANDS.title}</h1>
+        <div className="error-message">Estamos trabajando para tener lista esta sección.</div>
+        <br></br>
+        <div className="error-message">ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
       </div>
     );
   }

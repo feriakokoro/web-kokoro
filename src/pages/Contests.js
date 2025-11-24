@@ -7,6 +7,7 @@ import "../assets/styles/section.css";
 
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
+import sectionSetupService from "../services/sectionSetup";
 import Buttons from "../components/Buttons";
 
 import { CONTEST_SEARCH_FAIL } from "../utils/constants";
@@ -17,6 +18,20 @@ const Contests = () => {
   const [activityJson, setActivityJson] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sectionSetup, setSectionSetup] = useState(null);
+
+  const fetchSectionSetup = async () => {
+    try {
+      const data = await sectionSetupService.getData();
+      setSectionSetup(data);
+    } catch (err) {
+      console.error("Error al cargar la configuración de la sección:", err);
+    }
+  };
+  
+  useEffect(() => {
+    fetchSectionSetup();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,6 +100,7 @@ const Contests = () => {
   };
 
   if (isLoading) return <LoadingSpinner />;
+
   if (error) 
     return (
       <div className="page-container">
@@ -94,6 +110,20 @@ const Contests = () => {
         </div>
       </div>
     );
+
+
+  if (sectionSetup && !sectionSetup.activitiesEnabled)  {
+    return (
+      <div className="page-container">
+        <div className="section-container">
+          <h1 className="title">ACTIVIDADES</h1>
+          <div className="error-message">Prontro tendremos nuestra lista de actividades para el evento.</div>
+          <br></br>
+          <div className="error-message">(づ๑•ᴗ•๑)づ♡</div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="page-container">
