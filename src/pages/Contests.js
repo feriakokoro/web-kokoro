@@ -62,7 +62,6 @@ const Contests = () => {
     : activityJson;
 
   const handleContestClick = (activity) => {
-    console.log(activity);
     setSelectedActivity(activity);
   };
 
@@ -207,7 +206,7 @@ const Contests = () => {
                 {selectedActivity.content.urlForm &&
                   selectedActivity.content.urlForm.trim() !== "" && (
                     <a
-                      href={selectedActivity.urlForm}
+                      href={selectedActivity.content.urlForm}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="filter-button secondary"
