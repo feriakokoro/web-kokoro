@@ -62,7 +62,6 @@ const Contests = () => {
     : activityJson;
 
   const handleContestClick = (activity) => {
-    console.log(activity);
     setSelectedActivity(activity);
   };
 
