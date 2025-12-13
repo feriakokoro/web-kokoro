@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import kokoroLogo from "../assets/icons/logo_kokoro.webp";
+import kokoroLogo from "../assets/icons/logo_felices_fiestas.webp";
 import "../assets/styles/navbar.css";
 import "../assets/styles/global.css";
 import { routes } from "../config/routes";

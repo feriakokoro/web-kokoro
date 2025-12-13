@@ -28,14 +28,13 @@ const HeroSection = ({ earlyTicket = {} }) => {
       </div>
       <Modal isOpen={isModalOpen} onClose={handleModalClose}>
         <h2>¡Bienvenides a Feria Kokoro: Edición Felices Fiestas!</h2>
-        <p>Nuestra próxima edición está en camino.</p>
+        <p>Ya estamos más cerca de la última edición del año.</p>
         <p>
-          Te esperamos el Domingo 14 de Diciembre, 12 a 19 hs, en el Colegio San
-          José.
+          Te esperamos este Domingo 14 de Diciembre, de 12 a 19 hs, en el Colegio San José para vivir una edición única.
         </p>
-        <p>Pronto toda la info acá.</p>
+        <p>Acá podés conocer todo sobre las actividades, stands participantes, concursos y mucho más.</p>
         <p>
-          También podés seguirnos en{" "}
+          Seguinos en {" "}
           <a
             className="modal-link"
             href="https://www.instagram.com/feriakokoro/"
