@@ -22,7 +22,7 @@ const NewsSection = ({ newsJson = [] }) => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="card"
+              className="news-card"
             >
               <img src={image.imageUrl} alt=""></img>
               <h2>{image.title}</h2>
