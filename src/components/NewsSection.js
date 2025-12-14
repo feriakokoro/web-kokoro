@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../assets/styles/home.css";
+import "../assets/styles/cards.css";
 import { NEWS_SECTION } from "../utils/constants";
 
 const NewsSection = ({ newsJson = [] }) => {
