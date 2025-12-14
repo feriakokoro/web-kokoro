@@ -1,0 +1,34 @@
+@import url("./variables.css");
+
+.card {
+  width: 300px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--glass);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+  transform: var(--transform);
+}
+
+.card img {
+  align-items: center;
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.card h2 {
+  color: var(--accent);
+}
+
+.card p {
+  font-family: var(--font-secondary);
+  color: var(--text);
+}
