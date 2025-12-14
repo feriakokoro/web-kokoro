@@ -24,9 +24,9 @@ const NewsSection = ({ newsJson = [] }) => {
               key={index}
               className="card"
             >
-              <img className="grid-image" src={image.imageUrl} alt=""></img>
-              <h2 className="news-title">{image.title}</h2>
-              <p className="news-text">{image.description}</p>
+              <img src={image.imageUrl} alt=""></img>
+              <h2>{image.title}</h2>
+              <p>{image.description}</p>
             </a>
           ))}
         </div>
