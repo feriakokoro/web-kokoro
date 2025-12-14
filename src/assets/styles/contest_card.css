@@ -1,6 +1,7 @@
 @import url("./variables.css");
 
 .card {
+  align-items: center;
   background-color: var(--glass);
   border-radius: 12px;
   box-shadow: var(--box-shadow);

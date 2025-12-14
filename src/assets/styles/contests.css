@@ -8,10 +8,6 @@
   width: 100%;
 }
 
-.contest-title {
-  align-items: center;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;

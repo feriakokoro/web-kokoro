@@ -52,7 +52,9 @@ const Contests = () => {
 
   const categories = [
     ...new Set(
-      activityJson.flatMap((activity) => activity.cardDetails.category).filter(Boolean)
+      activityJson
+        .flatMap((activity) => activity.cardDetails.category)
+        .filter(Boolean)
     ),
   ];
 
@@ -141,14 +143,12 @@ const Contests = () => {
               className="card"
               onClick={() => handleContestClick(activity)}
             >
-              <div className="contest-title">
-                <img
-                  src={activity.cardDetails.urlImage}
-                  alt=""
-                  className="image"
-                  loading="lazy"
-                />
-              </div>
+              <img
+                src={activity.cardDetails.urlImage}
+                alt=""
+                className="image"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
@@ -188,7 +188,8 @@ const Contests = () => {
               <div className="contest-section">
                 <h3>Cupo</h3>
                 <p>
-                  Capacidad limitada hasta {selectedActivity.content.capacity} personas
+                  Capacidad limitada hasta {selectedActivity.content.capacity}{" "}
+                  personas
                 </p>
               </div>
               <div className="modal-action-buttons">
