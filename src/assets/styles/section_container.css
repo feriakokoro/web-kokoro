@@ -1,0 +1,43 @@
+@import url("./variables.css");
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+  min-width: 300px;
+  order: 2;
+}
+
+.flex-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.flex-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.flex-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.flex-container-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  font-family: var(--font-secondary);
+  order: 1;
+}
