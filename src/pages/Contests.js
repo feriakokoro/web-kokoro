@@ -140,7 +140,7 @@ const Contests = () => {
           {filteredActivities.map((activity, index) => (
             <div
               key={index}
-              className="card"
+              className="contest-card"
               onClick={() => handleContestClick(activity)}
             >
               <img

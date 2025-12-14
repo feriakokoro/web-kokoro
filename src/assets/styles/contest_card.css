@@ -1,6 +1,6 @@
 @import url("./variables.css");
 
-.card {
+.contest-card {
   align-items: center;
   background-color: var(--glass);
   border-radius: 12px;
@@ -12,11 +12,11 @@
   text-align: center;
 }
 
-.card:hover {
+.contest-card:hover {
   transform: var(--transform);
 }
 
-.card img {
+.contest-card img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
