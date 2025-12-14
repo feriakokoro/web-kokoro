@@ -3,6 +3,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/guests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
+import "../assets/styles/cards.css";
+import "../assets/styles/guest_card.css"
 import guestsService from "../services/guests";
 import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
@@ -101,7 +103,7 @@ const Guests = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="card"
+            className="card guest-card"
           >
             <img
               src={guest.imageUrl}

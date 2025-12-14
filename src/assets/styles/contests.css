@@ -8,67 +8,6 @@
   width: 100%;
 }
 
-.contest-card {
-  background-color: var(--glass);
-  border-radius: 12px;
-  box-shadow: var(--box-shadow);
-  width: 250px;
-  padding: 20px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  text-align: center;
-}
-
-.contest-card:hover {
-  transform: var(--transform);
-}
-
-.contest-title {
-  align-items: center;
-}
-
-.contest-content {
-  text-align: left;
-  padding-inline: 20px;
-}
-
-.contest-title {
-  font-size: 1.2rem;
-  color: var(--accent);
-}
-
-.contest-subtitle {
-  color: var(--accent);
-}
-
-.contest-description {
-  color: #7693f1;
-}
-
-.contest-tags {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.contest-tag {
-  background-color: var(--highlight);
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  color: white;
-  font-weight: bold;
-}
-
-.contest-icon {
-  font-size: 2rem;
-  color: var(--accent);
-  display: block;
-  margin: 0 auto;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
