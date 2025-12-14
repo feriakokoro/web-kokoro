@@ -21,6 +21,9 @@
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/*.gallery-image:hover {
-  transform: scale(1.05);
-}*/
+@media (max-width: 990px) {
+  .gallery-image {
+    height: 500px;
+    width: 320px;
+  }
+}
