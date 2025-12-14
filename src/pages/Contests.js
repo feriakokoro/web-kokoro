@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
+import "../assets/styles/contest_card.css";
 
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
@@ -137,7 +138,7 @@ const Contests = () => {
           {filteredActivities.map((activity, index) => (
             <div
               key={index}
-              className="contest-card"
+              className="card"
               onClick={() => handleContestClick(activity)}
             >
               <div className="contest-title">
@@ -148,7 +149,6 @@ const Contests = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="contest-content"></div>
             </div>
           ))}
         </div>
