@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../assets/styles/home.css";
+import "../assets/styles/news_card.css";
 import { NEWS_SECTION } from "../utils/constants";
 
 const NewsSection = ({ newsJson = [] }) => {
@@ -21,11 +22,11 @@ const NewsSection = ({ newsJson = [] }) => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="card"
+              className="news-card"
             >
-              <img className="grid-image" src={image.imageUrl} alt=""></img>
-              <h2 className="news-title">{image.title}</h2>
-              <p className="news-text">{image.description}</p>
+              <img src={image.imageUrl} alt=""></img>
+              <h2>{image.title}</h2>
+              <p>{image.description}</p>
             </a>
           ))}
         </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/styles/home.css";
+import "../assets/styles/section_container.css";
+import "../assets/styles/location.css";
 import PropTypes from "prop-types";
 import { LOCATION_SECTION } from "../utils/constants";
 
@@ -10,7 +12,7 @@ const LocationSection = ({ locationJson = {} }) => {
   }
   return (
     <section id="location">
-      <div className="section-flex-container">
+      <div className="flex-container">
         <div className="location-map">
           <div className="map-container">
             <iframe
@@ -22,8 +24,8 @@ const LocationSection = ({ locationJson = {} }) => {
             ></iframe>
           </div>
         </div>
-        <div className="section-text">
-          <h2 className="section-title">{LOCATION_SECTION.title}</h2>
+        <div className="flex-container-text">
+          <h2>{LOCATION_SECTION.title}</h2>
           <p>{LOCATION_SECTION.date} {locationJson.date}</p>
           <p>{LOCATION_SECTION.place} {locationJson.place}</p>
         </div>

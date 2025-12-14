@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "../assets/styles/stands.css";
+import "../assets/styles/cards.css"
 import standsService from "../services/stands";
 import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
