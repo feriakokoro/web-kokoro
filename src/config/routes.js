@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = React.lazy(() => import("../pages/Home"));
-const Participants = React.lazy(() => import("../pages/Participants"));
+const Participants = React.lazy(() => import("../pages/Guests"));
 const Stands = React.lazy(() => import("../pages/Stands"));
 const Schedule = React.lazy(() => import("../pages/Schedule"));
 const Contests = React.lazy(() => import("../pages/Contests"));
