@@ -38,7 +38,6 @@ const Guests = () => {
   useEffect(() => {
     fetchSectionSetup();
   }, [fetchSectionSetup]);
-  
 
   const fetchWithRetry = useCallback(async (attempt = 1) => {
     try {
@@ -58,7 +57,7 @@ const Guests = () => {
         }, delay);
       } else {
         setError(
-          "No se pudieron cargar los invitados después de varios intentos"
+          "No se pudieron cargar los invitados después de varios intentos",
         );
         setIsLoading(false);
       }
@@ -74,55 +73,63 @@ const Guests = () => {
   }
 
   if (error) {
-    return (<div className="section-container">
-      <h2 className="title">{GUESTS.title}</h2>
-      <div className="error-message">{error}</div>
-    </div>);
+    return (
+      <div className="section-container">
+        <h2 className="title">{GUESTS.title}</h2>
+        <div className="error-message">{error}</div>
+      </div>
+    );
   }
 
   if (sectionSetup && !sectionSetup.guestsEnabled) {
-    return (<div className="section-container">
-      <h2 className="title">{GUESTS.title}</h2>
-      <div className="error-message">Estamos trabajando para tener lista esta sección.</div>
-      <br></br>
-      <div className="error-message">ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
-    </div>);
+    return (
+      <div className="section-container">
+        <h2 className="title">{GUESTS.title}</h2>
+        <div className="error-message">
+          Estamos trabajando para tener lista esta sección.
+        </div>
+        <br></br>
+        <div className="error-message">ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
+      </div>
+    );
   }
 
   return (
-    <div className="section-container">
-      <h2 className="title">{GUESTS.title}</h2>
-      <Buttons
-        tags={categories}
-        selectedTag={selectedCategory}
-        onTagSelect={setSelectedCategory}
-      />
-      <div className="grid">
-        {filteredGuests.map((guest, index) => (
-          <a
-            href={guest.socialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={index}
-            className="card"
-          >
-            <img
-              src={guest.imageUrl}
-              alt={guest.name}
-              className="image"
-              loading="lazy"
-            />
-            <h3 className="name">{guest.name}</h3>
-            {guest.location && (
-              <p className="location">
-                <FaMapMarkerAlt className="icon" /> {guest.location}
-              </p>
-            )}
-            <div className="tags-container">
-              <span className="tag">{guest.category.toLowerCase()}</span>
-            </div>
-          </a>
-        ))}
+    <div className="page-container">
+      <div className="section-container">
+        <h2 className="title">{GUESTS.title}</h2>
+        <Buttons
+          tags={categories}
+          selectedTag={selectedCategory}
+          onTagSelect={setSelectedCategory}
+        />
+        <div className="grid">
+          {filteredGuests.map((guest, index) => (
+            <a
+              href={guest.socialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="card"
+            >
+              <img
+                src={guest.imageUrl}
+                alt={guest.name}
+                className="image"
+                loading="lazy"
+              />
+              <h3 className="name">{guest.name}</h3>
+              {guest.location && (
+                <p className="location">
+                  <FaMapMarkerAlt className="icon" /> {guest.location}
+                </p>
+              )}
+              <div className="tags-container">
+                <span className="tag">{guest.category.toLowerCase()}</span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

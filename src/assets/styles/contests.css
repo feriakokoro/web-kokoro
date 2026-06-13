@@ -149,3 +149,17 @@
 .modal-close-button:hover {
   color: #343a6a;
 }
+
+@media (max-width: 990px) {
+  .contest-card {
+    width: 100%;
+  }
+  .contest-card img {
+    height: auto;
+  }
+
+  .modal-content.activity {
+    width: 90%;
+    padding: 15px;
+  }
+}

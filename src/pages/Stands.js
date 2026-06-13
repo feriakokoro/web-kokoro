@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import "../assets/styles/card.css"
+import "../assets/styles/card.css";
 
 import standsService from "../services/stands";
 import sectionSetupService from "../services/sectionSetup";
@@ -28,8 +28,7 @@ const Stands = () => {
     try {
       const data = await sectionSetupService.getData();
       setSectionSetup(data);
-    }
-    catch (err) {
+    } catch (err) {
       console.error("Error al cargar la configuración de la sección:", err);
     }
   };
@@ -82,7 +81,9 @@ const Stands = () => {
     return (
       <div className="section-container">
         <h1 className="title">{STANDS.title}</h1>
-        <div className="error-message">Estamos trabajando para tener lista esta sección.</div>
+        <div className="error-message">
+          Estamos trabajando para tener lista esta sección.
+        </div>
         <br></br>
         <div className="error-message">ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</div>
       </div>
@@ -90,34 +91,36 @@ const Stands = () => {
   }
 
   return (
-    <div className="section-container">
-      <h1 className="title">{STANDS.title}</h1>
-      <Buttons
-        tags={tags}
-        selectedTag={selectedTag}
-        onTagSelect={setSelectedTag}
-      />
-      <div className="grid">
-        {filteredStands.map((stand, index) => (
-          <a
-            key={`${stand.name}-${index}`}
-            href={stand.socialUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card"
-          >
-            <img
-              src={stand.imageUrl}
-              alt={stand.name}
-              className="image"
-              loading="lazy"
-            />
-            <h2 className="name">{stand.name}</h2>
-            <p className="location">
-              <FaMapMarkerAlt className="icon" /> {stand.location}
-            </p>
-          </a>
-        ))}
+    <div className="page-container">
+      <div className="section-container">
+        <h1 className="title">{STANDS.title}</h1>
+        <Buttons
+          tags={tags}
+          selectedTag={selectedTag}
+          onTagSelect={setSelectedTag}
+        />
+        <div className="grid">
+          {filteredStands.map((stand, index) => (
+            <a
+              key={`${stand.name}-${index}`}
+              href={stand.socialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card"
+            >
+              <img
+                src={stand.imageUrl}
+                alt={stand.name}
+                className="image"
+                loading="lazy"
+              />
+              <h2 className="name">{stand.name}</h2>
+              <p className="location">
+                <FaMapMarkerAlt className="icon" /> {stand.location}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
