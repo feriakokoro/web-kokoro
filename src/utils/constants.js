@@ -53,7 +53,7 @@ export const NEWS_SECTION = {
 };
 
 export const FOOTER = {
-  CONTACT_TITLE: "Contacto",
+  CONTACT_TITLE: "Seguinos en nuestras redes",
   CONTACT_EMAIL: "Email:",
   SOCIAL_MEDIA: "Redes Sociales:",
   DISCLAIMER: "Feria Kokoro - Todos los derechos reservados",

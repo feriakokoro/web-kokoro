@@ -1,0 +1,81 @@
+@import url("./variables.css");
+
+.card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--glass);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+  transform: var(--transform);
+}
+
+.card img {
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.card h2 {
+  color: var(--accent);
+}
+
+.card p {
+  font-family: var(--font-secondary);
+  color: var(--text);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--accent);
+}
+
+.category {
+  color: #5c6a96;
+  font-size: 1em;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.icon {
+  color: #ff66b2;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 990px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+}

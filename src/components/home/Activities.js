@@ -1,12 +1,12 @@
 import React from "react";
-import "../assets/styles/home.css";
-import "../assets/styles/section_container.css";
-import nanaCat from "../assets/images/nana_cat2.webp";
-import { HOME_ACTIVITY_SECTION } from "../utils/constants";
+import "../../assets/styles/home.css";
+import "../../assets/styles/section_container.css";
+import nanaCat from "../../assets/images/nana_cat2.webp";
+import { HOME_ACTIVITY_SECTION } from "../../utils/constants";
 
-const activities = require("../data/activities.json");
+const activities = require("../../data/activities.json");
 
-const ActivitiesSection = () => {
+const Activities = () => {
   return (
     <section id="activities">
       <div className="flex-container">
@@ -26,4 +26,4 @@ const ActivitiesSection = () => {
   );
 };
 
-export default ActivitiesSection;
+export default Activities;

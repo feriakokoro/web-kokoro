@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
-import "../assets/styles/contest_card.css";
 
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
 import activityService from "../services/activity";
 import sectionSetupService from "../services/sectionSetup";
-import Buttons from "../components/Buttons";
+import Buttons from "../components/commons/Buttons";
 
 import { CONTEST_SEARCH_FAIL } from "../utils/constants";
 
