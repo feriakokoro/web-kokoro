@@ -1,6 +1,10 @@
 import React from "react";
 import "../assets/styles/footer.css";
 import { FOOTER } from "../utils/constants";
+
+import { FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+
 const footerData = require("../data/footer.json");
 
 const Footer = () => {
@@ -9,29 +13,26 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-contact">
           <h3>{FOOTER.CONTACT_TITLE}</h3>
-          <p>
-            {FOOTER.CONTACT_EMAIL}
-            <a href="mailto:contacto@ejemplo.com" className="footer-link">
-              {footerData.email}
-            </a>
-          </p>
-          <p>
-            {FOOTER.SOCIAL_MEDIA}
-            {footerData.socialLinks.map((link, index) => (
-              <span key={index}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                  aria-label={link.ariaLabel}
-                >
-                  {link.name}
-                </a>
-                {index < footerData.socialLinks.length - 1 ? " | " : ""}
-              </span>
-            ))}
-          </p>
+
+          <a
+            href="https://www.tiktok.com/@feria.kokoro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+            aria-label="TikTok"
+          >
+            <FaTiktok size="2.0rem" className="footer-icon" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/feriakokoro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+            aria-label="Instagram"
+          >
+            <FaInstagram size="2.0rem" className="footer-icon" />
+          </a>
         </div>
         <div className="footer-rights">
           <p>
