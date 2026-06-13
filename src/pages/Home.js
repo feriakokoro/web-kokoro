@@ -6,14 +6,14 @@ import { HOME_SEARCH_FAIL } from "../utils/constants";
 
 import homeService from "../services/home";
 import sectionSetupService from "../services/sectionSetup";
-import News from "../components/News";
-import Activities from "../components/Activities";
-import Hero from "../components/Hero";
-import PastEvents from "../components/PastEvents";
-import Location from "../components/Location";
-import LoadingSpinner from "../components/LoadingSpinner";
-import Map from "../components/Map";
-import Modal from "../components/Modal";
+import News from "../components/home/News";
+import Activities from "../components/home/Activities";
+import Hero from "../components/home/Hero";
+import PastEvents from "../components/home/PastEvents";
+import Location from "../components/home/Location";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
+import Map from "../components/home/Map";
+import Modal from "../components/commons/Modal";
 
 import kiwiImg from "../assets/images/KIWI_FONDO.webp";
 

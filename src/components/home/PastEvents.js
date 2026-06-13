@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Carousel } from "react-responsive-carousel";
-import "../assets/styles/home.css";
-import "../assets/styles/past_events.css";
+import "../../assets/styles/home.css";
+import "../../assets/styles/past_events.css";
 
-import { PAST_EVENTS } from "../utils/constants";
+import { PAST_EVENTS } from "../../utils/constants";
 
 const buildCarousel = (imagesJson) => {
   return (

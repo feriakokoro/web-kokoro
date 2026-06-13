@@ -1,7 +1,7 @@
 import React from "react";
-import "../assets/styles/home.css";
-import Modal from "./Modal";
-import { HERO_SECTION } from "../utils/constants";
+import "../../assets/styles/home.css";
+import Modal from "../commons/Modal";
+import { HERO_SECTION } from "../../utils/constants";
 
 const Hero = ({ earlyTicket = {} }) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);

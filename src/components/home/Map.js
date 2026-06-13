@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/home.css";
+import "../../assets/styles/home.css";
 import PropTypes from "prop-types";
 
 const Map = ({ mapJson = {} }) => {

@@ -3,7 +3,7 @@ import "../assets/styles/gallery.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
 import galleryService from "../services/gallery";
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
 import { GALLERY, GALLERY_SEARCH_FAIL } from "../utils/constants";
 
 const Gallery = () => {

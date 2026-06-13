@@ -4,8 +4,8 @@ import "../assets/styles/card.css"
 
 import standsService from "../services/stands";
 import sectionSetupService from "../services/sectionSetup";
-import Buttons from "./Buttons";
-import LoadingSpinner from "./LoadingSpinner";
+import Buttons from "./commons/Buttons";
+import LoadingSpinner from "./commons/LoadingSpinner";
 import { STANDS } from "../utils/constants";
 
 const MAX_RETRIES = 5;

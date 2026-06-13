@@ -7,8 +7,8 @@ import "../assets/styles/section.css";
 
 import scheduleService from "../services/schedule";
 import sectionSetupService from "../services/sectionSetup";
-import Buttons from "../components/Buttons";
-import LoadingSpinner from "../components/LoadingSpinner";
+import Buttons from "../components/commons/Buttons";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
 
 import { SCHEDULE_SEARCH_FAIL } from "../utils/constants";
 

@@ -1,9 +1,9 @@
 import React from "react";
-import "../assets/styles/home.css";
-import "../assets/styles/section_container.css";
-import "../assets/styles/location.css";
+import "../../assets/styles/home.css";
+import "../../assets/styles/section_container.css";
+import "../../assets/styles/location.css";
 import PropTypes from "prop-types";
-import { LOCATION_SECTION } from "../utils/constants";
+import { LOCATION_SECTION } from "../../utils/constants";
 
 const Location = ({ locationJson = {} }) => {
   if (!locationJson?.url || !locationJson?.date || !locationJson?.place) {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Stands from "../components/Stands";
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
 import { STANDS_SEARCH_FAIL } from "../utils/constants";
 
 const StandsPage = () => {

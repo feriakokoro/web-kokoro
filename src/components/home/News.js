@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../assets/styles/home.css";
-import "../assets/styles/news_card.css";
-import { NEWS_SECTION } from "../utils/constants";
+import "../../assets/styles/home.css";
+import "../../assets/styles/news_card.css";
+import { NEWS_SECTION } from "../../utils/constants";
 
 const News = ({ newsJson = [] }) => {
   if (!Array.isArray(newsJson) || newsJson.length === 0) {

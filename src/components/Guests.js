@@ -7,8 +7,8 @@ import "../assets/styles/card.css";
 
 import guestsService from "../services/guests";
 import sectionSetupService from "../services/sectionSetup";
-import Buttons from "./Buttons";
-import LoadingSpinner from "./LoadingSpinner";
+import Buttons from "./commons/Buttons";
+import LoadingSpinner from "./commons/LoadingSpinner";
 
 import { API_CONFIG, GUESTS } from "../utils/constants";
 

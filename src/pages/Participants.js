@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Guests from "../components/Guests";
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadingSpinner from "../components/commons/LoadingSpinner";
 import { GUESTS_SEARCH_FAIL } from "../utils/constants";
 
 const Participants = () => {
