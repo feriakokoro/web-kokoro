@@ -5,8 +5,6 @@ import { FOOTER } from "../utils/constants";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 
-const footerData = require("../data/footer.json");
-
 const Footer = () => {
   return (
     <footer className="footer">
