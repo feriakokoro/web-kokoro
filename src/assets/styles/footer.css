@@ -25,7 +25,7 @@
 .footer-link {
   color: #4db6ac;
   text-decoration: none;
-  margin: 5px;
+  margin: 10px;
 }
 
 .footer-rights {
@@ -33,4 +33,10 @@
   text-align: center;
   color: #777;
   font-size: 12px;
+}
+
+@media (max-width: 990px) {
+  .footer-link {
+    margin: 5px;
+  }
 }
