@@ -3,7 +3,7 @@ import "../assets/styles/home.css";
 import Modal from "./Modal";
 import { HERO_SECTION } from "../utils/constants";
 
-const HeroSection = ({ earlyTicket = {} }) => {
+const Hero = ({ earlyTicket = {} }) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -30,11 +30,15 @@ const HeroSection = ({ earlyTicket = {} }) => {
         <h2>¡Bienvenides a Feria Kokoro: Edición Felices Fiestas!</h2>
         <p>Ya estamos más cerca de la última edición del año.</p>
         <p>
-          Te esperamos este Domingo 14 de Diciembre, de 12 a 19 hs, en el Colegio San José para vivir una edición única.
+          Te esperamos este Domingo 14 de Diciembre, de 12 a 19 hs, en el
+          Colegio San José para vivir una edición única.
         </p>
-        <p>Acá podés conocer todo sobre las actividades, stands participantes, concursos y mucho más.</p>
         <p>
-          Seguinos en {" "}
+          Acá podés conocer todo sobre las actividades, stands participantes,
+          concursos y mucho más.
+        </p>
+        <p>
+          Seguinos en{" "}
           <a
             className="modal-link"
             href="https://www.instagram.com/feriakokoro/"
@@ -50,4 +54,4 @@ const HeroSection = ({ earlyTicket = {} }) => {
   );
 };
 
-export default HeroSection;
+export default Hero;

@@ -5,7 +5,7 @@ import "../assets/styles/location.css";
 import PropTypes from "prop-types";
 import { LOCATION_SECTION } from "../utils/constants";
 
-const LocationSection = ({ locationJson = {} }) => {
+const Location = ({ locationJson = {} }) => {
   if (!locationJson?.url || !locationJson?.date || !locationJson?.place) {
     console.log("LocationSection", "No data to display");
     return null;
@@ -34,7 +34,7 @@ const LocationSection = ({ locationJson = {} }) => {
   );
 };
 
-LocationSection.propTypes = {
+Location.propTypes = {
   locationJson: PropTypes.shape({
     url: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
@@ -42,4 +42,4 @@ LocationSection.propTypes = {
   }).isRequired,
 };
 
-export default LocationSection;
+export default Location;

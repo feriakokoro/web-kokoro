@@ -4,7 +4,7 @@ import "../assets/styles/home.css";
 import "../assets/styles/news_card.css";
 import { NEWS_SECTION } from "../utils/constants";
 
-const NewsSection = ({ newsJson = [] }) => {
+const News = ({ newsJson = [] }) => {
   if (!Array.isArray(newsJson) || newsJson.length === 0) {
     return <p>{NEWS_SECTION.no_news}</p>;
   }
@@ -35,7 +35,7 @@ const NewsSection = ({ newsJson = [] }) => {
   );
 };
 
-NewsSection.propTypes = {
+News.propTypes = {
   newsJson: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string.isRequired,
@@ -45,4 +45,4 @@ NewsSection.propTypes = {
   ),
 };
 
-export default NewsSection;
+export default News;

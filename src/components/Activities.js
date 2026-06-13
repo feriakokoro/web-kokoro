@@ -6,7 +6,7 @@ import { HOME_ACTIVITY_SECTION } from "../utils/constants";
 
 const activities = require("../data/activities.json");
 
-const ActivitiesSection = () => {
+const Activities = () => {
   return (
     <section id="activities">
       <div className="flex-container">
@@ -26,4 +26,4 @@ const ActivitiesSection = () => {
   );
 };
 
-export default ActivitiesSection;
+export default Activities;

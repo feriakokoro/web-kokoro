@@ -6,13 +6,13 @@ import { HOME_SEARCH_FAIL } from "../utils/constants";
 
 import homeService from "../services/home";
 import sectionSetupService from "../services/sectionSetup";
-import NewsSection from "../components/NewsSection";
-import ActivitiesSection from "../components/ActivitiesSection";
-import HeroSection from "../components/HeroSection";
-import PastEventsSection from "../components/PastEventsSection";
-import LocationSection from "../components/LocationSection";
+import News from "../components/News";
+import Activities from "../components/Activities";
+import Hero from "../components/Hero";
+import PastEvents from "../components/PastEvents";
+import Location from "../components/Location";
 import LoadingSpinner from "../components/LoadingSpinner";
-import MapSection from "../components/MapSection";
+import Map from "../components/Map";
 import Modal from "../components/Modal";
 
 import kiwiImg from "../assets/images/KIWI_FONDO.webp";
@@ -106,15 +106,15 @@ const Home = () => {
           </p>
         </Modal>
       )}
-      <HeroSection earlyTicket={homeJson.earlyTicket} />
-      <ActivitiesSection />
-      {homeJson.news.length > 0 && <NewsSection newsJson={homeJson.news} />}
-      {mapIsEnabled && <MapSection mapJson={homeJson.map} />}
+      <Hero earlyTicket={homeJson.earlyTicket} />
+      <Activities />
+      {homeJson.news.length > 0 && <News newsJson={homeJson.news} />}
+      {mapIsEnabled && <Map mapJson={homeJson.map} />}
       {homeJson.pastEvents.length > 0 && (
-        <PastEventsSection pastEventsJson={homeJson.pastEvents} />
+        <PastEvents pastEventsJson={homeJson.pastEvents} />
       )}
       {Object.keys(homeJson.location).length > 0 && (
-        <LocationSection locationJson={homeJson.location} />
+        <Location locationJson={homeJson.location} />
       )}
     </div>
   );

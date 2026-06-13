@@ -6,6 +6,8 @@
   background: var(--primary);
 }
 
+/* Hero Section */
+
 .hero {
   position: relative;
   height: auto;
@@ -39,6 +41,8 @@
   font-weight: bold;
   color: var(--title);
 }
+
+/****************/
 
 .subtitle {
   font-size: 1.2em;

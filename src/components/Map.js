@@ -2,7 +2,7 @@ import React from "react";
 import "../assets/styles/home.css";
 import PropTypes from "prop-types";
 
-const MapSection = ({ mapJson = {} }) => {
+const Map = ({ mapJson = {} }) => {
   const handleDownload = async () => {
     try {
       const response = await fetch(mapJson.url);
@@ -51,7 +51,7 @@ const MapSection = ({ mapJson = {} }) => {
   );
 };
 
-MapSection.propTypes = {
+Map.propTypes = {
   mapJson: PropTypes.shape({
     url: PropTypes.string.isRequired,
     previewUrl: PropTypes.string.isRequired,
@@ -59,4 +59,4 @@ MapSection.propTypes = {
   }).isRequired,
 };
 
-export default MapSection;
+export default Map;

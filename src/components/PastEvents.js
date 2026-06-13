@@ -26,7 +26,7 @@ const buildCarousel = (imagesJson) => {
   );
 };
 
-const PastEventsSection = ({ pastEventsJson = [] }) => {
+const PastEvents = ({ pastEventsJson = [] }) => {
   return (
     <section id="past-events">
       <div className="section-flex-container">
@@ -40,7 +40,7 @@ const PastEventsSection = ({ pastEventsJson = [] }) => {
   );
 };
 
-PastEventsSection.propTypes = {
+PastEvents.propTypes = {
   pastEventsJson: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string.isRequired,
@@ -49,4 +49,4 @@ PastEventsSection.propTypes = {
   ),
 };
 
-export default PastEventsSection;
+export default PastEvents;
