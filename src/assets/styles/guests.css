@@ -21,14 +21,6 @@
   margin-top: 10px;
 }
 
-.day-tag {
-  background-color: var(--accent);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
-
 .guest-location {
   font-size: 0.9rem;
   color: var(--text);

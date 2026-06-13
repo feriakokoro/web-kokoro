@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/loading.css";
+import "../../assets/styles/loading.css";
 
 const LoadingSpinner = () => (
   <div className="loading-overlay">
