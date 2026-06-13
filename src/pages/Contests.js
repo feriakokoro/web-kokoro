@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../assets/styles/contests.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
-import "../assets/styles/contest_card.css";
 
 import LoadingSpinner from "../components/LoadingSpinner";
 import activityService from "../services/activity";
