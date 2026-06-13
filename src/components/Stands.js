@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import "../assets/styles/stands.css";
-import "../assets/styles/cards.css"
+import "../assets/styles/card.css"
+
 import standsService from "../services/stands";
 import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
@@ -112,8 +112,8 @@ const Stands = () => {
               className="image"
               loading="lazy"
             />
-            <h2 className="stand-name">{stand.name}</h2>
-            <p className="stand-location">
+            <h2 className="name">{stand.name}</h2>
+            <p className="location">
               <FaMapMarkerAlt className="icon" /> {stand.location}
             </p>
           </a>

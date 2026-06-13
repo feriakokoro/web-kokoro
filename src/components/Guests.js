@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import "../assets/styles/guests.css";
+
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
-import "../assets/styles/cards.css";
-import "../assets/styles/guest_card.css"
+import "../assets/styles/card.css";
+
 import guestsService from "../services/guests";
 import sectionSetupService from "../services/sectionSetup";
 import Buttons from "./Buttons";
 import LoadingSpinner from "./LoadingSpinner";
+
 import { API_CONFIG, GUESTS } from "../utils/constants";
 
 const Guests = () => {
@@ -103,7 +104,7 @@ const Guests = () => {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="card guest-card"
+            className="card"
           >
             <img
               src={guest.imageUrl}
@@ -113,7 +114,7 @@ const Guests = () => {
             />
             <h3 className="name">{guest.name}</h3>
             {guest.location && (
-              <p className="guest-location">
+              <p className="location">
                 <FaMapMarkerAlt className="icon" /> {guest.location}
               </p>
             )}
