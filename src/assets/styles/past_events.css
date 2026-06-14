@@ -1,3 +1,5 @@
+@import url("./variables.css");
+
 .section-flex-container {
   display: flex;
   gap: 2rem;
@@ -25,6 +27,9 @@
 .carousel .slide img {
   max-height: 400px;
   object-fit: cover;
+
+  border-radius: var(--border-radius);
+  border: var(--border);
 }
 
 @media (max-width: 768px) {
