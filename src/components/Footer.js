@@ -13,7 +13,7 @@ const Footer = () => {
           <h3>{FOOTER.CONTACT_TITLE}</h3>
 
           <a
-            href="https://www.tiktok.com/@feria.kokoro"
+            href="https://www.tiktok.com/@kokoroproducciones"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/feriakokoro"
+            href="https://www.instagram.com/kokoro.producciones"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
