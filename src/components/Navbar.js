@@ -20,7 +20,6 @@ const Navbar = () => {
           alt="Feria Kokoro Logo"
           className="navbar-image-logo"
         />
-        <span className="navbar-logo-text">{NAVBAR_TITLE}</span>
       </div>
       <div className={`links-container ${menuOpen ? "active" : ""}`}>
         {routes.map((route, index) => (
