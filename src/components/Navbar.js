@@ -4,7 +4,6 @@ import kokoroLogo from "../assets/icons/logo_kokoro.webp";
 import "../assets/styles/navbar.css";
 import "../assets/styles/global.css";
 import { routes } from "../config/routes";
-import { NAVBAR_TITLE } from "../utils/constants";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
