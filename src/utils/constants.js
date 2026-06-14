@@ -60,5 +60,5 @@ export const FOOTER = {
 };
 
 export const GALLERY = {
-  title: "Galería de Imágenes"
+  title: "Galería"
 };

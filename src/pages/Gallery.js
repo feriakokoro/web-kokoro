@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
+
 import "../assets/styles/gallery.css";
 import "../assets/styles/global.css";
 import "../assets/styles/section.css";
+
 import galleryService from "../services/gallery";
 import LoadingSpinner from "../components/commons/LoadingSpinner";
 import { GALLERY, GALLERY_SEARCH_FAIL } from "../utils/constants";
 
 const Gallery = () => {
   const [galleryJson, setGalleryJson] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -35,6 +38,14 @@ const Gallery = () => {
     fetchData();
   }, []);
 
+  const handleClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   if (isLoading) return <LoadingSpinner />;
 
   if (error) {
@@ -52,16 +63,30 @@ const Gallery = () => {
     <div className="page-container">
       <div className="section-container">
         <h1 className="title">{GALLERY.title}</h1>
-        <div className="gallery-grid">
+        <div className="grid">
           {galleryJson.map((element, index) => (
             <img
               key={index}
               src={element.url}
               alt={element.name}
-              className="gallery-image"
+              className="preview"
+              onClick={() => handleClick(element)}
+              loading="lazy"
             />
           ))}
         </div>
+
+        {selectedImage && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div onClick={(e) => e.stopPropagation()}>
+              <img
+                src={selectedImage.url}
+                alt={selectedImage.name}
+                className="modal-image"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

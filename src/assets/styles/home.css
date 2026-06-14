@@ -102,8 +102,10 @@ section {
 .section-map img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  border: var(--border);
   max-width: 400px;
+  box-shadow: var(--box-shadow);
 }
 
 .section-map .filter-button {
