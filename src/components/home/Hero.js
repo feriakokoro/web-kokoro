@@ -1,6 +1,9 @@
 import React from "react";
-import "../../assets/styles/home.css";
+
+import "../../assets/styles/hero.css";
+
 import Modal from "../commons/Modal";
+
 import { HERO_SECTION } from "../../utils/constants";
 
 const Hero = ({ earlyTicket = {} }) => {
@@ -16,7 +19,7 @@ const Hero = ({ earlyTicket = {} }) => {
     <section className="hero">
       <div className="hero-overlay" aria-hidden="true"></div>
       <div className="hero-content">
-        <h1 className="home-title">{HERO_SECTION.title}</h1>
+        <h1 className="title">{HERO_SECTION.title}</h1>
         <p className="subtitle">{HERO_SECTION.subtitle}</p>
         <button
           className="button"
