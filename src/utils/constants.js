@@ -56,7 +56,7 @@ export const FOOTER = {
   CONTACT_TITLE: "Seguinos en nuestras redes",
   CONTACT_EMAIL: "Email:",
   SOCIAL_MEDIA: "Redes Sociales:",
-  DISCLAIMER: "Feria Kokoro - Todos los derechos reservados",
+  DISCLAIMER: "Producciones Kokoro - Todos los derechos reservados",
 };
 
 export const GALLERY = {
