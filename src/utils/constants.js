@@ -27,7 +27,7 @@ export const STANDS = {
 };
 
 export const HERO_SECTION = {
-  title: "Feria Kokoro 2025",
+  title: "Producciones Kokoro 2026",
   subtitle: "Un espacio cultural que celebra el arte en todas sus formas",
 };
 
